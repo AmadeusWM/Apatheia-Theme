@@ -1,0 +1,12 @@
+/* Main sass file that contains the theme */
+
+// theme config
+@import "../root.scss";
+
+.theme-dark {
+    @each $style, $value in $obsidian-vars {
+        #{$style}: #{$value};
+    } 
+}
+
+@import "./styling/apatheia.scss";

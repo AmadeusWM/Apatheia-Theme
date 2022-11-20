@@ -1,39 +1,7 @@
 /* Main sass file that contains the theme */
 
 // theme config
-@import "./settings";
-
-// generate theme config and colors
-body {
-    // Theme settings
-    @each $setting, $value in $theme-settings {
-        --#{$setting}: #{$value};
-    }
-
-    // Theme colors
-    @each $color, $value in $theme-colors {
-        --#{$color}: #{$value};
-    }
-
-    // mobile support config
-
-    // Theme format
-    @each $format, $value in $theme-format {
-        --#{$format}: #{$value};
-    }
-    
-    // Theme fonts
-    @each $font, $value in $theme-fonts {
-        --#{$font}: #{$value};
-    }
-};
-
-@import "../themes/theme_template.scss"; // import theme, their values will overwrite those of the basic settings
-body{
-    @each $style, $value in $template-vars{
-        #{$style}: #{$value};
-    }
-}
+@import "../root.scss";
 
 @import "./obsidian.scss"; // import obsidian config
 .theme-dark {
@@ -49,8 +17,7 @@ body{
     } 
 }
 
-
-@import "./apatheia.scss";
+@import "./styling/apatheia.scss";
 
 /*---------------------------------------
             Style settings

@@ -46,15 +46,15 @@ $theme-colors: (
     "ap-color-tag-text": #EEEEEE,
     
     // code syntac highlighting
-    "ap-code-gray-1": #383a42,
-    "ap-code-gray-2":#383a42,
-    "ap-code-red": #383a42,
-    "ap-code-green":#383a42,
-    "ap-code-blue":#383a42,
-    "ap-code-purple":#383a42,
-    "ap-code-aqua":#383a42,
-    "ap-code-yellow":#383a42,
-    "ap-code-orange":#383a42,
+    "ap-code-gray-1":   #5b5c5f,
+    "ap-code-gray-2":   #45474c,
+    "ap-code-red":      #E97193,
+    "ap-code-green":    #AAC5A0,
+    "ap-code-blue":     #A8C5E6,
+    "ap-code-purple":   #DFA7E7,
+    "ap-code-aqua":     #a8e5e6,
+    "ap-code-yellow":   #ece0a8,
+    "ap-code-orange":   #D1A999,
 
     // base colors (text, background, icons ...)
     "ap-color-dp0":     hsl(var(--ap-base1-h), var(--ap-base1-s), calc(var(--ap-base1-l) + 0%)), 
@@ -65,7 +65,7 @@ $theme-colors: (
     "ap-color-dp5":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 50%)), 
     "ap-color-dp6":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 60%)), 
     "ap-color-dp7":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 70%)), 
-    "ap-color-dp8":    hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%)), 
+    "ap-color-dp8":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%)), 
 );
 
 // default text sizin
