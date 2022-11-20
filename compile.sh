@@ -6,3 +6,4 @@ BASEDIR=$(dirname "$0")
  # obsidian 
 sass --no-source-map \
     $BASEDIR/scss/obsidian/main.scss:$BASEDIR/compiled-themes/obsidian/theme.css \
+    $BASEDIR/scss/firefox/styling/config.scss:$BASEDIR/compiled-themes/firefox/chrome/config.css

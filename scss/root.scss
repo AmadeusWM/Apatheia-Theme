@@ -4,7 +4,7 @@
 @import "./settings";
 
 // generate theme config and colors
-body {
+:root {
     // Theme settings
     @each $setting, $value in $theme-settings {
         --#{$setting}: #{$value};
@@ -29,7 +29,7 @@ body {
 };
 
 @import "../themes/theme_template.scss"; // import theme, their values will overwrite those of the basic settings
-body{
+:root {
     @each $style, $value in $template-vars{
         --#{$style}: #{$value};
     }

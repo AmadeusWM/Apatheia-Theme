@@ -21,12 +21,12 @@ $obsidian-vars: (
     "--color-base-20":  var(--ap-color-dp0), // coding block 
     "--color-base-25":  var(--ap-color-dp0), // background of multiselect 
     "--color-base-30":  var(--ap-color-dp0), // top bar highlighted, horizontal rectangle, on focus 
-    "--color-base-35":  var(--ap-color-dp3), // vertical bar next to tabs, background of inactive buttons, lines in node graph 
+    "--color-base-35":  var(--ap-color-dp4), // vertical bar next to tabs, background of inactive buttons, lines in node graph 
     "--color-base-40":  var(--ap-color-dp0), // borders 
-    "--color-base-50":  var(--ap-color-dp5), // idk 
-    "--color-base-60":  var(--ap-color-dp6), // idk 
-    "--color-base-70":  var(--ap-color-dp7), // idk 
-    "--color-base-100": var(--ap-color-dp8), // text colors unfaded
+    "--color-base-50":  var(--ap-color-dp6), // idk 
+    "--color-base-60":  var(--ap-color-dp7), // idk 
+    "--color-base-70":  var(--ap-color-dp10), // idk 
+    "--color-base-100": var(--ap-color-dp11), // text colors unfaded
     "--color-accent-hsl":   "var(--accent-h), var(--accent-s), var(--accent-l)",
     "--color-accent":       hsl(var(--accent-h), var(--accent-s), var(--accent-l)),
     "--color-accent-1":     hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%)),

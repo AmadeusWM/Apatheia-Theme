@@ -86,7 +86,7 @@
 /* don't bother with sidebar in light mode */
 
 /* dark mode */
-:root[style*="--lwt-accent-color:rgb(12, 12, 13);"] {
+:root{
     /* accentcolor */
     --lwt-accent-color: var(--dark-base) !important;
 
@@ -176,7 +176,7 @@
 }
 
 :root:not(:-moz-lwtheme):not([privatebrowsingmode="temporary"]) {
-    --toolbar-bgcolor: hsl(0, 0%, 100%) !important;
+    /* --toolbar-bgcolor: hsl(0, 0%, 100%); */
     --toolbar-color: hsl(213, 5%, 39%) !important;
     --toolbox-border-bottom-color: hsl(0, 0%, 70%) !important;
 }
@@ -190,7 +190,7 @@
 /* Ubuntu */
 @media (-moz-gtk-csd-available) {
     :root:not(:-moz-lwtheme):not([privatebrowsingmode="temporary"]) {
-        --toolbar-bgcolor: -moz-dialog !important;
+        /* --toolbar-bgcolor: -moz-dialog; */
         --toolbar-color: -moz-dialogtext !important;
     }
 }

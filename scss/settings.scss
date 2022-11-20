@@ -30,14 +30,15 @@ $theme-colors: (
     "ap-base0-l": 5%,
     "ap-base0-d": 13%, // lightness/darkness of text
     "ap-bg1": hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l)),
-    // header colors
-    "ap-h1": #E97193,
-    "ap-h2": #DFA7E7,
-    "ap-h3": #A8C5E6,
-    "ap-h4": #AAC5A0,
-    "ap-h5": #D1A999,
-    "ap-h6": #D79D9C,
 
+    "ap-red":      #E97193,
+    "ap-green":    #AAC5A0,
+    "ap-blue":     #A8C5E6,
+    "ap-purple":   #DFA7E7,
+    "ap-aqua":     #a8e5e6,
+    "ap-yellow":   #ece0a8,
+    "ap-orange":   #D1A999,
+    
     // extra colors
     "ap-color-strong":#E97193,
     "ap-color-quote": #E97193,
@@ -48,24 +49,35 @@ $theme-colors: (
     // code syntac highlighting
     "ap-code-gray-1":   #5b5c5f,
     "ap-code-gray-2":   #45474c,
-    "ap-code-red":      #E97193,
-    "ap-code-green":    #AAC5A0,
-    "ap-code-blue":     #A8C5E6,
-    "ap-code-purple":   #DFA7E7,
-    "ap-code-aqua":     #a8e5e6,
-    "ap-code-yellow":   #ece0a8,
-    "ap-code-orange":   #D1A999,
+    "ap-code-red":      var(--ap-red),
+    "ap-code-green":    var(--ap-green),
+    "ap-code-blue":     var(--ap-blue),
+    "ap-code-purple":   var(--ap-purple),
+    "ap-code-aqua":     var(--ap-aqua),
+    "ap-code-yellow":   var(--ap-yellow),
+    "ap-code-orange":   var(--ap-orange),
 
     // base colors (text, background, icons ...)
     "ap-color-dp0":     hsl(var(--ap-base1-h), var(--ap-base1-s), calc(var(--ap-base1-l) + 0%)), 
     "ap-color-dp1":     hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l)), 
     "ap-color-dp2":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 10%)), 
-    "ap-color-dp3":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 30%)), 
-    "ap-color-dp4":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 40%)), 
-    "ap-color-dp5":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 50%)), 
-    "ap-color-dp6":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 60%)), 
-    "ap-color-dp7":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 70%)), 
-    "ap-color-dp8":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%)), 
+    "ap-color-dp3":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 20%)), 
+    "ap-color-dp4":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 30%)), 
+    "ap-color-dp5":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 40%)), 
+    "ap-color-dp6":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 50%)), 
+    "ap-color-dp7":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 60%)), 
+    "ap-color-dp8":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 70%)), 
+    "ap-color-dp9":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 80%)), 
+    "ap-color-dp10":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%)), 
+    "ap-color-dp11":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 100%)), 
+
+    // header colors
+    "ap-h1": var(--ap-red),     //#E97193,
+    "ap-h2": var(--ap-purple),  //#DFA7E7,
+    "ap-h3": var(--ap-blue),    //#A8C5E6,
+    "ap-h4": var(--ap-green),   //#AAC5A0,
+    "ap-h5": var(--ap-orange),  //#D1A999,
+    "ap-h6": var(--ap-yellow),  //#D79D9C,
 );
 
 // default text sizin

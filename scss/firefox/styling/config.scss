@@ -1,27 +1,53 @@
-/* order of these files is important and should not be changed */
 
+// import theming and settings
+@import "../main.scss";
+
+// when import ends with ".css" it will be used as a normal css import (source: https://sass-lang.com/documentation/at-rules/import#plain-css-imports)
+/* order of these files is important and should not be changed */
 @import "icons/extension-icons.css";
-@import "window-controls/wc-without-tabline.css";
-@import "hide-tabline.css";
-@import "userChrome-hover.css";
+
+// window contols
+@if ($wc-with-tabline){
+  @import "window-controls/wc-with-tabline.css";
+}
+@else if($wc-right){
+  @import "window-controls/wc-without-tabline-r.css";
+}
+@else{
+  @import "window-controls/wc-without-tabline.css";
+}
+
+// misc
+@if ($hide-tabline){
+  @import "hide-tabline.css";
+}
+
+@if ($hover){
+  @import "userChrome-hover.css";
+}
+
+@if ($wc-windows-patch){
+  @import "window-controls/wc-wt-windowspatch.css";
+}
+
 
 :root { 
-  --dark-0: #0F0F0F;
-  --dark-base: #0f0f0f;
-  --dark-1: #242424;
-  --dark-2: #2E2E2E;
-  --dark-3: #424242;
-  --dark-4: #4D4D4D;
-  --light-0: #FBFCFE;
-  --light-base: #cedcee;
-  --light-1: #BFD1E8;
-  --light-2: #B0C6E3;
-  --light-3: #A1BBDE;
-  --light-4: #92B0D9;
-  --accent: #63cdcf;
-  --yellow: #dbc074;
-  --green: #5cb8a7;
-  --red: #c94f6d;
+  --dark-0: var(--ap-color-dp1);
+  --dark-base: var(--ap-color-dp1);
+  --dark-1: var(--ap-color-dp0);
+  --dark-2: var(--ap-color-dp1);
+  --dark-3: var(--ap-color-dp2);
+  --dark-4: var(--ap-color-dp3);
+  --light-0: var(--ap-color-dp11);
+  --light-base: var(--ap-color-dp10);
+  --light-1: var(--ap-color-dp9);
+  --light-2: var(--ap-color-dp8);
+  --light-3: var(--ap-color-dp6);
+  --light-4: var(--ap-color-dp5);
+  --accent: var(--ap-primary);
+  --yellow: var(--ap-yellow);
+  --green: var(--ap-green);
+  --red: var(--ap-red);
   /* --extension-icon-mask: grayscale(85%) invert(75%) sepia(8%) saturate(862%) hue-rotate(173deg) brightness(88%); */
     
   /* expanded width of the sidebar. 
