@@ -1,0 +1,81 @@
+/* Main sass file that contains the theme */
+
+// theme config
+@import "./settings";
+
+// generate theme config and colors
+body {
+    // Theme settings
+    @each $setting, $value in $theme-settings {
+        --#{$setting}: #{$value};
+    }
+
+    // Theme colors
+    @each $color, $value in $theme-colors {
+        --#{$color}: #{$value};
+    }
+
+    // mobile support config
+
+    // Theme format
+    @each $format, $value in $theme-format {
+        --#{$format}: #{$value};
+    }
+    
+    // Theme fonts
+    @each $font, $value in $theme-fonts {
+        --#{$font}: #{$value};
+    }
+};
+
+@import "../themes/theme_template.scss"; // import theme, their values will overwrite those of the basic settings
+body{
+    @each $style, $value in $template-vars{
+        #{$style}: #{$value};
+    }
+}
+
+@import "./obsidian.scss"; // import obsidian config
+.theme-dark {
+    @each $style, $value in $obsidian-vars {
+        #{$style}: #{$value};
+    } 
+}
+
+//TODO: Change light theme colors
+.theme-light {
+    @each $style, $value in $obsidian-vars {
+        #{$style}: #{$value};
+    } 
+}
+
+
+@import "./apatheia.scss";
+
+/*---------------------------------------
+            Style settings
+---------------------------------------*/
+/* @settings
+
+name: Apatheia 
+id: ap-theme
+settings:
+    - 
+        id: --ap-radius-l
+        title: border radius
+        type: variable-number-slider
+        level: 1
+    - 
+        id: accent
+        title: Accent Color
+        type: variable-color
+        format: hsl-split
+        default: '#007AFF'
+    - 
+        id: text
+        title: UI font
+        description: Font used for the user interface
+        type: variable-text
+        default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+
+*/

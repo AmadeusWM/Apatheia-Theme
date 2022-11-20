@@ -1,0 +1,101 @@
+$theme-settings: (
+    "ap-radius-s": 4px,
+    "ap-radius-m": 8px,
+    "ap-radius-l": 10px,
+    "ap-radius-xl": 16px,
+);
+
+$theme-colors: (
+    // primary color: #F4D7CD
+    "ap-primary-h": 15,
+    "ap-primary-s": 64%,
+    "ap-primary-l": 88%,
+    "ap-primary-d": 80%, // lightness/darkness of accented text/icons
+    "ap-primary": hsl(var(--ap-primary-h), var(--ap-primary-s), var(--ap-primary-l)),
+    // secondary color: #72b69c
+    "ap-secondary-h": 157,
+    "ap-secondary-s": 32%,
+    "ap-secondary-l": 58%,
+    "ap-secondary-d": 70%,
+    "ap-secondary": hsl(var(--ap-secondary-h), var(--ap-secondary-s), var(--ap-secondary-l)),
+    // base 0: #0B0A10
+    "ap-base1-h": 249,
+    "ap-base1-s": 33%,
+    "ap-base1-l": 8%,
+    "ap-base1-d": 10%,
+    "ap-bg0": hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l)),
+    // base 1: #0F0D1A
+    "ap-base0-h": 250,
+    "ap-base0-s": 23%,
+    "ap-base0-l": 5%,
+    "ap-base0-d": 13%, // lightness/darkness of text
+    "ap-bg1": hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l)),
+    // header colors
+    "ap-h1": #E97193,
+    "ap-h2": #DFA7E7,
+    "ap-h3": #A8C5E6,
+    "ap-h4": #AAC5A0,
+    "ap-h5": #D1A999,
+    "ap-h6": #D79D9C,
+
+    // extra colors
+    "ap-color-strong":#E97193,
+    "ap-color-quote": #E97193,
+    "ap-color-italic": #E97193,
+    "ap-color-tag-background": #2c2537,
+    "ap-color-tag-text": #EEEEEE,
+    
+    // code syntac highlighting
+    "ap-code-gray-1": #383a42,
+    "ap-code-gray-2":#383a42,
+    "ap-code-red": #383a42,
+    "ap-code-green":#383a42,
+    "ap-code-blue":#383a42,
+    "ap-code-purple":#383a42,
+    "ap-code-aqua":#383a42,
+    "ap-code-yellow":#383a42,
+    "ap-code-orange":#383a42,
+
+    // base colors (text, background, icons ...)
+    "ap-color-dp0":     hsl(var(--ap-base1-h), var(--ap-base1-s), calc(var(--ap-base1-l) + 0%)), 
+    "ap-color-dp1":     hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l)), 
+    "ap-color-dp2":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 10%)), 
+    "ap-color-dp3":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 30%)), 
+    "ap-color-dp4":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 40%)), 
+    "ap-color-dp5":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 50%)), 
+    "ap-color-dp6":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 60%)), 
+    "ap-color-dp7":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 70%)), 
+    "ap-color-dp8":    hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%)), 
+);
+
+// default text sizin
+$theme-format: (
+    // headers
+    "ap-h1-size": 2.5em,
+    "ap-h2-size": 1.9882em,
+    "ap-h3-size": 1.5811em,
+    "ap-h4-size": 1.2574em,
+    "ap-h5-size": 1em,
+    "ap-h6-size": 0.7953em,
+    
+    // text
+    "ap-size-text": 1em,
+    "ap-size-text-header": 1em,
+    "ap-size-text-item": 1em,
+    
+    // containers
+    "ap-container-padding": 8px,
+    "ap-frame-left": 10px
+);
+
+// default fonts
+$theme-fonts: (
+    // font styles
+    "ap-font-text",
+    "ap-font-interface",
+    "ap-font-title",
+    "ap-font-cursive",
+    "ap-font-bold",
+    "ap-font-link",
+    "ap-font-hashtag",
+);
