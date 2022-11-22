@@ -28,7 +28,7 @@
     }
 };
 
-@import "../themes/theme_template.scss"; // import theme, their values will overwrite those of the basic settings
+@import "../themes/theme_dark.scss"; // import theme, their values will overwrite those of the basic settings
 :root {
     @each $style, $value in $template-vars{
         --#{$style}: #{$value};

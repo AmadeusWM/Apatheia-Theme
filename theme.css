@@ -1,5 +1,5 @@
 /* Main sass file that contains the theme */ /* Main sass file that contains the theme */
-body {
+:root {
   --ap-radius-s: 4px;
   --ap-radius-m: 8px;
   --ap-radius-l: 10px;
@@ -24,12 +24,13 @@ body {
   --ap-base0-l: 5%;
   --ap-base0-d: 13%;
   --ap-bg1: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
-  --ap-h1: #E97193;
-  --ap-h2: #DFA7E7;
-  --ap-h3: #A8C5E6;
-  --ap-h4: #AAC5A0;
-  --ap-h5: #D1A999;
-  --ap-h6: #D79D9C;
+  --ap-red: #E97193;
+  --ap-green: #AAC5A0;
+  --ap-blue: #A8C5E6;
+  --ap-purple: #DFA7E7;
+  --ap-aqua: #a8e5e6;
+  --ap-yellow: #ece0a8;
+  --ap-orange: #D1A999;
   --ap-color-strong: #E97193;
   --ap-color-quote: #E97193;
   --ap-color-italic: #E97193;
@@ -37,22 +38,31 @@ body {
   --ap-color-tag-text: #EEEEEE;
   --ap-code-gray-1: #5b5c5f;
   --ap-code-gray-2: #45474c;
-  --ap-code-red: #E97193;
-  --ap-code-green: #AAC5A0;
-  --ap-code-blue: #A8C5E6;
-  --ap-code-purple: #DFA7E7;
-  --ap-code-aqua: #a8e5e6;
-  --ap-code-yellow: #ece0a8;
-  --ap-code-orange: #D1A999;
-  --ap-color-dp0: hsl(var(--ap-base1-h), var(--ap-base1-s), calc(var(--ap-base1-l) + 0%));
+  --ap-code-red: var(--ap-red);
+  --ap-code-green: var(--ap-green);
+  --ap-code-blue: var(--ap-blue);
+  --ap-code-purple: var(--ap-purple);
+  --ap-code-aqua: var(--ap-aqua);
+  --ap-code-yellow: var(--ap-yellow);
+  --ap-code-orange: var(--ap-orange);
+  --ap-color-dp0: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
   --ap-color-dp1: hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l));
   --ap-color-dp2: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 10%));
-  --ap-color-dp3: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 30%));
-  --ap-color-dp4: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 40%));
-  --ap-color-dp5: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 50%));
-  --ap-color-dp6: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 60%));
-  --ap-color-dp7: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 70%));
-  --ap-color-dp8: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%));
+  --ap-color-dp3: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 20%));
+  --ap-color-dp4: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 30%));
+  --ap-color-dp5: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 40%));
+  --ap-color-dp6: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 50%));
+  --ap-color-dp7: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 60%));
+  --ap-color-dp8: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 70%));
+  --ap-color-dp9: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 80%));
+  --ap-color-dp10: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 95%));
+  --ap-color-dp11: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 100%));
+  --ap-h1: var(--ap-red);
+  --ap-h2: var(--ap-purple);
+  --ap-h3: var(--ap-blue);
+  --ap-h4: var(--ap-green);
+  --ap-h5: var(--ap-orange);
+  --ap-h6: var(--ap-yellow);
   --ap-h1-size: 2.5em;
   --ap-h2-size: 1.9882em;
   --ap-h3-size: 1.5811em;
@@ -73,20 +83,41 @@ body {
   --ap-font-hashtag: ;
 }
 
-/*
-This is a template which you can use to generate new themes
-*/
-body {
-  ap-base0-h: 250;
-  ap-base0-s: 23%;
-  ap-base0-l: 5%;
-  ap-base0-d: 13%;
-  ap-bg0: hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l));
-  ap-base1-h: 249;
-  ap-base1-s: 33%;
-  ap-base1-l: 8%;
-  ap-base1-d: 10%;
-  ap-bg1: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
+:root {
+  --ap-primary-h: 15.3846153846deg;
+  --ap-primary-s: 63.9344262295%;
+  --ap-primary-l: 88.0392156863%;
+  --ap-primary-d: 80%;
+  --ap-primary: #F4D7CD;
+  --ap-secondary-h: 157.0588235294deg;
+  --ap-secondary-s: 31.7757009346%;
+  --ap-secondary-l: 58.0392156863%;
+  --ap-secondary-d: 70%;
+  --ap-secondary: #72b69c;
+  --ap-base0-h: 250deg;
+  --ap-base0-s: 23.0769230769%;
+  --ap-base0-l: 5.0980392157%;
+  --ap-base0-d: 20%;
+  --ap-bg0: #0B0A10;
+  --ap-base1-h: 250deg;
+  --ap-base1-s: 23.0769230769%;
+  --ap-base1-l: 8.0980392157%;
+  --ap-base1-d: 20%;
+  --ap-bg1: #111019;
+  --ap-red: #E97193;
+  --ap-green: #AAC5A0;
+  --ap-blue: #A8C5E6;
+  --ap-purple: #DFA7E7;
+  --ap-aqua: #a8e5e6;
+  --ap-yellow: #ece0a8;
+  --ap-orange: #D1A999;
+  --ap-color-strong: #E97193;
+  --ap-color-quote: #E97193;
+  --ap-color-italic: #E97193;
+  --ap-color-tag-background: #2c2537;
+  --ap-color-tag-text: #EEEEEE;
+  --ap-color-dp0: #111019;
+  --ap-color-dp1: #0B0A10;
 }
 
 .theme-dark {
@@ -109,12 +140,12 @@ body {
   --color-base-20: var(--ap-color-dp0);
   --color-base-25: var(--ap-color-dp0);
   --color-base-30: var(--ap-color-dp0);
-  --color-base-35: var(--ap-color-dp3);
+  --color-base-35: var(--ap-color-dp4);
   --color-base-40: var(--ap-color-dp0);
-  --color-base-50: var(--ap-color-dp5);
-  --color-base-60: var(--ap-color-dp6);
-  --color-base-70: var(--ap-color-dp7);
-  --color-base-100: var(--ap-color-dp8);
+  --color-base-50: var(--ap-color-dp6);
+  --color-base-60: var(--ap-color-dp7);
+  --color-base-70: var(--ap-color-dp10);
+  --color-base-100: var(--ap-color-dp11);
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
@@ -206,12 +237,12 @@ body {
   --color-base-20: var(--ap-color-dp0);
   --color-base-25: var(--ap-color-dp0);
   --color-base-30: var(--ap-color-dp0);
-  --color-base-35: var(--ap-color-dp3);
+  --color-base-35: var(--ap-color-dp4);
   --color-base-40: var(--ap-color-dp0);
-  --color-base-50: var(--ap-color-dp5);
-  --color-base-60: var(--ap-color-dp6);
-  --color-base-70: var(--ap-color-dp7);
-  --color-base-100: var(--ap-color-dp8);
+  --color-base-50: var(--ap-color-dp6);
+  --color-base-60: var(--ap-color-dp7);
+  --color-base-70: var(--ap-color-dp10);
+  --color-base-100: var(--ap-color-dp11);
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
@@ -604,5 +635,3 @@ settings:
         default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
 
 */
-
-/*# sourceMappingURL=theme.css.map */

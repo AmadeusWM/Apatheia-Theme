@@ -2,8 +2,8 @@
 
 $theme-primary: #F4D7CD;
 $theme-secondary: #72b69c;
-$theme-base0: hsl(250, 23%, 6%);
-$theme-base1: hsl(249, 33%, 9%);
+$theme-base0: #11030d;
+$theme-base1: lighten($theme-base0, 1%);
 
 $template-vars: (
     // primary
@@ -33,6 +33,22 @@ $template-vars: (
     "ap-base1-l": color.lightness($theme-base1),
     "ap-base1-d": 13%,
     "ap-bg1": $theme-base1,
+    
+    // colors
+    "ap-red": #E97193,
+    "ap-green": #AAC5A0,
+    "ap-blue": #A8C5E6,
+    "ap-purple": #DFA7E7,
+    "ap-aqua": #a8e5e6,
+    "ap-yellow": #ece0a8,
+    "ap-orange": #D1A999,
+
+    // extra colors
+    "ap-color-strong":#E97193,
+    "ap-color-quote": #E97193,
+    "ap-color-italic": #E97193,
+    "ap-color-tag-background": #2c2537,
+    "ap-color-tag-text": #EEEEEE,
 
     // base colors
     "ap-color-dp0":     $theme-base1, 

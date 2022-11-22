@@ -5,6 +5,8 @@ $theme-settings: (
     "ap-radius-xl": 16px,
 );
 
+// TO-DO: use colors
+
 $theme-colors: (
     // primary color: #F4D7CD
     "ap-primary-h": 15,
@@ -58,7 +60,7 @@ $theme-colors: (
     "ap-code-orange":   var(--ap-orange),
 
     // base colors (text, background, icons ...)
-    "ap-color-dp0":     hsl(var(--ap-base1-h), var(--ap-base1-s), calc(var(--ap-base1-l) + 0%)), 
+    "ap-color-dp0":     hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l)), 
     "ap-color-dp1":     hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l)), 
     "ap-color-dp2":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 10%)), 
     "ap-color-dp3":     hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 20%)), 
