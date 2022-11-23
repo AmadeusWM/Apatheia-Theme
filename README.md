@@ -22,6 +22,8 @@ spicetify apply
 ```
 
 ### VS-code
+
+#### When you change something:
 You'll have to upload it to the vs-code marketplace.
 Follow the docs:
 1. Generate theme repository
