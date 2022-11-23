@@ -10,6 +10,8 @@
     --scrollbar-vertical-size: 8px;
     --cover-border-radius: 8px;
     --os-windows-icon-dodge: 0;
+    /* !change */
+    --buddy-feed-width: 20px;
 }
 
 @font-face {
@@ -468,13 +470,19 @@ html.sidebar-hide-text .main-rootlist-statusIcons {
     --size: 35px !important;
 }
 
+/* !change */
 .main-entityHeader-image {
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .main-entityHeader-metaDataText,
 .main-duration-container {
     color: var(--spice-subtext);
+}
+
+/* !change */
+.view-homeShortcutsGrid-shortcut {
+    background-color: rgba(255,255,255,.04); 
 }
 
 /** Sidebar */

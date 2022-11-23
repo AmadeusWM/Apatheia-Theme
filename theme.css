@@ -431,6 +431,7 @@ Container styling
   border-radius: var(--ap-radius-l);
   padding: 0px;
   margin: var(--ap-container-padding);
+  margin-bottom: 0px;
 }
 
 .mod-root, .nav-folder-title {
@@ -570,6 +571,10 @@ Plugins
   padding: var(--ap-container-padding);
   border-radius: var(--ap-radius-l);
   background-color: var(--color-base-00);
+}
+
+.excalidraw.theme--dark {
+  --theme-filter: invert(100%) !important;
 }
 
 /*---------------------------------------
