@@ -2,9 +2,10 @@
     display: none !important;
 }
 
-toolbox#navigator-toolbox {
+/* change! - removed the bottom border (same color anyways, just missaligns everything) */
+/* toolbox#navigator-toolbox {
     border-bottom: solid var(--dividers) var(--sidebar-shadow-color) !important;
-}
+} */
 
 #nav-bar {
     min-height: 36px !important;

@@ -25,14 +25,14 @@ $template-vars: (
     "ap-base0-s": color.saturation($theme-base0),
     "ap-base0-l": color.lightness($theme-base0),
     "ap-base0-d": 10%,
-    "ap-bg0": $theme-base0,
+    "ap-base0": $theme-base0,
     
     // base 1
     "ap-base1-h": color.hue($theme-base1),
     "ap-base1-s": color.saturation($theme-base1),
     "ap-base1-l": color.lightness($theme-base1),
     "ap-base1-d": 13%,
-    "ap-bg1": $theme-base1,
+    "ap-base1": $theme-base1,
 
     // base colors
     "ap-color-dp0":     $theme-base1, 

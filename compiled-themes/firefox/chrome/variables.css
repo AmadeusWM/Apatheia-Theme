@@ -79,6 +79,9 @@
     --toolbarbutton-active-background: var(--dark-base) !important;
 
     --sidebar-shadow-color: var(--dark-0);
+
+    /* background color when starting firefox, or when loading pages... */
+    --tabpanel-background-color: var(--dark-0) !important;/* /#2B2A33; */
 }
 
 /* light mode */

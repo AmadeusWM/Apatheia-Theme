@@ -186,6 +186,7 @@
     border: 2px solid var(--toolbar-field-focus-border-color) !important;
     padding: 0 !important;
     margin: 0 !important;
+    padding-left: 5px !important;
 }
 
 /* if only focused, don't break out the urlbar */
@@ -206,7 +207,7 @@
     padding: 0 !important;
     border-radius: 8px !important;
     min-height: var(--urlbar-height) !important;
-    /* margin: -4px 0 -1px !important; */
+    padding: 0px 5px !important;
     box-shadow: 5px 4px 16px -10px rgba(0, 0, 0, 0.2), -5px 4px 16px -10px rgba(0, 0, 0, 0.2),
         0 8px 32px -16px rgba(0, 0, 0, 0.6) !important;
     z-index: 99999 !important;
@@ -220,7 +221,8 @@
 #urlbar-input-container,
 #searchbar {
     display: flex !important;
-    align-items: center !important;
+    /* this messes up the margin around the container mode displayer or whatever lol */
+    /* align-items: center !important; */
 }
 
 /* Outer container of url bar*/
@@ -588,7 +590,8 @@
     top: 0 !important;
     bottom: 0 !important;
     background: var(--identity-tab-color) !important;
-    border-radius: 99px !important;
+    /* change! - looks ugly with border-radius */
+    /* border-radius: 99px !important; */
     opacity: 0.1 !important;
 }
 

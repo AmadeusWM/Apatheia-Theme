@@ -25,13 +25,13 @@ $theme-colors: (
     "ap-base1-s": 33%,
     "ap-base1-l": 8%,
     "ap-base1-d": 10%,
-    "ap-bg0": hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l)),
+    "ap-base0": hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l)),
     // base 1: #0F0D1A
     "ap-base0-h": 250,
     "ap-base0-s": 23%,
     "ap-base0-l": 5%,
     "ap-base0-d": 13%, // lightness/darkness of text
-    "ap-bg1": hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l)),
+    "ap-base1": hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l)),
 
     "ap-red":      #E97193,
     "ap-green":    #AAC5A0,
