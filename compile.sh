@@ -8,8 +8,10 @@ sass --no-source-map \
     $BASEDIR/scss/obsidian/main.scss:$BASEDIR/compiled-themes/obsidian/theme.css \
     $BASEDIR/scss/firefox/chrome/config.scss:$BASEDIR/compiled-themes/firefox/chrome/config.css \
     $BASEDIR/scss/firefox/treestyletab/treestyletab.scss:$BASEDIR/compiled-themes/firefox/treestyletab/treestyletab.css \
-    $BASEDIR/scss/vs-code/vs-code-full.scss:$BASEDIR/compiled-themes/vs-code/vs-code-full.css \
-    $BASEDIR/scss/vs-code/vs-code-partial.scss:$BASEDIR/compiled-themes/vs-code/vs-code-partial.css
+    $BASEDIR/scss/vs-code/vs-code-full.scss:$BASEDIR/compiled-themes/vs-code/vs-code-full.json \
+    $BASEDIR/scss/vs-code/vs-code-partial.scss:$BASEDIR/compiled-themes/vs-code/vs-code-partial.json \
+    $BASEDIR/scss/eww-bar/eww.scss:$BASEDIR/compiled-themes/eww-bar/eww/eww.scss \
+    $BASEDIR/scss/spotify/color.scss:$BASEDIR/compiled-themes/spotify/Dribbblish/color.ini
 # obsidian for theme
 sass --no-source-map \
     $BASEDIR/scss/obsidian/main.scss:$BASEDIR/theme.css \

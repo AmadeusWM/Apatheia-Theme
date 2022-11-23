@@ -57,6 +57,10 @@ Compile the theme in `compiled-themes/gtk/Orchis-Theme` with:
 ```bash
 ./install --tweaks black
 ```
+or (when not working with nautilus)
+```bash
+./install --tweaks black -l
+```
 Then change in the following files:
 - `~/.config/gtk-3.0`
 - `~/.config/gtk-4.0`
@@ -66,7 +70,25 @@ the configuration to this:
 gtk-application-prefer-dark-theme=1
 gtk-theme-name = Orchis-Dark
 ```
+and you might have to run: 
+```bash
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
 
+#### Nautilus still not themed?
+Use this patch: (from [here](https://github.com/odziom91/libadwaita-theme-changer))
+```bash
+git clone https://github.com/odziom91/libadwaita-theme-changer.git
+cd libadwaita-theme-changer
+chmod +x libadwaita-tc.py
+./libadwaita-tc.py
+```
+> source: https://github.com/vinceliuice/Orchis-theme/issues/226
+#### Terminal Inside Nautilus
+https://github.com/flozz/nautilus-terminal
+
+### Eww Bar
+Credits to https://github.com/taylor85345
 
 ## Todo
 - [ ] Create Dark and light theme 

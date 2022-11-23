@@ -4,6 +4,22 @@
 
 @import "../themes/theme_dark.scss"; // selected theme
 
+// helper methods
+// useable variables: https://code.visualstudio.com/api/references/theme-color
+@function to-hex($inp_color){
+	$ie-hex: ie_hex_str($inp_color);    //#33039B15
+	$color-hex: unquote('#' + str_slice($ie-hex, 4)); 
+	@return $color-hex;
+}
+
+@function cut-hash($inp_color){
+	$color-str: ie_hex_str($inp_color);    //#33039B15
+	$return-color: unquote(str_slice($color-str, 4)); 
+	@return $return-color;
+}
+
+
+// colors
 $theme-colors: map.merge($theme-colors, $template-vars);
 // base 0
 $ap-base0: map.get($theme-colors, "ap-base0");

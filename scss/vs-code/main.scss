@@ -7,13 +7,6 @@
 
 // vs-code theming docs: https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme
 
-// useable variables: https://code.visualstudio.com/api/references/theme-color
-
-@function to-hex($inp_color){
-	$ie-hex: ie_hex_str($inp_color);    //#33039B15
-	$color-hex: unquote('#' + str_slice($ie-hex, 4)); 
-	@return $color-hex;
-}
 
 // themes settings
 $theme-name: "Apatheia";
