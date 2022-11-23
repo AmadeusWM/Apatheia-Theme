@@ -89,6 +89,7 @@ https://github.com/flozz/nautilus-terminal
 
 ### Eww Bar
 Credits to https://github.com/taylor85345
+Dependency: `eww-wayland`
 
 ## Todo
 - [ ] Create Dark and light theme 
