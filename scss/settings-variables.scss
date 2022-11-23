@@ -5,10 +5,8 @@
 @import "../themes/theme_dark.scss"; // selected theme
 
 $theme-colors: map.merge($theme-colors, $template-vars);
-@debug $theme-colors;
 // base 0
 $ap-base0: map.get($theme-colors, "ap-base0");
-@debug $ap-base0;
 $ap-base0-h: color.hue($ap-base0);
 $ap-base0-s: color.saturation($ap-base0);
 $ap-base0-l: color.lightness($ap-base0);
@@ -21,6 +19,7 @@ $ap-base1-s: color.saturation($ap-base1);
 $ap-base1-l: color.lightness($ap-base1);
 $ap-base1-d: 20%;
 
+// base colors
 $ap-color-dp0:     hsl($ap-base1-h, $ap-base1-s, $ap-base1-l);
 $ap-color-dp1:     hsl($ap-base0-h, $ap-base0-s, $ap-base0-l);
 $ap-color-dp2:     hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 10%));
