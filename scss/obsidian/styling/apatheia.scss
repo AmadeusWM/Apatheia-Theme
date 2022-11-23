@@ -230,6 +230,7 @@ Container styling
 .workspace-tab-container {
   display: flex;
   // overflow: visible;
+  padding-bottom: var(--ap-container-padding);
 }
 
 .workspace-split.mod-root .view-content {
