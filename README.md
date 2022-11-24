@@ -22,8 +22,9 @@ spicetify apply
 ```
 
 ### VS-code
-
-#### When you change something:
+The Apatheia theme can be found on the marketplace. 
+Look up `Apatheia` from `Amadeus Wolf`
+#### Non-default
 You'll have to upload it to the vs-code marketplace.
 Follow the docs:
 1. Generate theme repository
@@ -50,8 +51,6 @@ Follow the docs:
 1. Install the nighttab extension from [here](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
 2. Upload `compiled-themes/firefox/night-tab/night-tab.json`
 3. You'll have to change the colors yourself if you change the theme from the default `theme_dark.scss`
-
-### Eww Bar
 
 ### GTK Theme
 For GTK: [Orchis-Theme](https://github.com/vinceliuice/Orchis-theme)

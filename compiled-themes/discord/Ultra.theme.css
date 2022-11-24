@@ -1,8 +1,26 @@
+/**
+ * @name Ultra
+ * @version 1.0.6
+ * @author TheCommieAxolotl#0001
+ * @authorId 538487970408300544
+ * @description A Smooth, Black theme
+ * @source https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Ultra
+ * @website https://thecommieaxolotl.netlify.app/
+ * @donate https://github.com/sponsors/thecommieaxolotl
+ * @invite g2KnUw7u7N
+*/
+/* Imports */
+@import url("https://discord-custom-covers.github.io/usrbg/dist/usrbg.css");
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/Touchup.css");
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Imports/UserBadges.css");
+@import url("https://maendisease.github.io/BetterDiscordStuff/css/bettterInvites.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source Code Pro:wght@550&display=swap");
+/* Source */
+@import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/Ultra/Clients/betterdiscord.css");
+/* Source: https://betterdiscord.app/theme/Ultra */
+/* Theme Colors Apatheia */
 /* Main sass file that contains the theme */
-@import "icons/extension-icons.css";
-@import "window-controls/wc-without-tabline.css";
-@import "hide-tabline.css";
-@import "userChrome-hover.css";
 :root {
   --ap-radius-s: 4px;
   --ap-radius-m: 8px;
@@ -80,65 +98,46 @@
   --ap-frame-left: 10px;
 }
 
-/* order of these files is important and should not be changed */
-:root {
-  --dark-0: var(--ap-color-dp0);
-  --dark-base: var(--ap-color-dp0);
-  --dark-1: var(--ap-color-dp1);
-  --dark-2: var(--ap-color-dp1);
-  --dark-3: var(--ap-color-dp2);
-  --dark-4: var(--ap-color-dp3);
-  --light-0: var(--ap-color-dp11);
-  --light-base: var(--ap-color-dp11);
-  --light-1: var(--ap-color-dp10);
-  --light-2: var(--ap-color-dp9);
-  --light-3: var(--ap-color-dp8);
-  --light-4: var(--ap-color-dp7);
-  --accent: var(--ap-primary);
-  --yellow: var(--ap-yellow);
-  --green: var(--ap-green);
-  --red: var(--ap-red);
-  /* expanded width of the sidebar. 
-    used for userChrome-static, and hover */
-  --sidebar-width: 250px;
-  /* initial width of the sidebar. 
-    advised not to change since tst css relies on this value*/
-  --sidebar-collapsed-width: 60px;
-  --dividers: 2px;
-  --tl-animation-duration: 200ms;
-  /*--tl-tab-background-gradient: */
-  /* uncomment and add gradient value for selected tab gradient*/
-  /******WINDOW CONTROL PLACEMENT VARS******/
-  --wc-vertical-shift: 16px;
-  /* larger value moves window controls down,*/
-  /* can be negative(moves controls up) */
-  /* Experiemntal: 55px if tabline visible, -25px if tabline hidden */
-  --wc-left-space: 15px; /* add space to the left of window controls*/
-  --wc-right-space: 18px; /* add space to the right of window controls*/
-  /* left-space shifts window-controls */
-  /* if you want to shift window controls to the left: positive value */
-  /* if you want to shift them to the right: smaller or negative value */
-  /* right-space shifts rest of the navbar (forward,backward,urlbar,etc.) to the right */
-  /* if you want to increase/decrease space between window-controls and navbars: */
-  /* set positive/smaller or negative value for right-space*/
+:root,
+.theme-dark {
+  --version1_0_6: none;
+  --text-normal: #dcddde;
+  --text-muted: var(--ap-color-dp8);
+  --text-link: #6e6af6;
+  --text-positive: #50dc7d;
+  --text-warning: #8d4949;
+  --text-danger: #8d4949;
+  --text-brand: #6e6af6;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #c9ced0;
+  --interactive-muted: #4f545c;
+  --background-primary: var(--ap-color-dp0);
+  --background-secondary: var(--ap-color-dp1);
+  --background-secondary-alt: var(--ap-color-dp1);
+  --background-tertiary: var(--ap-color-dp0);
+  --background-accent: var(--ap-color-dp2);
+  --background-floating: var(--ap-color-dp1);
+  --channeltextarea-background: var(--ap-color-dp1);
+  --info-positive-text: #fff;
+  --info-warning-text: #fff;
+  --info-warning-foreground: #6e6af6;
+  --info-danger-text: #fff;
+  --info-help-text: #fff;
+  --status-warning-text: #000;
+  --background-mentioned: #6f6af62c;
+  --background-mentioned-hover: #6f6af615;
+  --background-message-hover: rgba(4, 4, 5, 0.1);
+  --scrollbar-auto-thumb: #6e6af6;
+  --brand-experiment: #6e6af6;
+  --brand-experiment-hover: #6f6af64d;
+  --brand-experiment-560: #6e6af6;
+  --channels-default: var(--ap-color-dp9);
+  --selected-indicator: var(--ap-red);
+  --hover-indicator: var(--ap-primary);
+  --font: "Lato";
+  --code-font: "Source Code Pro";
+  --boost-bar: none;
 }
 
-:root[privatebrowsingmode=temporary] {
-  --dark-0: #1C0E34;
-  --dark-base: #20103c;
-  --dark-1: #2F1D4E;
-  --dark-2: #38225D;
-  --dark-3: #4A2D7B;
-  --dark-4: #53338A;
-  --light-0: #CC6B9C;
-  --light-base: #B9407C;
-  --light-1: #AB3B73;
-  --light-2: #9C3569;
-  --light-3: #8D305E;
-  --light-4: #7D2B54;
-  --accent: #e9207e;
-  --yellow: #C9B336;
-  --green: #36C987;
-  --red: #C9365D;
-  --extension-icon-mask: grayscale(85%) invert(17%) sepia(42%) saturate(2474%) hue-rotate(241deg) brightness(94%) contrast(92%);
-}
+/* Made By The Commie Axolotl */
