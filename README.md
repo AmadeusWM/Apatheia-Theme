@@ -63,8 +63,8 @@ or (when not working with nautilus)
 ./install --tweaks black -l
 ```
 Then change in the following files:
-- `~/.config/gtk-3.0`
-- `~/.config/gtk-4.0`
+- `~/.config/gtk-3.0/settings.ini`
+- `~/.config/gtk-4.0/settings.ini`
 the configuration to this:
 ```conf
 [Settings]

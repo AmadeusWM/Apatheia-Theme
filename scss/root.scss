@@ -5,9 +5,7 @@
 @import "./settings";
 
 // apply selected theme to theme colors
-@import "../themes/theme_dark.scss"; // selected theme
-
-$theme-colors: map.merge($theme-colors, $template-vars);
+@import "./settings-variables.scss"; // selected theme
 
 // generate theme config and colors
 :root {
