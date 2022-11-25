@@ -3,10 +3,12 @@
 // base
 $kit-bg0: to-hex($ap-color-dp0);
 $kit-bg1: to-hex($ap-color-dp1);
+$kit-bg4: to-hex($ap-color-dp4);
+$kit-bg5: to-hex($ap-color-dp5);
 $kit-fg0: to-hex($ap-color-dp11);
 $kit-fg1: to-hex($ap-color-dp10);
 // colorful
-$kit-red:    to-hex($ap-primary);
+$kit-primary:    to-hex($ap-primary);
 $kit-red:    to-hex($ap-red);
 $kit-green:  to-hex($ap-green);
 $kit-blue:   to-hex($ap-blue);
@@ -15,8 +17,7 @@ $kit-aqua:   to-hex($ap-aqua);
 $kit-yellow: to-hex($ap-yellow);
 $kit-orange: to-hex($ap-orange);
 
-/*
-### ^ REMOVE THE PREVIOUS COMMENT FOR THE THEME TO WORK ###
+/* REMOVE THIS LINE
 # vim:ft=kitty
 
 ## name: Catppuccin
@@ -69,35 +70,35 @@ mark3_background #B5E8E0
 #: The 16 terminal colors
 
 #: black
-color0 #6E6C7E
-color8 #988BA2
+color0 #{$kit-bg4}
+color8 #{$kit-bg5}
 
 #: red
-color1 #F28FAD
-color9 #F28FAD
+color1 #{$kit-red}
+color9 #{$kit-red}
 
 #: green
-color2  #ABE9B3
-color10 #ABE9B3
+color2  #{$kit-green}
+color10 #{$kit-green}
 
 #: yellow
-color3  #FAE3B0
-color11 #FAE3B0
+color3  #{$kit-yellow}
+color11 #{$kit-yellow}
 
 #: blue
-color4  #96CDFB
-color12 #96CDFB
+color4  #{$kit-blue}
+color12 #{$kit-blue}
 
 #: magenta
-color5  #F5C2E7
-color13 #F5C2E7
+color5  #{$kit-purple}
+color13 #{$kit-purple}
 
 #: cyan
-color6  #89DCEB
-color14 #89DCEB
+color6  #{$kit-aqua}
+color14 #{$kit-aqua}
 
 #: white
-color7  #D9E0EE
-color15 #D9E0EE
+color7  #{$kit-fg1}
+color15 #{$kit-fg1}
 
 #*/

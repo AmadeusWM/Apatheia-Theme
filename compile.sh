@@ -3,7 +3,6 @@
 BASEDIR=$(dirname "$0")
 
 # many-to-many mode with (source:output) (from https://sass-lang.com/documentation/cli/dart-sass)
- # obsidian 
 sass --no-source-map \
     $BASEDIR/scss/obsidian/main.scss:$BASEDIR/compiled-themes/obsidian/theme.css \
     $BASEDIR/scss/firefox/chrome/config.scss:$BASEDIR/compiled-themes/firefox/chrome/config.css \
@@ -14,7 +13,9 @@ sass --no-source-map \
     $BASEDIR/scss/spotify/color.scss:$BASEDIR/compiled-themes/spotify/Dribbblish/color.ini \
     $BASEDIR/scss/discord/Ultra.theme.scss:$BASEDIR/compiled-themes/discord/Ultra.theme.css \
     $BASEDIR/scss/kitty/kitty-theme.scss:$BASEDIR/compiled-themes/kitty/kitty-theme.conf \
-    $BASEDIR/scss/dunst/dunstrc.scss:$BASEDIR/compiled-themes/dunst/dunstrc
+    $BASEDIR/scss/dunst/dunstrc.scss:$BASEDIR/compiled-themes/dunst/dunstrc \
+    $BASEDIR/scss/rofi/rounded-pink-dark-apatheia.scss:$BASEDIR/compiled-themes/rofi/rounded-pink-dark-apatheia.rasi \
+    $BASEDIR/scss/wofi/style.scss:$BASEDIR/compiled-themes/wofi/style.css
 
 # obsidian for theme
 sass --no-source-map \
