@@ -122,6 +122,7 @@
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
   --tag-background: var(--ap-color-tag-background);
   --tag-color: var(--ap-color-tag-text);
+  --icon-color-focused: var(--color-accent);
   --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
   --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
@@ -219,6 +220,7 @@
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
   --tag-background: var(--ap-color-tag-background);
   --tag-color: var(--ap-color-tag-text);
+  --icon-color-focused: var(--color-accent);
   --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
   --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
@@ -571,38 +573,7 @@ Plugins
 
 .theme-dark,
 .excalidraw.theme--dark {
-  --interactive-normal: var(--bg3);
-  --interactive-accent-rgb: 66, 66, 66;
-  --active-line-bg: rgba(255, 255, 255, 0.04);
-  --background-modifier-cover: hsla(var(--ap-base1-h), var(--ap-base1-s), calc(var(--ap-base1-d) - 12%), 0.7);
-  --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
-  /* Errors */
-  --background-modifier-error: rgba(255, 20, 20, 0.12);
-  --background-modifier-error-hover: rgba(255, 20, 20, 0.18);
-  /* Shadows */
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --btn-shadow-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Excalidraw Plugin */
-body .excalidraw,
-body .excalidraw.theme--dark {
-  --color-primary-light:var(--text-selection);
-  --color-primary:var(--interactive-accent);
-  --color-primary-chubb:var(--interactive-accent-hover);
-  --color-primary-darker:var(--interactive-accent-hover);
-  --color-primary-darkest:var(--interactive-accent-hover);
-  --ui-font:var(--font-interface);
-  --island-bg-color:var(--background-secondary);
-  --button-gray-1:var(--background-tertiary);
-  --button-gray-2:var(--background-tertiary);
-  --focus-highlight-color:var(--background-modifier-border-focus);
-  --default-bg-color:var(--background-primary);
-  --input-border-color:var(--background-modifier-border);
-  --link-color:var(--text-accent);
-  --overlay-bg-color:rgba(255, 255, 255, 0.88);
-  --text-primary-color:var(--text-normal);
+  --theme-filter: invert(98%) hue-rotate(180deg);
 }
 
 /*---------------------------------------

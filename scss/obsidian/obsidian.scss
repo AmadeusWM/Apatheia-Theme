@@ -49,6 +49,7 @@ $obsidian-vars: (
     "--tag-background": var(--ap-color-tag-background),
     "--tag-color": var(--ap-color-tag-text),
 
+    "--icon-color-focused": var(--color-accent),
     // text
     "--text-muted": hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%)),
     "--text-faint": hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%)),
