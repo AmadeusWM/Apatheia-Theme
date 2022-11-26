@@ -1,0 +1,115 @@
+@use "sass:string";
+@use "sass:map";
+
+$test: "hello";
+
+
+
+
+@function createSetting($id, $title, $type, $default, $format: "", $description: ""){
+    $setting: ();
+    @debug $setting;
+    $setting: map-merge($setting, ("id": $id));
+
+    $setting: map-merge($setting, ("title": $title));
+    $setting: map-merge($setting, ("type": $type));
+    $setting: map-merge($setting, ("default": $default));
+
+    @if $format {
+        $setting: map-merge($setting, ("format": $format));
+    }
+    @if $description {
+        $setting: map-merge($setting, ("description": $description));
+    }
+    
+    @return $setting;
+
+}
+@function createOption($value, $label: None){
+    @return (
+        "label": $label,
+        "value": $value
+    );
+}
+
+@function addOption($setting, $options){
+
+    @return map-merge($setting, ("options": $options));
+}
+
+@function generateOptionString($values){
+    $string: "";
+
+    @each $option in $values {
+        @if map-get($map: $option, $key: "label") {
+            $value: map-get($map: $option, $key: "value");
+            $label: map-get($map: $option, $key: "label");
+
+            $string: str-insert($string: #{"\d\9\9-\d"}, $insert: $string, $index: 0);  // - 
+            $string: str-insert($string: #{"\9\9" + "label:" + $label + "\d"}, $insert: $string, $index: 0);  // label
+            $string: str-insert($string: #{"\9\9" + "value:" + $value + "\d"}, $insert: $string, $index: 0);  // value
+        }
+        @else {
+            
+            $string: str-insert($string: #{"\9\9-" + $key + "\d"}, $insert: $string, $index: 0);  // value
+        }
+    }
+    @return $string;
+}
+
+// generate the settings string for a setting
+@function generateString($settings, $tabs) {
+    $string: "\9-\d";
+    @each $key, $value in $settings {
+        // check if option setting is selected
+        @if $key == "options" {
+            // add option field
+            $string: str-insert($string: #{"\9\9" + $key + ":"}, $insert: $string, $index: 0); // options
+
+            // add options
+            $optionstring: generateOptionString($value);
+            $string: str-insert($string: $optionstring, $insert: $string, $index: 0); // options 
+        }
+        @else {
+            @debug $key;
+            @debug $value;
+            $string: str-insert($string: #{"\9\9" + $key + ":" + $value "\d"}, $insert: $string, $index: 0);
+        }
+    };
+    @return $string;
+}
+
+// generate all settings
+@function generateSettings($settings) {
+    $string: "";
+    @each $setting in $settings {
+        $result: generateString($setting, "\9\9");
+        $string: str-insert($string: $result, $insert: $string, $index: 0);
+    }
+
+
+    @return $string;
+}
+
+$theme-variant: createSetting("a-theme", "Theme variant", "class-select", "apatheia");
+$theme-variant: addOption($theme-variant, (createOption("a-theme-dark", "Dark theme"), createOption("a-theme-dracula", "Dracula theme")));
+
+$setting-border-radius: createSetting("--a-border-radius", "Border radius", "variable-number-slider", "");
+// $theme-variant: addOption($theme-variant, (createOption("a-theme-dark", "Dark theme"), createOption("a-theme-dracula", "Dracula theme")));
+
+$settings: (
+    $theme-variant,
+    $setting-border-radius
+);
+
+
+$return: generateSettings($settings);
+
+/* @settings
+
+name: Apatheia
+id: apatheia
+settings:
+#{$return}
+
+*/
