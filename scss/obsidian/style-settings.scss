@@ -1,11 +1,6 @@
 @use "sass:string";
 @use "sass:map";
 
-$test: "hello";
-
-
-
-
 @function createSetting($id, $title, $type, $default, $format: "", $description: ""){
     $setting: ();
     @debug $setting;
@@ -91,25 +86,3 @@ $test: "hello";
     @return $string;
 }
 
-$theme-variant: createSetting("a-theme", "Theme variant", "class-select", "apatheia");
-$theme-variant: addOption($theme-variant, (createOption("a-theme-dark", "Dark theme"), createOption("a-theme-dracula", "Dracula theme")));
-
-$setting-border-radius: createSetting("--a-border-radius", "Border radius", "variable-number-slider", "");
-// $theme-variant: addOption($theme-variant, (createOption("a-theme-dark", "Dark theme"), createOption("a-theme-dracula", "Dracula theme")));
-
-$settings: (
-    $theme-variant,
-    $setting-border-radius
-);
-
-
-$return: generateSettings($settings);
-
-/* @settings
-
-name: Apatheia
-id: apatheia
-settings:
-#{$return}
-
-*/

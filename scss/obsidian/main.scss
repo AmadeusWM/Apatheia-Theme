@@ -1,4 +1,5 @@
 /* Main sass file that contains the theme */
+@use "./style-settings" as ss;
 
 // theme config
 @import "../root.scss";
@@ -17,11 +18,36 @@
     } 
 }
 
+
 @import "./styling/apatheia.scss";
 
 /*---------------------------------------
             Style settings
 ---------------------------------------*/
+
+// standard settings
+$theme-variant: ss.createSetting("a-theme", "Theme variant", "class-select", "apatheia");
+$theme-variant: ss.addOption($theme-variant, (ss.createOption("a-theme-dark", "Dark theme"), ss.createOption("a-theme-dracula", "Dracula theme")));
+
+$setting-border-radius: ss.createSetting("--a-border-radius", "Border radius", "variable-number-slider", "");
+
+// settings list
+$settings: (
+    $theme-variant,
+    $setting-border-radius
+);
+
+// generate settings
+$style-settings: ss.generateSettings($settings);
+
+/* @settings
+
+name: Apatheia
+id: ap-theme
+settings:
+#{$style-settings}
+*/
+
 /* @settings
 
 name: Apatheia 
