@@ -29,9 +29,9 @@
 $theme-variant: ss.createSetting("a-theme", "Theme variant", "class-select", "apatheia");
 $theme-variant: ss.addOption($theme-variant, (ss.createOption("a-theme-dark", "Dark theme"), ss.createOption("a-theme-dracula", "Dracula theme")));
 
-$setting-border-radius-small: ss.createSetting("--ap-radius-s", "Border radius S", "variable-number-slider", 4);
-$setting-border-radius-medium: ss.createSetting("--ap-radius-m", "Border radius M", "variable-number-slider", 8);
-$setting-border-radius-large: ss.createSetting("--ap-radius-l", "Border radius L", "variable-number-slider", 10);
+$setting-border-radius-small: ss.createSetting("ap-radius-s", "Border radius S", "variable-number-slider", 4, "px");
+$setting-border-radius-medium: ss.createSetting("ap-radius-m", "Border radius M", "variable-number-slider", 8, "px");
+$setting-border-radius-large: ss.createSetting("ap-radius-l", "Border radius L", "variable-number-slider", 10, "px");
 
 // settings list
 $settings: (
