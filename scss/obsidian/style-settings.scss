@@ -1,7 +1,9 @@
 @use "sass:string";
 @use "sass:map";
 
-@function createSetting($id, $title, $type, $default, $format: "", $description: ""){
+$yaml-tab: "\9\9";
+
+@function createSetting($id, $title, $type, $default, $format: None, $description: None){
     $setting: ();
     @debug $setting;
     $setting: map-merge($setting, ("id": $id));
@@ -10,10 +12,10 @@
     $setting: map-merge($setting, ("type": $type));
     $setting: map-merge($setting, ("default": $default));
 
-    @if $format {
+    @if $format != None{
         $setting: map-merge($setting, ("format": $format));
     }
-    @if $description {
+    @if $description != None{
         $setting: map-merge($setting, ("description": $description));
     }
     
@@ -40,13 +42,12 @@
             $value: map-get($map: $option, $key: "value");
             $label: map-get($map: $option, $key: "label");
 
-            $string: str-insert($string: #{"\d\9\9-\d"}, $insert: $string, $index: 0);  // - 
-            $string: str-insert($string: #{"\9\9" + "label:" + $label + "\d"}, $insert: $string, $index: 0);  // label
-            $string: str-insert($string: #{"\9\9" + "value:" + $value + "\d"}, $insert: $string, $index: 0);  // value
+            $string: str-insert($string: #{"\d" + $yaml-tab + $yaml-tab + $yaml-tab + "-\d"}, $insert: $string, $index: 0);  // - 
+            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + $yaml-tab + "label: " + $label + "\d"}, $insert: $string, $index: 0);  // label
+            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + $yaml-tab + "value: " + $value + "\d"}, $insert: $string, $index: 0);  // value
         }
         @else {
-            
-            $string: str-insert($string: #{"\9\9-" + $key + "\d"}, $insert: $string, $index: 0);  // value
+            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + $key + "\d"}, $insert: $string, $index: 0);  // value
         }
     }
     @return $string;
@@ -54,12 +55,12 @@
 
 // generate the settings string for a setting
 @function generateString($settings, $tabs) {
-    $string: "\9-\d";
+    $string: $yaml-tab + "-\d";
     @each $key, $value in $settings {
         // check if option setting is selected
         @if $key == "options" {
             // add option field
-            $string: str-insert($string: #{"\9\9" + $key + ":"}, $insert: $string, $index: 0); // options
+            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $key + ":"}, $insert: $string, $index: 0); // options
 
             // add options
             $optionstring: generateOptionString($value);
@@ -68,7 +69,7 @@
         @else {
             @debug $key;
             @debug $value;
-            $string: str-insert($string: #{"\9\9" + $key + ":" + $value "\d"}, $insert: $string, $index: 0);
+            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $key + ": " + $value "\d"}, $insert: $string, $index: 0);
         }
     };
     @return $string;
