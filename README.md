@@ -22,13 +22,16 @@ spicetify apply
 ```
 ### Discord (Better Discord)
 install from AUR: `betterdiscordctl`
+
 #### Discord Snap Install
 ```bash
 betterdiscordctl --d-install snap install 
 ```
+
 ### VS-code
 The Apatheia theme can be found on the marketplace. 
 Look up `Apatheia` from `Amadeus Wolf`
+
 #### Non-default
 You'll have to upload it to the vs-code marketplace.
 Follow the docs:
