@@ -265,6 +265,10 @@ Container styling
   background-color: var(--color-base-20);
 }
 
+.workspace-leaf-content .view-content {
+  padding: var(--ap-container-padding);
+}
+
 // file select
 .workspace-tab-header {}
 

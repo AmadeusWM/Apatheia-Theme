@@ -517,6 +517,10 @@ Container styling
   background-color: var(--color-base-20);
 }
 
+.workspace-leaf-content .view-content {
+  padding: var(--ap-container-padding);
+}
+
 .workspace .mod-root .workspace-tab-header {
   -webkit-app-region: no-drag;
   flex: 1 1 0;
@@ -588,3 +592,5 @@ id: ap-theme
 settings:
 		-				id: a-theme 				title: Theme variant 				type: class-select 				default: apatheia 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				type: variable-number-slider 				default: 4 				format: px 		-				id: ap-radius-m 				title: Border radius M 				type: variable-number-slider 				default: 8 				format: px 		-				id: ap-radius-l 				title: Border radius L 				type: variable-number-slider 				default: 10 				format: px 
 */
+
+/*# sourceMappingURL=theme.css.map */
