@@ -20,7 +20,12 @@ spicetify config current_theme Dribbblish color_scheme base
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
-
+### Discord (Better Discord)
+install from AUR: `betterdiscordctl`
+#### Discord Snap Install
+```bash
+betterdiscordctl --d-install snap install 
+```
 ### VS-code
 The Apatheia theme can be found on the marketplace. 
 Look up `Apatheia` from `Amadeus Wolf`
@@ -49,8 +54,9 @@ Follow the docs:
 
 #### Night Tab
 1. Install the nighttab extension from [here](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
-2. Upload `compiled-themes/firefox/night-tab/night-tab.json`
-3. You'll have to change the colors yourself if you change the theme from the default
+2. Go to night tab settings (top right), and then the data tab
+3. Import `compiled-themes/firefox/night-tab/night-tab.json`
+4. You'll have to change the colors yourself if you change the theme from the default
 
 ### GTK Theme
 For GTK: [Orchis-Theme](https://github.com/vinceliuice/Orchis-theme)
