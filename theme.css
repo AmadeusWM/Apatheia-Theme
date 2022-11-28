@@ -567,6 +567,8 @@ Plugins
 =========================================*/
 #calendar-container {
   padding: var(--ap-container-padding);
+  margin: 0px;
+  padding: 0px;
   border-radius: var(--ap-radius-l);
   background-color: var(--color-base-00);
 }
