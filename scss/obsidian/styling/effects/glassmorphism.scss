@@ -1,0 +1,34 @@
+@mixin glassmorphism {
+
+    // change colors
+    background: linear-gradient(120deg,
+            var(--ap-color-dp1),
+            var(--ap-color-dp2), 70%,
+            var(--ap-color-dp1));
+
+    // border variable
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+}
+
+@mixin glassmorphism-inline {
+    // change colors
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+.glassMorphism #calendar-container,
+.glassMorphism .view-header,
+.glassMorphism .nav-folder.mod-root,
+.glassMorphism .nav-header .nav-buttons-container,
+
+.glassMorphism .workspace-split.mod-root .view-content {
+    @include glassmorphism;
+}
+
+.glassMorphism .nav-file-title,
+.nav-folder-title,
+.nav-folder {
+    @include glassmorphism-inline;
+}
