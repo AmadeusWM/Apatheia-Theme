@@ -51,8 +51,8 @@ $ap-color-dp6:     hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 50%));
 $ap-color-dp7:     hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 60%));
 $ap-color-dp8:     hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 70%));
 $ap-color-dp9:     hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 80%));
-$ap-color-dp10:    hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 95%));
-$ap-color-dp11:    hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 100%));
+$ap-color-dp10:    hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 85%));
+$ap-color-dp11:    hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 90%));
 
 // colorful
 $ap-red:      map.get($theme-colors, "ap-red");

@@ -1,14 +1,14 @@
 # Apatheia theme
 ## Compile all themes with:
 ```bash
-./config.sh
+./compile.sh
 ```
 
 ## How To Apply Generated Themes
 All generated themes are stored in `compiled-themes`
 
 ### Spotify (Spicetify)
-Install spicetify.
+Install spicetify. (AUR: `spicetify-cli`)
 Copy `compiled-themes/spotify/Dribbblish` to `~/.config/spicetify/Themes` (or wherever your spicetify configurations are stored)
 Then:
 ```bash
@@ -20,10 +20,18 @@ spicetify config current_theme Dribbblish color_scheme base
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
+### Discord (Better Discord)
+install from AUR: `betterdiscordctl`
+
+#### Discord Snap Install
+```bash
+betterdiscordctl --d-install snap install 
+```
 
 ### VS-code
 The Apatheia theme can be found on the marketplace. 
 Look up `Apatheia` from `Amadeus Wolf`
+
 #### Non-default
 You'll have to upload it to the vs-code marketplace.
 Follow the docs:
@@ -44,13 +52,14 @@ Follow the docs:
 2. Visit `Preferences` with `ctrl+shift+a>Tree Style Tab>Preferences`
 3. Scroll to the bottom, and Press `Import` in `All Configs`
 4. Import the `config.json` from `compiled-themes/treestyletab/config.json`
-5. Then go to `Advanced>Extra style rules for contents provided by Tree Style Tab`
-6. Choose `Load from file` and upload the following `Firefox Theming/treestyletab/custom-hover.css`
+5. Then go to `Advanced` and scroll down
+6. Choose `Load from file` and upload the following `Firefox Theming/treestyletab/treestyletab.css`
 
 #### Night Tab
 1. Install the nighttab extension from [here](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
-2. Upload `compiled-themes/firefox/night-tab/night-tab.json`
-3. You'll have to change the colors yourself if you change the theme from the default `theme_dark.scss`
+2. Go to night tab settings (top right), and then the data tab
+3. Import `compiled-themes/firefox/night-tab/night-tab.json`
+4. You'll have to change the colors yourself if you change the theme from the default
 
 ### GTK Theme
 For GTK: [Orchis-Theme](https://github.com/vinceliuice/Orchis-theme)

@@ -11,9 +11,9 @@ window {
   padding: 4px 10px;
   margin: 4px;
   border: none;
-  color: white;
+  color: #e2e0ec;
   font-weight: bold;
-  background-color: white;
+  background-color: #f1f0f5;
   background: linear-gradient(90deg, #E97193 0%, #f09db5 100%);
   outline: none;
   border-radius: 15px;
@@ -45,7 +45,7 @@ window {
 }
 
 #text:selected {
-  color: white;
+  color: #f1f0f5;
   margin: 0px 0px;
   border: none;
   border-radius: 15px;

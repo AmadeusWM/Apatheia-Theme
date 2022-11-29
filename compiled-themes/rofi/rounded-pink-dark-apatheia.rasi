@@ -3,8 +3,8 @@
     bg1:    #0B0A10;
     bg2:    #161420;
     bg3:    #E97193;
-    fg0:    #FFFFFF;
-    fg1:    #FFFFFF;
+    fg0:    #F1F0F5;
+    fg1:    #E2E0EC;
     fg2:    #D3D0E2;
     fg3:    #B6B1CE;
 }

@@ -302,7 +302,7 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = 	"#111019" # "#0f0f0f"
-    foreground = 	"#FFFFFF" # "#89b4fa"
+    foreground = 	"#F1F0F5" # "#89b4fa"
     frame_color = 	"#0B0A10" # "#89b4fa"
     timeout = 3
     # script = ~/.scripts/dunst/sound-normal.sh
@@ -311,7 +311,7 @@
 
 [urgency_normal]
     background = 	"#111019" # "#0f0f0f"
-    foreground = 	"#FFFFFF" # "#a6e3a1"
+    foreground = 	"#F1F0F5" # "#a6e3a1"
     frame_color = 	"#0B0A10" # "#a6e3a1"
     timeout = 5
     # script = ~/.scripts/dunst/sound-normal.sh
