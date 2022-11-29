@@ -272,10 +272,6 @@
   --radius-xl: var(--ap-radius-xl);
 }
 
-:hover {
-  transition: background 0.2s;
-}
-
 /* H2 styling */
 h2,
 .HyperMD-header.HyperMD-header-2.cm-line {
@@ -506,12 +502,17 @@ Container styling
 .workspace-split.mod-root {
   padding: 0;
   border-radius: var(--ap-radius-l);
+  background-color: None;
 }
 
 .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
 .mod-root .workspace-tabs .workspace-leaf {
   background-color: var(--color-base-20);
   margin: var(--ap-container-padding);
+}
+
+.workspace-split.mod-root {
+  background-color: var(--color-base-20);
 }
 
 .workspace-leaf-content .view-content {
@@ -569,11 +570,33 @@ Plugins
 #calendar-container {
   padding: var(--ap-container-padding);
   border-radius: var(--ap-radius-l);
+  background-color: var(--ap-color-dp1);
 }
 
 .theme-dark,
 .excalidraw.theme--dark {
   --theme-filter: invert(98%) hue-rotate(180deg);
+}
+
+/*---------------------------------------
+            Effects            
+--------------------------------------*/
+.glassMorphism #calendar-container,
+.glassMorphism .view-header,
+.glassMorphism .nav-folder.mod-root,
+.glassMorphism .nav-header .nav-buttons-container,
+.glassMorphism .workspace-split.mod-root .view-content {
+  background: linear-gradient(120deg, var(--ap-color-dp1), var(--ap-color-dp2), 70%, var(--ap-color-dp1));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+
+.glassMorphism .nav-file-title,
+.nav-folder-title,
+.nav-folder {
+  background: transparent;
+  backdrop-filter: blur(15px);
 }
 
 /*---------------------------------------
@@ -584,5 +607,5 @@ Plugins
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: a-theme 				title: Theme variant 				type: class-select 				default: apatheia 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				type: variable-number-slider 				default: 4 				format: px 		-				id: ap-radius-m 				title: Border radius M 				type: variable-number-slider 				default: 8 				format: px 		-				id: ap-radius-l 				title: Border radius L 				type: variable-number-slider 				default: 10 				format: px 
+		-				id: a-theme 				title: Theme variant 				type: class-select 				default: apatheia 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				type: variable-number-slider 				default: 4 				format: px 		-				id: ap-radius-m 				title: Border radius M 				type: variable-number-slider 				default: 8 				format: px 		-				id: ap-radius-l 				title: Border radius L 				type: variable-number-slider 				default: 10 				format: px 		-				id: glassMorphism 				title: glassmorphism 				type: class-toggle 				default: test 
 */

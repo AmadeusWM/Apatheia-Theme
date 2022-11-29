@@ -1,6 +1,3 @@
-:hover {
-  transition: background .2s;
-}
 /* H2 styling */
 h2,
 .HyperMD-header.HyperMD-header-2.cm-line {
@@ -256,6 +253,7 @@ Container styling
 .workspace-split.mod-root {
   padding: 0;
   border-radius: var(--ap-radius-l);
+  background-color: None;
 }
 
 .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
@@ -265,7 +263,7 @@ Container styling
 }
 
 .workspace-split.mod-root {
-  // background-color: var(--color-base-20);
+  background-color: var(--color-base-20);
 }
 
 .workspace-leaf-content .view-content {
@@ -342,7 +340,7 @@ Plugins
 #calendar-container {
   padding: var(--ap-container-padding);
   border-radius: var(--ap-radius-l);
-  // background-color: var(--color-base-00);
+  background-color: var(--ap-color-dp1);
 }
 
 .theme-dark,
