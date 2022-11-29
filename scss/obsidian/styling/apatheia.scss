@@ -1,3 +1,6 @@
+:hover {
+  transition: background .2s;
+}
 /* H2 styling */
 h2,
 .HyperMD-header.HyperMD-header-2.cm-line {
@@ -194,12 +197,12 @@ Container styling
 .backlink-pane,
 .outgoing-link-pane {
   margin: var(--ap-container-padding);
-  background-color: var(--color-base-00);
+  // background-color: var(--color-base-00);
   border-radius: var(--ap-radius-l);
 }
 
 .workspace-ribbon.mod-left {
-  background-color: var(--color-base-00);
+  // background-color: var(--color-base-00);
   border-radius: var(--ap-radius-l);
   margin: calc(var(--header-height) + var(--ap-container-padding)) var(--ap-container-padding) var(--ap-container-padding) var(--ap-container-padding);
 }
@@ -243,7 +246,7 @@ Container styling
 }
 
 .workspace-split.mod-root .view-content {
-  background-color: var(--color-base-00);
+  // background-color: var(--color-base-00);
   border-radius: var(--ap-radius-l);
   padding: var(--ap-container-padding);
   margin-top: var(--ap-container-padding);
@@ -262,7 +265,7 @@ Container styling
 }
 
 .workspace-split.mod-root {
-  background-color: var(--color-base-20);
+  // background-color: var(--color-base-20);
 }
 
 .workspace-leaf-content .view-content {
@@ -339,7 +342,7 @@ Plugins
 #calendar-container {
   padding: var(--ap-container-padding);
   border-radius: var(--ap-radius-l);
-  background-color: var(--color-base-00);
+  // background-color: var(--color-base-00);
 }
 
 .theme-dark,
