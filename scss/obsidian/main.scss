@@ -6,9 +6,6 @@
 
 // theme config
 @import "../root.scss";
-
-
-
 /*---------------------------------------
             Style settings
 ---------------------------------------*/
@@ -26,14 +23,25 @@ $theme-style-settings: (); // list of all theme style settings
 
 @import "./styling/themes/test.scss";
 
-$settings: list.append($settings, ss.CreateHeading("a-standard-settings", "Standard settings", "Basic config settings"));
+$settings: list.append($settings, ss.CreateHeading("a-theme-settings", "Theme settings", "Change them appearance here"));
 $settings: list.append($settings, ss.CreateClassSelect("theme-dark", "Theme variant", "Select theme variant", "apatheia", $theme-select));
-
+// loop over all the theme settings
+@each $theme-setting, $theme-setting-settings in $theme-style-settings {
+    
+    // add header
+    $settings: list.append($settings, $theme-setting);
+    
+    // loop over all the settings from a theme
+    @each $setting in $theme-setting-settings {
+        // add contents
+        $settings: list.append($settings, $setting); 
+    }
+}
 /*---------------------------------------
             Effects            
 --------------------------------------*/
 $settings: list.append($settings,
-    ss.CreateHeading("a-effect-settings", "Effects", "Add effects")
+    ss.CreateHeading("a-effect-settings", "Effects", "Add effects", 1)
 );
 @import "./styling/effects/glassmorphism.scss";
 

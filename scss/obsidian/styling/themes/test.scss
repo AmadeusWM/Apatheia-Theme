@@ -10,8 +10,9 @@ $theme-colors: (
     "ap-primary-h": 15,
     "ap-primary-s": 64%,
     "ap-primary-l": 88%,
-    "ap-primary-d": 80%, // lightness/darkness of accented text/icons
-    "ap-primary": #EEEEEE, 
+    "ap-primary-d": 80%,
+    // lightness/darkness of accented text/icons
+    "ap-primary": #EEEEEE,
     // secondary color: #72b69c
     "ap-secondary-h": 157,
     "ap-secondary-s": 32%,
@@ -28,56 +29,63 @@ $theme-colors: (
     "ap-base0-h": 250,
     "ap-base0-s": 23%,
     "ap-base0-l": 5%,
-    "ap-base0-d": 13%, // lightness/darkness of text
-    "ap-base1": #370617, 
+    "ap-base0-d": 13%,
+    // lightness/darkness of text
+    "ap-base1": #370617,
 
-    "ap-red":      #E97193,
-    "ap-green":    #AAC5A0,
-    "ap-blue":     #A8C5E6,
-    "ap-purple":   #DFA7E7,
-    "ap-aqua":     #a8e5e6,
-    "ap-yellow":   #ece0a8,
-    "ap-orange":   #D1A999,
-    
+    "ap-red": #E97193,
+    "ap-green": #AAC5A0,
+    "ap-blue": #A8C5E6,
+    "ap-purple": #DFA7E7,
+    "ap-aqua": #a8e5e6,
+    "ap-yellow": #ece0a8,
+    "ap-orange": #D1A999,
+
     // extra colors
     "ap-color-strong":#E97193,
     "ap-color-quote": #E97193,
     "ap-color-italic": #E97193,
     "ap-color-tag-background": #2c2537,
     "ap-color-tag-text": #EEEEEE,
-    
+
     // code syntac highlighting
-    "ap-code-gray-1":   #5b5c5f,
-    "ap-code-gray-2":   #45474c,
-    "ap-code-red":      var(--ap-red),
-    "ap-code-green":    var(--ap-green),
-    "ap-code-blue":     var(--ap-blue),
-    "ap-code-purple":   var(--ap-purple),
-    "ap-code-aqua":     var(--ap-aqua),
-    "ap-code-yellow":   var(--ap-yellow),
-    "ap-code-orange":   var(--ap-orange),
+    "ap-code-gray-1": #5b5c5f,
+    "ap-code-gray-2": #45474c,
+    "ap-code-red": var(--ap-red),
+    "ap-code-green": var(--ap-green),
+    "ap-code-blue": var(--ap-blue),
+    "ap-code-purple": var(--ap-purple),
+    "ap-code-aqua": var(--ap-aqua),
+    "ap-code-yellow": var(--ap-yellow),
+    "ap-code-orange": var(--ap-orange),
 
     // base colors (text, background, icons ...)
     "ap-color-dp0": #10002b,
-    "ap-color-dp1": #240046,    
-    "ap-color-dp2": #3c096c,    
-    "ap-color-dp3":    #5a189a,
+    "ap-color-dp1": #240046,
+    "ap-color-dp2": #3c096c,
+    "ap-color-dp3": #5a189a,
     "ap-color-dp4": #7b2cbf,
-    "ap-color-dp5":    #03071e, 
-    "ap-color-dp6":    #03071e, 
-    "ap-color-dp7":    #03071e, 
-    "ap-color-dp8":    #03071e, 
-    "ap-color-dp9":    #03071e, 
-    "ap-color-dp10":   #03071e, 
-    "ap-color-dp11":   #e0aaff, 
+    "ap-color-dp5": #03071e,
+    "ap-color-dp6": #03071e,
+    "ap-color-dp7": #03071e,
+    "ap-color-dp8": #03071e,
+    "ap-color-dp9": #03071e,
+    "ap-color-dp10": #03071e,
+    "ap-color-dp11": #e0aaff,
 
     // header colors
-    "ap-h1": #ffba08,     //#E97193,
-    "ap-h2": var(--ap-purple),  //#DFA7E7,
-    "ap-h3": var(--ap-blue),    //#A8C5E6,
-    "ap-h4": var(--ap-green),   //#AAC5A0,
-    "ap-h5": var(--ap-orange),  //#D1A999,
-    "ap-h6": var(--ap-yellow),  //#D79D9C,
+    "ap-h1": #ffba08,
+    //#E97193,
+    "ap-h2": var(--ap-purple),
+    //#DFA7E7,
+    "ap-h3": var(--ap-blue),
+    //#A8C5E6,
+    "ap-h4": var(--ap-green),
+    //#AAC5A0,
+    "ap-h5": var(--ap-orange),
+    //#D1A999,
+    "ap-h6": var(--ap-yellow),
+    //#D79D9C,
 );
 
 // default text sizin
@@ -89,12 +97,12 @@ $theme-format: (
     "ap-h4-size": 1.2574em,
     "ap-h5-size": 1em,
     "ap-h6-size": 0.7953em,
-    
+
     // text
     "ap-size-text": 1em,
     "ap-size-text-header": 1em,
     "ap-size-text-item": 1em,
-    
+
     // containers
     "ap-container-padding": 8px,
     "ap-frame-left": 10px
@@ -102,14 +110,20 @@ $theme-format: (
 
 // generate theme variables
 .theme-dark.a-theme-purple {
+
     @each $var,
-    $value in $theme-colors{ 
+    $value in $theme-colors {
         --#{$var}: #{$value};
-    }; 
+    }
+
+    ;
+
     @each $var,
     $value in o-var.$obsidian-vars {
         #{$var}: #{$value};
-    };
+    }
+
+    ;
 }
 
 // add list
@@ -117,6 +131,7 @@ $theme-select: list.append($theme-select,
         ss.CreateOption("a-theme-purple", "👾 Purple"));
 
 // theme style settings
-$theme-style-settings: list.append($theme-style-settings,
-        ss.CreateHeading("a-theme-test-settings", "Test theme settings", "Settings for the test theme", 2),
-    );
+$theme-style-settings: map.set($theme-style-settings, ss.CreateHeading("a-theme-purple-settings", "Test theme settings", "Settings for the test theme", 2),
+        ( // options
+            ss.CreateClassToggle("a-theme-purple-test", "Toggle test", "toggle to test"),
+        ));
