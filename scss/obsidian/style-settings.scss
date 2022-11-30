@@ -1,43 +1,117 @@
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
 @use "sass:string";
 @use "sass:map";
+@use "sass:meta";
 
 $yaml-tab: "\9\9";
-
-@function createSetting($id, $title, $type, $default, $format: None, $description: None){
-    $setting: ();
-    @debug $setting;
-    $setting: map-merge($setting, ("id": $id));
-
-    $setting: map-merge($setting, ("title": $title));
-    $setting: map-merge($setting, ("type": $type));
-    $setting: map-merge($setting, ("default": $default));
-
-    @if $format != None{
-        $setting: map-merge($setting, ("format": $format));
-    }
-    @if $description != None{
-        $setting: map-merge($setting, ("description": $description));
-    }
-    
-    @return $setting;
-
+/* ----------------------------
+        Style Functions
+---------------------------- */
+@function CreateHeading($id, $title, $description, $level: 1, $collapsed: false){
+    $map: createDefaultSetting($id, $title, $description, "heading");
+    $map: map-merge($map1: $map, $map2: (
+        "level": $level,
+        "collapsed": $collapsed
+    ));
+    @return $map;
 }
-@function createOption($value, $label: None){
+@function CreateClassToggle($id, $title, $description){
+    $map: createDefaultSetting($id, $title, $description, "class-toggle");
+    @return $map;
+}
+@function CreateClassSelect($id, $title, $description, $default, $options, $allowEmpty: false){
+    $map: createDefaultSetting($id, $title, $description, "class-select");
+    $map: map-merge($map1: $map, $map2: (
+        "default": $default,
+        "allowEmpty": $allowEmpty,
+        "options": $options
+    ));
+    @return $map;
+}
+@function CreateVariableText($id, $title, $description, $default){
+    $map: createDefaultSetting($id, $title, $description, "variable-text");
+    $map: map-merge($map1: $map, $map2: (
+        "default": $default,
+    ));
+    @return $map;
+}
+@function CreateVariableNumber($id, $title, $description, $default, $format: px){
+    $map: createDefaultSetting($id, $title, $description, "variable-number");
+    $map: map-merge($map1: $map, $map2: (
+        "default": $default,
+        "format": $format,
+    ));
+    @return $map;
+}
+@function CreateVariableNumberSlider($id, $title, $description, $default, $min, $max, $step: 1, $format: px){
+    $map: createDefaultSetting($id, $title, $description, "variable-number-slider");
+    $map: map-merge($map1: $map, $map2: (
+        "default": $default,
+        "min": $min,
+        "max": $max,
+        "step": $step,
+        "format": $format
+    ));
+    @return $map;
+}
+@function CreateVariableSelect($id, $title, $description, $default, $options){
+    $map: createDefaultSetting($id, $title, $description, "variable-text");
+    $map: map-merge($map1: $map, $map2: (
+        "default": $default,
+        "options": $options
+    ));
+    @return $map;
+}
+@function CreateVariableColor($id, $title, $description, $default, $options, $opacity: false, $format: hex){
+    $map: createDefaultSetting($id, $title, $description, "variable-color");
+    $map: map-merge($map1: $map, $map2: (
+        "default": $level,
+        "opacity": $opacity,
+        "format": $format,
+        "options": $options
+    ));
+    @return $map;
+}
+
+/* ----------------------------
+        Private Functions
+---------------------------- */
+// 
+@function createSettingsMap($map, $settings...){
+    @each $setting in $settings {
+        $map: map-merge($map1: $map, $map2: $setting);
+    }
+
+    @return $map;
+}
+
+@function createDefaultSetting($id, $title, $description, $type){
+    $setting: ();
+    $setting: map-merge($setting, ("id": $id));
+    $setting: map-merge($setting, ("title": $title));
+    $setting: map-merge($setting, ("description": $description));
+    $setting: map-merge($setting, ("type": $type));
+    @return $setting;
+}
+
+@function CreateOption($value, $label: None){
     @return (
         "label": $label,
         "value": $value
     );
 }
 
-@function addOption($setting, $options){
-
-    @return map-merge($setting, ("options": $options));
-}
-
 @function generateOptionString($values){
     $string: "";
 
     @each $option in $values {
+        // $option: meta.call($option);
         @if map-get($map: $option, $key: "label") {
             $value: map-get($map: $option, $key: "value");
             $label: map-get($map: $option, $key: "label");
@@ -67,8 +141,6 @@ $yaml-tab: "\9\9";
             $string: str-insert($string: $optionstring, $insert: $string, $index: 0); // options 
         }
         @else {
-            @debug $key;
-            @debug $value;
             $string: str-insert($string: #{$yaml-tab + $yaml-tab + $key + ": " + $value "\d"}, $insert: $string, $index: 0);
         }
     };
@@ -82,7 +154,6 @@ $yaml-tab: "\9\9";
         $result: generateString($setting, "\9\9");
         $string: str-insert($string: $result, $insert: $string, $index: 0);
     }
-
 
     @return $string;
 }

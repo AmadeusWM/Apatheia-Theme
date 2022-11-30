@@ -5,17 +5,22 @@
 @import "../root.scss";
 
 @import "./obsidian.scss"; // import obsidian config
+
 .theme-dark {
-    @each $style, $value in $obsidian-vars {
+
+    @each $style,
+    $value in $obsidian-vars {
         #{$style}: #{$value};
-    } 
+    }
 }
 
 //TODO: Change light theme colors
 .theme-light {
-    @each $style, $value in $obsidian-vars {
+
+    @each $style,
+    $value in $obsidian-vars {
         #{$style}: #{$value};
-    } 
+    }
 }
 
 
@@ -30,14 +35,15 @@
 ---------------------------------------*/
 
 // standard settings
-$theme-variant: ss.createSetting("a-theme", "Theme variant", "class-select", "apatheia");
-$theme-variant: ss.addOption($theme-variant, (ss.createOption("a-theme-dark", "Dark theme"), ss.createOption("a-theme-dracula", "Dracula theme")));
+$theme-variant: ss.CreateClassSelect("a-theme", "Theme variant", "Select theme variant", "apatheia", (
+    ss.CreateOption("a-theme-dark", "Dark theme"),
+    ss.CreateOption("a-theme-dracula", "Dracula theme"),
+));
 
-$setting-border-radius-small: ss.createSetting("ap-radius-s", "Border radius S", "variable-number-slider", 4, "px");
-$setting-border-radius-medium: ss.createSetting("ap-radius-m", "Border radius M", "variable-number-slider", 8, "px");
-$setting-border-radius-large: ss.createSetting("ap-radius-l", "Border radius L", "variable-number-slider", 10, "px");
 
-$effect-glassmorphism: ss.createSetting("glassMorphism", "glassmorphism", "class-toggle", "test");
+$setting-border-radius-small: ss.CreateVariableNumberSlider("ap-radius-s", "Border radius S", "variable-number-slider", 4, 0, 20, "px");
+$setting-border-radius-medium: ss.CreateVariableNumberSlider("ap-radius-m", "Border radius M", "variable-number-slider", 8, 0, 20, "px");
+$setting-border-radius-large: ss.CreateVariableNumberSlider("ap-radius-l", "Border radius L", "variable-number-slider", 10, 0, 20, "px");
 
 // settings list
 $settings: (
@@ -45,7 +51,7 @@ $settings: (
     $setting-border-radius-small,
     $setting-border-radius-medium,
     $setting-border-radius-large,
-    $effect-glassmorphism,
+    // $effect-glassmorphism,
 );
 
 // generate settings

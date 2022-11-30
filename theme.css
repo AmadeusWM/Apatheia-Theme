@@ -1,3 +1,16 @@
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
 /* Main sass file that contains the theme */ /* Main sass file that contains the theme */
 :root {
   --ap-radius-s: 4px;
@@ -607,5 +620,5 @@ Plugins
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: a-theme 				title: Theme variant 				type: class-select 				default: apatheia 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				type: variable-number-slider 				default: 4 				format: px 		-				id: ap-radius-m 				title: Border radius M 				type: variable-number-slider 				default: 8 				format: px 		-				id: ap-radius-l 				title: Border radius L 				type: variable-number-slider 				default: 10 				format: px 		-				id: glassMorphism 				title: glassmorphism 				type: class-toggle 				default: test 
+		-				id: a-theme 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: apatheia 				allowEmpty: false 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 
 */
