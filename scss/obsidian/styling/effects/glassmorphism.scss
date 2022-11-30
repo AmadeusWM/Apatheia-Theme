@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "../../style-settings.scss" as ss;
+
 @mixin glassmorphism {
 
     // change colors
@@ -22,7 +25,6 @@
 .glassMorphism .view-header,
 .glassMorphism .nav-folder.mod-root,
 .glassMorphism .nav-header .nav-buttons-container,
-
 .glassMorphism .workspace-split.mod-root .view-content {
     @include glassmorphism;
 }
@@ -32,3 +34,7 @@
 .nav-folder {
     @include glassmorphism-inline;
 }
+
+$settings: list.append($settings, (
+    ss.CreateClassToggle("glassMorphism", "Glassmorphism", "Add glassmorphism to your theme")
+));

@@ -1,3 +1,5 @@
+/* Main sass file that contains the theme */ /* Main sass file that contains the theme */
+@import url("./styling/themes/*");
 /*
 This is a simple function library to generate Obsidian Style settings with scss.
 @author @Zenneh
@@ -11,7 +13,6 @@ For reference, check the Obsidian style settings repo
 /* ----------------------------
         Private Functions
 ---------------------------- */
-/* Main sass file that contains the theme */ /* Main sass file that contains the theme */
 :root {
   --ap-radius-s: 4px;
   --ap-radius-m: 8px;
@@ -592,8 +593,27 @@ Plugins
 }
 
 /*---------------------------------------
+            Style settings
+---------------------------------------*/
+/*---------------------------------------
+            Themes            
+--------------------------------------*/
+/*---------------------------------------
             Effects            
 --------------------------------------*/
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
 .glassMorphism #calendar-container,
 .glassMorphism .view-header,
 .glassMorphism .nav-folder.mod-root,
@@ -612,13 +632,10 @@ Plugins
   backdrop-filter: blur(15px);
 }
 
-/*---------------------------------------
-            Style settings
----------------------------------------*/
 /* @settings
 
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: a-theme 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: apatheia 				allowEmpty: false 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 
+		-				id: a-standard-settings 				title: Standard settings 				description: Basic config settings 				type: heading 				level: 1 				collapsed: false 		-				id: a-theme 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: apatheia 				allowEmpty: false 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: false 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 
 */

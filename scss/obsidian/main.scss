@@ -1,6 +1,5 @@
 /* Main sass file that contains the theme */
 @use "./style-settings" as ss;
-
 // theme config
 @import "../root.scss";
 
@@ -24,39 +23,41 @@
 }
 
 
+// default theme
 @import "./styling/apatheia.scss";
+/*---------------------------------------
+            Style settings
+---------------------------------------*/
+$settings: (
+
+    // standard settings
+    ss.CreateHeading("a-standard-settings", "Standard settings", "Basic config settings"),
+    ss.CreateClassSelect("a-theme", "Theme variant", "Select theme variant", "apatheia", (
+        ss.CreateOption("a-theme-dark", "Dark theme"),
+        ss.CreateOption("a-theme-dracula", "Dracula theme"))),
+
+    ss.CreateVariableNumberSlider("ap-radius-s", "Border radius S", "variable-number-slider", 4, 0, 20, "px"),
+    ss.CreateVariableNumberSlider("ap-radius-m", "Border radius M", "variable-number-slider", 8, 0, 20, "px"),
+    ss.CreateVariableNumberSlider("ap-radius-l", "Border radius L", "variable-number-slider", 10, 0, 20, "px"),
+
+    ss.CreateHeading("a-effect-settings", "Effects", "Add effects")
+    
+);
+
+/*---------------------------------------
+            Themes            
+--------------------------------------*/
+@import url("./styling/themes/*");
 
 /*---------------------------------------
             Effects            
 --------------------------------------*/
 @import "./styling/effects/glassmorphism.scss";
-/*---------------------------------------
-            Style settings
----------------------------------------*/
 
-// standard settings
-$theme-variant: ss.CreateClassSelect("a-theme", "Theme variant", "Select theme variant", "apatheia", (
-    ss.CreateOption("a-theme-dark", "Dark theme"),
-    ss.CreateOption("a-theme-dracula", "Dracula theme"),
-));
-
-
-$setting-border-radius-small: ss.CreateVariableNumberSlider("ap-radius-s", "Border radius S", "variable-number-slider", 4, 0, 20, "px");
-$setting-border-radius-medium: ss.CreateVariableNumberSlider("ap-radius-m", "Border radius M", "variable-number-slider", 8, 0, 20, "px");
-$setting-border-radius-large: ss.CreateVariableNumberSlider("ap-radius-l", "Border radius L", "variable-number-slider", 10, 0, 20, "px");
-
-// settings list
-$settings: (
-    $theme-variant,
-    $setting-border-radius-small,
-    $setting-border-radius-medium,
-    $setting-border-radius-large,
-    // $effect-glassmorphism,
-);
 
 // generate settings
 $style-settings: ss.generateSettings($settings);
-
+@debug $style-settings;
 /* @settings
 
 name: Apatheia
