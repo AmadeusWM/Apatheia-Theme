@@ -1,10 +1,48 @@
 /* Main sass file that contains the theme */
 @use "./style-settings" as ss;
+@use "sass:string";
+@use "sass:map";
+@use "sass:list";
+
 // theme config
 @import "../root.scss";
 
-@import "./obsidian.scss"; // import obsidian config
 
+
+/*---------------------------------------
+            Style settings
+---------------------------------------*/
+$settings: (
+    ss.CreateVariableNumberSlider("ap-radius-s", "Border radius S", "variable-number-slider", 4, 0, 20, "px"),
+    ss.CreateVariableNumberSlider("ap-radius-m", "Border radius M", "variable-number-slider", 8, 0, 20, "px"),
+    ss.CreateVariableNumberSlider("ap-radius-l", "Border radius L", "variable-number-slider", 10, 0, 20, "px"),
+);
+
+/*---------------------------------------
+            Themes            
+--------------------------------------*/
+$theme-select: (); // list of all themes
+$theme-style-settings: (); // list of all theme style settings
+
+@import "./styling/themes/test.scss";
+
+$settings: list.append($settings, ss.CreateHeading("a-standard-settings", "Standard settings", "Basic config settings"));
+$settings: list.append($settings, ss.CreateClassSelect("theme-dark", "Theme variant", "Select theme variant", "apatheia", $theme-select));
+
+/*---------------------------------------
+            Effects            
+--------------------------------------*/
+$settings: list.append($settings,
+    ss.CreateHeading("a-effect-settings", "Effects", "Add effects")
+);
+@import "./styling/effects/glassmorphism.scss";
+
+
+// default theme
+
+@import "./styling/apatheia.scss";
+
+@import "./obsidian.scss"; // import obsidian config
 .theme-dark {
 
     @each $style,
@@ -21,38 +59,6 @@
         #{$style}: #{$value};
     }
 }
-
-
-// default theme
-@import "./styling/apatheia.scss";
-/*---------------------------------------
-            Style settings
----------------------------------------*/
-$settings: (
-
-    // standard settings
-    ss.CreateHeading("a-standard-settings", "Standard settings", "Basic config settings"),
-    ss.CreateClassSelect("a-theme", "Theme variant", "Select theme variant", "apatheia", (
-        ss.CreateOption("a-theme-dark", "Dark theme"),
-        ss.CreateOption("a-theme-dracula", "Dracula theme"))),
-
-    ss.CreateVariableNumberSlider("ap-radius-s", "Border radius S", "variable-number-slider", 4, 0, 20, "px"),
-    ss.CreateVariableNumberSlider("ap-radius-m", "Border radius M", "variable-number-slider", 8, 0, 20, "px"),
-    ss.CreateVariableNumberSlider("ap-radius-l", "Border radius L", "variable-number-slider", 10, 0, 20, "px"),
-
-    ss.CreateHeading("a-effect-settings", "Effects", "Add effects")
-    
-);
-
-/*---------------------------------------
-            Themes            
---------------------------------------*/
-@import url("./styling/themes/*");
-
-/*---------------------------------------
-            Effects            
---------------------------------------*/
-@import "./styling/effects/glassmorphism.scss";
 
 
 // generate settings
