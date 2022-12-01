@@ -19,12 +19,13 @@ $settings: (
             Themes            
 --------------------------------------*/
 $theme-select: (); // list of all themes
+$theme-select: list.append($theme-select, ss.CreateOption("a-theme-apatheia", "Apatheia"));
 $theme-style-settings: (); // list of all theme style settings
 
 @import "./styling/themes/test.scss";
 
 $settings: list.append($settings, ss.CreateHeading("a-theme-settings", "Theme settings", "Change them appearance here"));
-$settings: list.append($settings, ss.CreateClassSelect("theme-dark", "Theme variant", "Select theme variant", "apatheia", $theme-select));
+$settings: list.append($settings, ss.CreateClassSelect("theme-dark", "Theme variant", "Select theme variant", "a-theme-apatheia", $theme-select));
 // loop over all the theme settings
 @each $theme-setting, $theme-setting-settings in $theme-style-settings {
     
@@ -51,7 +52,8 @@ $settings: list.append($settings,
 @import "./styling/apatheia.scss";
 
 @import "./obsidian.scss"; // import obsidian config
-.theme-dark {
+.theme-dark,
+.theme-dark.a-theme-apatheia {
 
     @each $style,
     $value in $obsidian-vars {
