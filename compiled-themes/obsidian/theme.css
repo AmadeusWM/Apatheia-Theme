@@ -12,32 +12,32 @@ For reference, check the Obsidian style settings repo
 /* ----------------------------
         Private Functions
 ---------------------------- */
-/* Main sass file that contains the theme */ /* Main sass file that contains the theme */
+/* Main sass file that contains the theme */
 :root {
   --ap-radius-s: 4px;
   --ap-radius-m: 8px;
   --ap-radius-l: 10px;
   --ap-radius-xl: 16px;
-  --ap-primary-h: 15.3846153846deg;
-  --ap-primary-s: 63.9344262295%;
-  --ap-primary-l: 88.0392156863%;
+  --ap-primary-h: 15;
+  --ap-primary-s: 64%;
+  --ap-primary-l: 88%;
   --ap-primary-d: 80%;
-  --ap-primary: #F4D7CD;
-  --ap-secondary-h: 157.0588235294deg;
-  --ap-secondary-s: 31.7757009346%;
-  --ap-secondary-l: 58.0392156863%;
+  --ap-primary: hsl(var(--ap-primary-h), var(--ap-primary-s), var(--ap-primary-l));
+  --ap-secondary-h: 157;
+  --ap-secondary-s: 32%;
+  --ap-secondary-l: 58%;
   --ap-secondary-d: 70%;
-  --ap-secondary: #72b69c;
-  --ap-base1-h: 250deg;
-  --ap-base1-s: 23.0769230769%;
-  --ap-base1-l: 8.0980392157%;
-  --ap-base1-d: 20%;
-  --ap-base0: #0B0A10;
-  --ap-base0-h: 250deg;
-  --ap-base0-s: 23.0769230769%;
-  --ap-base0-l: 5.0980392157%;
-  --ap-base0-d: 20%;
-  --ap-base1: #111019;
+  --ap-secondary: hsl(var(--ap-secondary-h), var(--ap-secondary-s), var(--ap-secondary-l));
+  --ap-base1-h: 249;
+  --ap-base1-s: 33%;
+  --ap-base1-l: 8%;
+  --ap-base1-d: 10%;
+  --ap-base0: hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l));
+  --ap-base0-h: 250;
+  --ap-base0-s: 23%;
+  --ap-base0-l: 5%;
+  --ap-base0-d: 13%;
+  --ap-base1: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
   --ap-red: #E97193;
   --ap-green: #AAC5A0;
   --ap-blue: #A8C5E6;
@@ -59,8 +59,8 @@ For reference, check the Obsidian style settings repo
   --ap-code-aqua: var(--ap-aqua);
   --ap-code-yellow: var(--ap-yellow);
   --ap-code-orange: var(--ap-orange);
-  --ap-color-dp0: #111019;
-  --ap-color-dp1: #0B0A10;
+  --ap-color-dp0: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
+  --ap-color-dp1: hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l));
   --ap-color-dp2: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 5%));
   --ap-color-dp3: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 10%));
   --ap-color-dp4: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 15%));
@@ -88,8 +88,15 @@ For reference, check the Obsidian style settings repo
   --ap-size-text-item: 1em;
   --ap-container-padding: 8px;
   --ap-frame-left: 10px;
+  --ap-font-text: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-interface: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-monospace: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-title: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-header: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-hashtag: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
 }
 
+/* Main sass file that contains the theme */
 /*---------------------------------------
             Style settings
 ---------------------------------------*/
@@ -232,10 +239,10 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -307,6 +314,7 @@ For reference, check the Obsidian style settings repo
   --ap-aqua: #94e2d5;
   --ap-yellow: #f9e2af;
   --ap-orange: #fab387;
+  --ap-pink: #f5c2e7;
   --ap-color-strong: #f5c2e7;
   --ap-color-quote: #f5c2e7;
   --ap-color-italic: #f5c2e7;
@@ -333,7 +341,7 @@ For reference, check the Obsidian style settings repo
   --ap-color-dp9: hsl(240deg, 21.0526315789%, 94.9019607843%);
   --ap-color-dp10: hsl(240deg, 21.0526315789%, 99.9019607843%);
   --ap-color-dp11: hsl(240deg, 21.0526315789%, 100%);
-  --ap-h1: #ffba08;
+  --ap-h1: var(--ap-pink);
   --ap-h2: var(--ap-purple);
   --ap-h3: var(--ap-blue);
   --ap-h4: var(--ap-green);
@@ -402,10 +410,10 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -477,6 +485,7 @@ For reference, check the Obsidian style settings repo
   --ap-aqua: #94e2d5;
   --ap-yellow: #f9e2af;
   --ap-orange: #fab387;
+  --ap-pink: #f5c2e7;
   --ap-color-strong: #f5c2e7;
   --ap-color-quote: #f5c2e7;
   --ap-color-italic: #f5c2e7;
@@ -503,7 +512,7 @@ For reference, check the Obsidian style settings repo
   --ap-color-dp9: hsl(249.2307692308deg, 33.3333333333%, 87.6470588235%);
   --ap-color-dp10: hsl(249.2307692308deg, 33.3333333333%, 92.6470588235%);
   --ap-color-dp11: hsl(249.2307692308deg, 33.3333333333%, 97.6470588235%);
-  --ap-h1: #ffba08;
+  --ap-h1: var(--ap-pink);
   --ap-h2: var(--ap-purple);
   --ap-h3: var(--ap-blue);
   --ap-h4: var(--ap-green);
@@ -572,10 +581,10 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -640,6 +649,103 @@ For reference, check the Obsidian style settings repo
   backdrop-filter: blur(15px);
 }
 
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
+/* Smooth Live Headers by Luke242#8485 */
+@keyframes indent {
+  from {
+    transform: translateX(calc(-1 * var(--header-offset)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes outdent {
+  from {
+    transform: translateX(var(--header-offset));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.smoothIndent .is-live-preview .cm-widgetBuffer + .cm-header {
+  animation: outdent 275ms ease-out;
+  display: inline-block;
+}
+
+.smoothIndent .is-live-preview .cm-widgetBuffer + .cm-header.cm-formatting {
+  animation: opac 275ms ease-in;
+}
+
+.smoothIndent .is-live-preview .cm-active .cm-header + .cm-header {
+  animation: indent 275ms ease-out;
+  display: inline-block;
+}
+
+.cm-header-1 {
+  --header-offset: 2rem;
+}
+
+.cm-header-2 {
+  --header-offset: 3rem;
+}
+
+.cm-header-3 {
+  --header-offset: 3rem;
+}
+
+.cm-header-4 {
+  --header-offset: 3rem;
+}
+
+.cm-header-5 {
+  --header-offset: 3rem;
+}
+
+.cm-header-6 {
+  --header-offset: 3rem;
+}
+
+.Fade.modal,
+.Fade.snw-ref-title-popover,
+.Fade.menu,
+.Fade.popover,
+.Fade.prompt,
+.Fade.workspace-split.mod-vertical.mod-root .workspace-tabs:not(.mod-stacked) .view-content {
+  animation: 0.2s fade cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Hover * {
+  transition: background-color 0.1s ease-in;
+}
+
 /* H2 styling */
 h2,
 .HyperMD-header.HyperMD-header-2.cm-line {
@@ -652,6 +758,33 @@ h2,
 .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
 .markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
   font-family: var(--ap-font-hashtag);
+}
+
+h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.HyperMD-list-line .cm-header-1,
+h2,
+.markdown-rendered h2,
+.HyperMD-header-2,
+.HyperMD-list-line .cm-header-2,
+h3,
+.markdown-rendered h3,
+.HyperMD-header-3,
+.HyperMD-list-line .cm-header-3,
+h4,
+.markdown-rendered h4,
+.HyperMD-header-4,
+.HyperMD-list-line .cm-header-4,
+h5,
+.markdown-rendered h5,
+.HyperMD-header-5,
+.HyperMD-list-line .cm-header-5,
+h6,
+.markdown-rendered h6,
+.HyperMD-header-6,
+.HyperMD-list-line .cm-header-6 {
+  font-family: var(--ap-font-header);
 }
 
 /* Blockquote */
@@ -1011,10 +1144,10 @@ Plugins
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -1045,6 +1178,9 @@ Plugins
   --radius-xl: var(--ap-radius-xl);
 }
 
+/*---------------------------------------
+            Fonts            
+--------------------------------------*/
 .theme-light {
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
@@ -1109,10 +1245,10 @@ Plugins
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -1148,5 +1284,5 @@ Plugins
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change theme appearance here 				type: heading 				level: 1 				collapsed: false 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple						-								label: 🌿 Catpuccin Mocha								value: a-catpuccin-mocha						-								label: ☕ Catpuccin Espresso								value: a-catpuccin-espresso		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: false 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: false 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 
+		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change theme appearance here 				type: heading 				level: 1 				collapsed: true 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple						-								label: 🌿 Catpuccin Mocha								value: a-catpuccin-mocha						-								label: ☕ Catpuccin Espresso								value: a-catpuccin-espresso		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: true 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: true 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 		-				id: smoothIndent 				title: Smooth indent 				description: Smooth Indent headers. Vim users may experience weird glitches 				type: class-toggle 		-				id: Fade 				title: Fade 				description: Fade 				type: class-toggle 		-				id: Hover 				title: Hover effect 				description: On hover transition on components 				type: class-toggle 		-				id: a-font-settings 				title: Fonts 				description: Select fonts 				type: heading 				level: 1 				collapsed: true 		-				id: ap-font-title 				title: Title font 				description: Change title font 				type: variable-select 				default: Open sans 				options:						-								label: Open sans								value: Open Sans
 */
