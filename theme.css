@@ -232,10 +232,10 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -374,6 +374,27 @@ For reference, check the Obsidian style settings repo
 
 .cm-header-6 {
   --header-offset: 3rem;
+}
+
+.Fade.modal,
+.Fade.snw-ref-title-popover,
+.Fade.menu,
+.Fade.popover,
+.Fade.prompt,
+.Fade.workspace-split.mod-vertical.mod-root .workspace-tabs:not(.mod-stacked) .view-content {
+  animation: 0.2s fade cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Hover * {
+  transition: background-color 0.1s ease-in;
 }
 
 /* H2 styling */
@@ -747,10 +768,10 @@ Plugins
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -781,6 +802,9 @@ Plugins
   --radius-xl: var(--ap-radius-xl);
 }
 
+/*---------------------------------------
+            Fonts            
+--------------------------------------*/
 .theme-light {
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
@@ -845,10 +869,10 @@ Plugins
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
   --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
@@ -884,5 +908,5 @@ Plugins
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change them appearance here 				type: heading 				level: 1 				collapsed: true 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: true 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: true 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 		-				id: smoothIndent 				title: Smooth indent 				description: Smooth Indent headers. Vim users may experience weird glitches 				type: class-toggle 
+		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change them appearance here 				type: heading 				level: 1 				collapsed: true 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: true 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: true 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 		-				id: smoothIndent 				title: Smooth indent 				description: Smooth Indent headers. Vim users may experience weird glitches 				type: class-toggle 		-				id: Fade 				title: Fade 				description: Fade 				type: class-toggle 		-				id: Hover 				title: Hover effect 				description: On hover transition on components 				type: class-toggle 		-				id: a-font-settings 				title: Fonts 				description: Select fonts 				type: heading 				level: 1 				collapsed: true 
 */

@@ -46,6 +46,8 @@ $settings: list.append($settings,
 );
 @import "./styling/effects/glassmorphism.scss";
 @import "./styling/effects/smoothIndent.scss";
+@import "./styling/effects/fade.scss";
+@import "./styling/effects/hover.scss";
 
 // default theme
 
@@ -60,8 +62,13 @@ $settings: list.append($settings,
         #{$style}: #{$value};
     }
 }
+/*---------------------------------------
+            Fonts            
+--------------------------------------*/
+$settings: list.append($settings,
+    ss.CreateHeading("a-font-settings", "Fonts", "Select fonts", 1)
+);
 
-//TODO: Change light theme colors
 .theme-light {
 
     @each $style,
