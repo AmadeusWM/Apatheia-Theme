@@ -13,13 +13,11 @@ window {
   border: none;
   color: #e2e0ec;
   font-weight: bold;
-  background-color: #f1f0f5;
-  background: linear-gradient(90deg, #E97193 0%, #f09db5 100%);
+  background-color: #161420;
   outline: none;
   border-radius: 15px;
   margin: 10px;
   margin-bottom: 2px;
-  background-color: rgba(1, 1, 1, 0.9);
 }
 
 #inner-box {

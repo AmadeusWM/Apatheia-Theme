@@ -19,13 +19,12 @@ window {
     border: none;
     color: rgba($ap-color-dp10, 1);
     font-weight: bold;
-    background-color: rgba($ap-color-dp11, 1);
-    background: linear-gradient(90deg, $ap-red 0%, lighten($ap-red, 10%) 100%);
+    background-color: rgba($ap-color-dp2, 1);
+    // background: linear-gradient(90deg, $ap-red 0%, lighten($ap-red, 10%) 100%);
    	outline: none;
     border-radius: 15px;
     margin: 10px;
     margin-bottom: 2px;
-    background-color: rgba(0.7, 0.7, 0.7, 0.9);
 }
 
 #inner-box {
