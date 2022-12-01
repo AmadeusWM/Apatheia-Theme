@@ -1,18 +1,21 @@
- * {
-    bg0:    #111019;
-    bg1:    #0B0A10;
-    bg2:    #161420;
-    bg3:    #E97193;
-    fg0:    #F1F0F5;
-    fg1:    #E2E0EC;
-    fg2:    #D3D0E2;
-    fg3:    #B6B1CE;
-}
+ *     ,
+ * 107 |     "ap-font-text": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+ *     |     ============== first key
+ * ... |
+ * 112 |     "ap-font-text":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+ *     |     ^^^^^^^^^^^^^^ second key
+ *     '
+ *   scss/settings.scss 112:5                       @import
+ *   scss/settings-variables.scss 3:9               @import
+ *   scss/rofi/rounded-pink-dark-apatheia.scss 2:9  root stylesheet */
 
-@import "rounded-common.rasi"
-//REMOVE THIS LINE*/
-/*******************************************************************************
- * ROUNDED THEME FOR ROFI 
- * User                 : LR-Tech               
- * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
- *******************************************************************************/
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Duplicate key.\a     \2577 \a 107 \2502      \"ap-font-text\": \"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif\",\a     \2502      \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  first key\a... \2502 \a 112 \2502      \"ap-font-text\":\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif\",\a     \2502      ^^^^^^^^^^^^^^ second key\a     \2575 \a   scss/settings.scss 112:5                       @import\a   scss/settings-variables.scss 3:9               @import\a   scss/rofi/rounded-pink-dark-apatheia.scss 2:9  root stylesheet";
+}

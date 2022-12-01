@@ -56,6 +56,7 @@ $theme-colors: (
     "ap-aqua": #94e2d5,
     "ap-yellow": #f9e2af,
     "ap-orange": #fab387,
+    "ap-pink": #f5c2e7,
 
     // extra colors
     "ap-color-strong":#f5c2e7,
@@ -90,7 +91,7 @@ $theme-colors: (
     "ap-color-dp11":    hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 90%)),
 
     // header colors
-    "ap-h1": #ffba08,
+    "ap-h1": var(--ap-pink),
     //#E97193,
     "ap-h2": var(--ap-purple),
     //#DFA7E7,
