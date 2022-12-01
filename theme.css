@@ -270,6 +270,14 @@ For reference, check the Obsidian style settings repo
   --radius-m: var(--ap-radius-m);
   --radius-l: var(--ap-radius-l);
   --radius-xl: var(--ap-radius-xl);
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--ap-secondary);
+  --graph-node-attachment: var(--color-yellow);
 }
 
 /*
@@ -440,6 +448,14 @@ For reference, check the Obsidian style settings repo
   --radius-m: var(--ap-radius-m);
   --radius-l: var(--ap-radius-l);
   --radius-xl: var(--ap-radius-xl);
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--ap-secondary);
+  --graph-node-attachment: var(--color-yellow);
 }
 
 /*
@@ -610,6 +626,14 @@ For reference, check the Obsidian style settings repo
   --radius-m: var(--ap-radius-m);
   --radius-l: var(--ap-radius-l);
   --radius-xl: var(--ap-radius-xl);
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--ap-secondary);
+  --graph-node-attachment: var(--color-yellow);
 }
 
 /*---------------------------------------
@@ -1172,6 +1196,14 @@ Plugins
   --radius-m: var(--ap-radius-m);
   --radius-l: var(--ap-radius-l);
   --radius-xl: var(--ap-radius-xl);
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--ap-secondary);
+  --graph-node-attachment: var(--color-yellow);
 }
 
 /*---------------------------------------
@@ -1272,6 +1304,14 @@ Plugins
   --radius-m: var(--ap-radius-m);
   --radius-l: var(--ap-radius-l);
   --radius-xl: var(--ap-radius-xl);
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--ap-secondary);
+  --graph-node-attachment: var(--color-yellow);
 }
 
 /* @settings
