@@ -1,0 +1,24 @@
+.Fade.modal,
+.Fade.snw-ref-title-popover,
+.Fade.menu,
+.Fade.popover,
+.Fade.prompt,
+.Fade.workspace-split.mod-vertical.mod-root
+    .workspace-tabs:not(.mod-stacked)
+    .view-content {
+    animation: .2s fade cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+$settings: list.append($settings, (
+    ss.CreateClassToggle("Fade", "Fade", "Fade")
+));

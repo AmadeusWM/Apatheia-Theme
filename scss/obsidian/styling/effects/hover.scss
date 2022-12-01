@@ -1,0 +1,9 @@
+.Hover * {
+    transition: background-color .1s ease-in;
+}
+
+
+
+$settings: list.append($settings, (
+    ss.CreateClassToggle("Hover", "Hover effect", "On hover transition on components")
+));

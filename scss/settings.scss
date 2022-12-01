@@ -104,11 +104,11 @@ $theme-format: (
 // default fonts
 $theme-fonts: (
     // font styles
-    // "ap-font-text",
-    // "ap-font-interface",
-    // "ap-font-title",
-    // "ap-font-cursive",
-    // "ap-font-bold",
-    // "ap-font-link",
-    // "ap-font-hashtag",
+    "ap-font-text": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+    "ap-font-interface": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+    "ap-font-monospace":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+    "ap-font-title":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+    "ap-font-header":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+    "ap-font-text":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
+    "ap-font-hashtag":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",
 );
