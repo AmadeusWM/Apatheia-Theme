@@ -1,3 +1,17 @@
+@charset "UTF-8";
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
 /* Main sass file that contains the theme */ /* Main sass file that contains the theme */
 :root {
   --ap-radius-s: 4px;
@@ -76,7 +90,864 @@
   --ap-frame-left: 10px;
 }
 
-.theme-dark {
+/*---------------------------------------
+            Style settings
+---------------------------------------*/
+/*---------------------------------------
+            Themes            
+--------------------------------------*/
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
+.theme-dark.a-theme-purple {
+  --ap-primary-h: 15;
+  --ap-primary-s: 64%;
+  --ap-primary-l: 88%;
+  --ap-primary-d: 80%;
+  --ap-primary: #EEEEEE;
+  --ap-secondary-h: 157;
+  --ap-secondary-s: 32%;
+  --ap-secondary-l: 58%;
+  --ap-secondary-d: 70%;
+  --ap-secondary: #03071e;
+  --ap-base1-h: 249;
+  --ap-base1-s: 33%;
+  --ap-base1-l: 8%;
+  --ap-base1-d: 10%;
+  --ap-base0: #03071e;
+  --ap-base0-h: 250;
+  --ap-base0-s: 23%;
+  --ap-base0-l: 5%;
+  --ap-base0-d: 13%;
+  --ap-base1: #370617;
+  --ap-red: #E97193;
+  --ap-green: #AAC5A0;
+  --ap-blue: #A8C5E6;
+  --ap-purple: #DFA7E7;
+  --ap-aqua: #a8e5e6;
+  --ap-yellow: #ece0a8;
+  --ap-orange: #D1A999;
+  --ap-color-strong: #E97193;
+  --ap-color-quote: #E97193;
+  --ap-color-italic: #E97193;
+  --ap-color-tag-background: #2c2537;
+  --ap-color-tag-text: #EEEEEE;
+  --ap-code-gray-1: #5b5c5f;
+  --ap-code-gray-2: #45474c;
+  --ap-code-red: var(--ap-red);
+  --ap-code-green: var(--ap-green);
+  --ap-code-blue: var(--ap-blue);
+  --ap-code-purple: var(--ap-purple);
+  --ap-code-aqua: var(--ap-aqua);
+  --ap-code-yellow: var(--ap-yellow);
+  --ap-code-orange: var(--ap-orange);
+  --ap-color-dp0: #10002b;
+  --ap-color-dp1: #240046;
+  --ap-color-dp2: #3c096c;
+  --ap-color-dp3: #5a189a;
+  --ap-color-dp4: #7b2cbf;
+  --ap-color-dp5: #03071e;
+  --ap-color-dp6: #03071e;
+  --ap-color-dp7: #03071e;
+  --ap-color-dp8: #03071e;
+  --ap-color-dp9: #03071e;
+  --ap-color-dp10: #03071e;
+  --ap-color-dp11: #e0aaff;
+  --ap-h1: #ffba08;
+  --ap-h2: var(--ap-purple);
+  --ap-h3: var(--ap-blue);
+  --ap-h4: var(--ap-green);
+  --ap-h5: var(--ap-orange);
+  --ap-h6: var(--ap-yellow);
+  color-scheme: dark;
+  --highlight-mix-blend-mode: lighten;
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255,;
+  --color-red-rgb: 251, 70, 76,;
+  --color-red: #fb464c;
+  --color-green-rgb: 68, 207, 110,;
+  --color-green: #44cf6e;
+  --color-orange: #e9973f;
+  --color-yellow: #e0de71;
+  --color-cyan: #53dfdd;
+  --color-blue: #027aff;
+  --color-purple: #a882ff;
+  --color-pink: #fa99cd;
+  --color-base-00: var(--ap-color-dp1);
+  --color-base-10: var(--ap-color-dp2);
+  --color-base-20: var(--ap-color-dp0);
+  --color-base-25: var(--ap-color-dp0);
+  --color-base-30: var(--ap-color-dp0);
+  --color-base-35: var(--ap-color-dp4);
+  --color-base-40: var(--ap-color-dp0);
+  --color-base-50: var(--ap-color-dp6);
+  --color-base-60: var(--ap-color-dp7);
+  --color-base-70: var(--ap-color-dp10);
+  --color-base-100: var(--ap-color-dp11);
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+  --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+  --background-modifier-form-field: var(--color-base-25);
+  --background-secondary-alt: var(--color-base-30);
+  --background-modifier-hover: hsla(var(--interactive-accent-hsl), 0.5);
+  --interactive-normal: var(--color-base-30);
+  --interactive-hover: var(--color-base-35);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),0 2px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1.5px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121), 0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+  --tag-background: var(--ap-color-tag-background);
+  --tag-color: var(--ap-color-tag-text);
+  --icon-color-focused: var(--color-accent);
+  --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
+  --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
+  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-d) + 12%));
+  --h1-color: var(--ap-h1);
+  --h2-color: var(--ap-h2);
+  --h3-color: var(--ap-h3);
+  --h4-color: var(--ap-h4);
+  --h5-color: var(--ap-h5);
+  --h6-color: var(--ap-h6);
+  --strong-color: var(--ap-color-strong);
+  --em-color: var(--ap-color-italic);
+  --quote-color: var(--ap-color-quote);
+  --tag-background-color-l: #bde1d3;
+  --tag-font-color-l: #1d694b;
+  --tag-background-color-d: #1d694b;
+  --tag-font-color-d: #ffffff;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --checkbox-radius: 30%;
+  --link-external-decoration: underline;
+  --link-decoration: underline;
+  --scrollbar-bg: hsla(var(--base-h), var(--base-s), calc(var(--base-l) + 15%), 1);
+  --scrollbar-thumb-bg: hsla(var(--base-h), var(--base-s), calc(var(--base-l) + 15%), 1);
+  --scrollbar-active-thumb-bg: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
+  --base-h: var(--ap-base0-h);
+  --base-s: var(--ap-base0-s);
+  --base-l: var(--ap-base0-l);
+  --base-d: var(--ap-base0-d);
+  --accent-h: var(--ap-primary-h);
+  --accent-s: var(--ap-primary-s);
+  --accent-l: var(--ap-primary-l);
+  --accent-d: var(--ap-primary-d);
+  --blue: #2e80f2;
+  --pink: #ff82b2;
+  --green: #3eb4bf;
+  --yellow: #e5b567;
+  --orange: #e87d3e;
+  --red: #e83e3e;
+  --purple: #9e86c8;
+  --tab-divider-color: var(--color-base-10);
+  --tab-text-color: var(--color-base-70);
+  --radius-s: var(--ap-radius-s);
+  --radius-m: var(--ap-radius-m);
+  --radius-l: var(--ap-radius-l);
+  --radius-xl: var(--ap-radius-xl);
+}
+
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
+.theme-dark.a-catpuccin-mocha {
+  --ap-primary-h: 15.3846153846deg;
+  --ap-primary-s: 63.9344262295%;
+  --ap-primary-l: 88.0392156863%;
+  --ap-primary-d: 80%;
+  --ap-primary: #F4D7CD;
+  --ap-secondary-h: 157.0588235294deg;
+  --ap-secondary-s: 31.7757009346%;
+  --ap-secondary-l: 58.0392156863%;
+  --ap-secondary-d: 70%;
+  --ap-secondary: #72b69c;
+  --ap-base0-h: 240deg;
+  --ap-base0-s: 21.0526315789%;
+  --ap-base0-l: 14.9019607843%;
+  --ap-base0-d: 20%;
+  --ap-base0: #1e1e2e;
+  --ap-base1-h: 240deg;
+  --ap-base1-s: 21.0526315789%;
+  --ap-base1-l: 17.9019607843%;
+  --ap-base1-d: 20%;
+  --ap-base1: #242437;
+  --ap-red: #f38ba8;
+  --ap-green: #a6e3a1;
+  --ap-blue: #89b4fa;
+  --ap-purple: #cba6f7;
+  --ap-aqua: #94e2d5;
+  --ap-yellow: #f9e2af;
+  --ap-orange: #fab387;
+  --ap-color-strong: #f5c2e7;
+  --ap-color-quote: #f5c2e7;
+  --ap-color-italic: #f5c2e7;
+  --ap-color-tag-background: #2c2537;
+  --ap-color-tag-text: #EEEEEE;
+  --ap-code-gray-1: #5b5c5f;
+  --ap-code-gray-2: #45474c;
+  --ap-code-red: var(--ap-red);
+  --ap-code-green: var(--ap-green);
+  --ap-code-blue: var(--ap-blue);
+  --ap-code-purple: var(--ap-purple);
+  --ap-code-aqua: var(--ap-aqua);
+  --ap-code-yellow: var(--ap-yellow);
+  --ap-code-orange: var(--ap-orange);
+  --ap-color-dp0: #242437;
+  --ap-color-dp1: #1e1e2e;
+  --ap-color-dp2: hsl(240deg, 21.0526315789%, 19.9019607843%);
+  --ap-color-dp3: hsl(240deg, 21.0526315789%, 24.9019607843%);
+  --ap-color-dp4: hsl(240deg, 21.0526315789%, 29.9019607843%);
+  --ap-color-dp5: hsl(240deg, 21.0526315789%, 54.9019607843%);
+  --ap-color-dp6: hsl(240deg, 21.0526315789%, 64.9019607843%);
+  --ap-color-dp7: hsl(240deg, 21.0526315789%, 74.9019607843%);
+  --ap-color-dp8: hsl(240deg, 21.0526315789%, 84.9019607843%);
+  --ap-color-dp9: hsl(240deg, 21.0526315789%, 94.9019607843%);
+  --ap-color-dp10: hsl(240deg, 21.0526315789%, 99.9019607843%);
+  --ap-color-dp11: hsl(240deg, 21.0526315789%, 100%);
+  --ap-h1: #ffba08;
+  --ap-h2: var(--ap-purple);
+  --ap-h3: var(--ap-blue);
+  --ap-h4: var(--ap-green);
+  --ap-h5: var(--ap-orange);
+  --ap-h6: var(--ap-yellow);
+  color-scheme: dark;
+  --highlight-mix-blend-mode: lighten;
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255,;
+  --color-red-rgb: 251, 70, 76,;
+  --color-red: #fb464c;
+  --color-green-rgb: 68, 207, 110,;
+  --color-green: #44cf6e;
+  --color-orange: #e9973f;
+  --color-yellow: #e0de71;
+  --color-cyan: #53dfdd;
+  --color-blue: #027aff;
+  --color-purple: #a882ff;
+  --color-pink: #fa99cd;
+  --color-base-00: var(--ap-color-dp1);
+  --color-base-10: var(--ap-color-dp2);
+  --color-base-20: var(--ap-color-dp0);
+  --color-base-25: var(--ap-color-dp0);
+  --color-base-30: var(--ap-color-dp0);
+  --color-base-35: var(--ap-color-dp4);
+  --color-base-40: var(--ap-color-dp0);
+  --color-base-50: var(--ap-color-dp6);
+  --color-base-60: var(--ap-color-dp7);
+  --color-base-70: var(--ap-color-dp10);
+  --color-base-100: var(--ap-color-dp11);
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+  --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+  --background-modifier-form-field: var(--color-base-25);
+  --background-secondary-alt: var(--color-base-30);
+  --background-modifier-hover: hsla(var(--interactive-accent-hsl), 0.5);
+  --interactive-normal: var(--color-base-30);
+  --interactive-hover: var(--color-base-35);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),0 2px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1.5px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121), 0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+  --tag-background: var(--ap-color-tag-background);
+  --tag-color: var(--ap-color-tag-text);
+  --icon-color-focused: var(--color-accent);
+  --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
+  --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
+  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-d) + 12%));
+  --h1-color: var(--ap-h1);
+  --h2-color: var(--ap-h2);
+  --h3-color: var(--ap-h3);
+  --h4-color: var(--ap-h4);
+  --h5-color: var(--ap-h5);
+  --h6-color: var(--ap-h6);
+  --strong-color: var(--ap-color-strong);
+  --em-color: var(--ap-color-italic);
+  --quote-color: var(--ap-color-quote);
+  --tag-background-color-l: #bde1d3;
+  --tag-font-color-l: #1d694b;
+  --tag-background-color-d: #1d694b;
+  --tag-font-color-d: #ffffff;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --checkbox-radius: 30%;
+  --link-external-decoration: underline;
+  --link-decoration: underline;
+  --scrollbar-bg: hsla(var(--base-h), var(--base-s), calc(var(--base-l) + 15%), 1);
+  --scrollbar-thumb-bg: hsla(var(--base-h), var(--base-s), calc(var(--base-l) + 15%), 1);
+  --scrollbar-active-thumb-bg: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
+  --base-h: var(--ap-base0-h);
+  --base-s: var(--ap-base0-s);
+  --base-l: var(--ap-base0-l);
+  --base-d: var(--ap-base0-d);
+  --accent-h: var(--ap-primary-h);
+  --accent-s: var(--ap-primary-s);
+  --accent-l: var(--ap-primary-l);
+  --accent-d: var(--ap-primary-d);
+  --blue: #2e80f2;
+  --pink: #ff82b2;
+  --green: #3eb4bf;
+  --yellow: #e5b567;
+  --orange: #e87d3e;
+  --red: #e83e3e;
+  --purple: #9e86c8;
+  --tab-divider-color: var(--color-base-10);
+  --tab-text-color: var(--color-base-70);
+  --radius-s: var(--ap-radius-s);
+  --radius-m: var(--ap-radius-m);
+  --radius-l: var(--ap-radius-l);
+  --radius-xl: var(--ap-radius-xl);
+}
+
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
+.theme-dark.a-catpuccin-espresso {
+  --ap-primary-h: 15.3846153846deg;
+  --ap-primary-s: 63.9344262295%;
+  --ap-primary-l: 88.0392156863%;
+  --ap-primary-d: 80%;
+  --ap-primary: #F4D7CD;
+  --ap-secondary-h: 157.0588235294deg;
+  --ap-secondary-s: 31.7757009346%;
+  --ap-secondary-l: 58.0392156863%;
+  --ap-secondary-d: 70%;
+  --ap-secondary: #72b69c;
+  --ap-base0-h: 249.2307692308deg;
+  --ap-base0-s: 33.3333333333%;
+  --ap-base0-l: 7.6470588235%;
+  --ap-base0-d: 20%;
+  --ap-base0: #0F0D1A;
+  --ap-base1-h: 250deg;
+  --ap-base1-s: 23.0769230769%;
+  --ap-base1-l: 5.0980392157%;
+  --ap-base1-d: 20%;
+  --ap-base1: #0B0A10;
+  --ap-red: #f38ba8;
+  --ap-green: #a6e3a1;
+  --ap-blue: #89b4fa;
+  --ap-purple: #cba6f7;
+  --ap-aqua: #94e2d5;
+  --ap-yellow: #f9e2af;
+  --ap-orange: #fab387;
+  --ap-color-strong: #f5c2e7;
+  --ap-color-quote: #f5c2e7;
+  --ap-color-italic: #f5c2e7;
+  --ap-color-tag-background: #2c2537;
+  --ap-color-tag-text: #EEEEEE;
+  --ap-code-gray-1: #5b5c5f;
+  --ap-code-gray-2: #45474c;
+  --ap-code-red: var(--ap-red);
+  --ap-code-green: var(--ap-green);
+  --ap-code-blue: var(--ap-blue);
+  --ap-code-purple: var(--ap-purple);
+  --ap-code-aqua: var(--ap-aqua);
+  --ap-code-yellow: var(--ap-yellow);
+  --ap-code-orange: var(--ap-orange);
+  --ap-color-dp0: #0B0A10;
+  --ap-color-dp1: #0F0D1A;
+  --ap-color-dp2: hsl(249.2307692308deg, 33.3333333333%, 12.6470588235%);
+  --ap-color-dp3: hsl(249.2307692308deg, 33.3333333333%, 17.6470588235%);
+  --ap-color-dp4: hsl(249.2307692308deg, 33.3333333333%, 22.6470588235%);
+  --ap-color-dp5: hsl(249.2307692308deg, 33.3333333333%, 47.6470588235%);
+  --ap-color-dp6: hsl(249.2307692308deg, 33.3333333333%, 57.6470588235%);
+  --ap-color-dp7: hsl(249.2307692308deg, 33.3333333333%, 67.6470588235%);
+  --ap-color-dp8: hsl(249.2307692308deg, 33.3333333333%, 77.6470588235%);
+  --ap-color-dp9: hsl(249.2307692308deg, 33.3333333333%, 87.6470588235%);
+  --ap-color-dp10: hsl(249.2307692308deg, 33.3333333333%, 92.6470588235%);
+  --ap-color-dp11: hsl(249.2307692308deg, 33.3333333333%, 97.6470588235%);
+  --ap-h1: #ffba08;
+  --ap-h2: var(--ap-purple);
+  --ap-h3: var(--ap-blue);
+  --ap-h4: var(--ap-green);
+  --ap-h5: var(--ap-orange);
+  --ap-h6: var(--ap-yellow);
+  color-scheme: dark;
+  --highlight-mix-blend-mode: lighten;
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255,;
+  --color-red-rgb: 251, 70, 76,;
+  --color-red: #fb464c;
+  --color-green-rgb: 68, 207, 110,;
+  --color-green: #44cf6e;
+  --color-orange: #e9973f;
+  --color-yellow: #e0de71;
+  --color-cyan: #53dfdd;
+  --color-blue: #027aff;
+  --color-purple: #a882ff;
+  --color-pink: #fa99cd;
+  --color-base-00: var(--ap-color-dp1);
+  --color-base-10: var(--ap-color-dp2);
+  --color-base-20: var(--ap-color-dp0);
+  --color-base-25: var(--ap-color-dp0);
+  --color-base-30: var(--ap-color-dp0);
+  --color-base-35: var(--ap-color-dp4);
+  --color-base-40: var(--ap-color-dp0);
+  --color-base-50: var(--ap-color-dp6);
+  --color-base-60: var(--ap-color-dp7);
+  --color-base-70: var(--ap-color-dp10);
+  --color-base-100: var(--ap-color-dp11);
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+  --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+  --background-modifier-form-field: var(--color-base-25);
+  --background-secondary-alt: var(--color-base-30);
+  --background-modifier-hover: hsla(var(--interactive-accent-hsl), 0.5);
+  --interactive-normal: var(--color-base-30);
+  --interactive-hover: var(--color-base-35);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),0 2px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1.5px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121), 0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+  --tag-background: var(--ap-color-tag-background);
+  --tag-color: var(--ap-color-tag-text);
+  --icon-color-focused: var(--color-accent);
+  --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
+  --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
+  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-d) + 12%));
+  --h1-color: var(--ap-h1);
+  --h2-color: var(--ap-h2);
+  --h3-color: var(--ap-h3);
+  --h4-color: var(--ap-h4);
+  --h5-color: var(--ap-h5);
+  --h6-color: var(--ap-h6);
+  --strong-color: var(--ap-color-strong);
+  --em-color: var(--ap-color-italic);
+  --quote-color: var(--ap-color-quote);
+  --tag-background-color-l: #bde1d3;
+  --tag-font-color-l: #1d694b;
+  --tag-background-color-d: #1d694b;
+  --tag-font-color-d: #ffffff;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --checkbox-radius: 30%;
+  --link-external-decoration: underline;
+  --link-decoration: underline;
+  --scrollbar-bg: hsla(var(--base-h), var(--base-s), calc(var(--base-l) + 15%), 1);
+  --scrollbar-thumb-bg: hsla(var(--base-h), var(--base-s), calc(var(--base-l) + 15%), 1);
+  --scrollbar-active-thumb-bg: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
+  --base-h: var(--ap-base0-h);
+  --base-s: var(--ap-base0-s);
+  --base-l: var(--ap-base0-l);
+  --base-d: var(--ap-base0-d);
+  --accent-h: var(--ap-primary-h);
+  --accent-s: var(--ap-primary-s);
+  --accent-l: var(--ap-primary-l);
+  --accent-d: var(--ap-primary-d);
+  --blue: #2e80f2;
+  --pink: #ff82b2;
+  --green: #3eb4bf;
+  --yellow: #e5b567;
+  --orange: #e87d3e;
+  --red: #e83e3e;
+  --purple: #9e86c8;
+  --tab-divider-color: var(--color-base-10);
+  --tab-text-color: var(--color-base-70);
+  --radius-s: var(--ap-radius-s);
+  --radius-m: var(--ap-radius-m);
+  --radius-l: var(--ap-radius-l);
+  --radius-xl: var(--ap-radius-xl);
+}
+
+/*---------------------------------------
+            Effects            
+--------------------------------------*/
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
+.glassMorphism #calendar-container,
+.glassMorphism .view-header,
+.glassMorphism .nav-folder.mod-root,
+.glassMorphism .nav-header .nav-buttons-container,
+.glassMorphism .workspace-split.mod-root .view-content {
+  background: linear-gradient(120deg, var(--ap-color-dp1), var(--ap-color-dp2), 70%, var(--ap-color-dp1));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+
+.glassMorphism .nav-file-title,
+.nav-folder-title,
+.nav-folder {
+  background: transparent;
+  backdrop-filter: blur(15px);
+}
+
+/* H2 styling */
+h2,
+.HyperMD-header.HyperMD-header-2.cm-line {
+  border-bottom: 2px solid var(--background-modifier-border);
+  width: 100%;
+  padding-bottom: 2px;
+}
+
+/* Hashtags font */
+.markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
+.markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
+  font-family: var(--ap-font-hashtag);
+}
+
+/* Blockquote */
+body:not(.default-font-color) .markdown-preview-view blockquote,
+body:not(.default-font-color) span.cm-quote.cm-quote-1 {
+  font-style: italic;
+  color: var(--ap-color-quote);
+}
+
+/* Bold font */
+body:not(.default-font-color) strong,
+body:not(.default-font-color) .cm-strong {
+  color: var(--ap-color-strong);
+}
+
+/* Markdown formatting */
+.cm-formatting-strong,
+.cm-formatting-em,
+.cm-formatting.cm-formatting-quote {
+  color: var(--text-faint) !important;
+  font-weight: var(--normal-weight);
+  opacity: 0.8;
+  letter-spacing: -0.02em;
+}
+
+/* Completed checkboxes */
+.markdown-preview-view ul > li.task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X] {
+  text-decoration: none;
+  color: var(--text-faint);
+}
+
+/* Image card */
+img {
+  border-radius: var(--ap-radius-l);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* ###########################################
+Code styling
+########################################### */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--ap-code-gray-1);
+}
+
+.token.punctuation,
+.cm-hmd-codeblock,
+.cm-bracket {
+  color: var(--ap-code-gray-2);
+}
+
+code[class*=language-],
+.token.selector,
+.token.tag,
+.token.parameter,
+.token.property-access,
+.cm-def,
+.cm-property,
+.cm-qualifier {
+  color: var(--ap-code-red);
+}
+
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.attr-name,
+.token.deleted,
+.cm-number,
+.cm-property.cm-string {
+  color: var(--ap-code-orange) !important;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.builtin,
+.token.inserted,
+.cm-hmd-codeblock.cm-string {
+  color: var(--ap-code-green);
+}
+
+.token.operator,
+.cm-operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--ap-code-aqua);
+}
+
+.token.atrule,
+.token.keyword,
+.cm-keyword {
+  color: var(--ap-code-purple);
+}
+
+.token.function,
+.token.macro.property,
+.cm-variable {
+  color: var(--ap-code-blue);
+}
+
+.token.class-name,
+.token.property,
+.cm-atom,
+code .cm-tag,
+.theme-dark .cm-variable-2,
+.cm-type {
+  color: var(--ap-code-yellow);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--ap-code-purple);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/*=======================================
+Container styling
+=========================================*/
+.nav-files-container.node-insert-event {
+  border-radius: var(--ap-radius-l);
+  padding: 0px;
+  margin: var(--ap-container-padding);
+  margin-bottom: 0px;
+}
+
+.mod-root,
+.nav-folder-title {
+  padding: var(--ap-container-padding);
+}
+
+.nav-header .nav-buttons-container {
+  border-radius: var(--ap-radius-l);
+  background-color: var(--color-base-00);
+  margin-top: none;
+  padding: var(--ap-container-padding);
+}
+
+.nav-files-container {
+  padding: var(--ap-container-padding);
+}
+
+.nav-folder {
+  border-radius: var(--ap-radius-l);
+  background-color: var(--color-base-00);
+}
+
+.backlink-pane,
+.outgoing-link-pane {
+  margin: var(--ap-container-padding);
+  border-radius: var(--ap-radius-l);
+}
+
+.workspace-ribbon.mod-left {
+  border-radius: var(--ap-radius-l);
+  margin: calc(var(--header-height) + var(--ap-container-padding)) var(--ap-container-padding) var(--ap-container-padding) var(--ap-container-padding);
+}
+
+.workspace-ribbon.mod-left:before {
+  width: calc(var(--ribbon-width) + var(--ap-container-padding) + var(--ap-container-padding));
+}
+
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
+  margin: 0px;
+}
+
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  border-radius: var(--ap-radius-l) !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf .view-header {
+  margin: 0px var(--ap-container-padding);
+}
+
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf .view-content {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.workspace {
+  background-color: var(--color-base-20);
+}
+
+.workspace-tab-container {
+  display: flex;
+  padding-bottom: var(--ap-container-padding);
+}
+
+.workspace-split.mod-root .view-content {
+  border-radius: var(--ap-radius-l);
+  padding: var(--ap-container-padding);
+  margin-top: var(--ap-container-padding);
+  margin-bottom: var(--ap-container-padding);
+}
+
+.workspace-split.mod-root {
+  padding: 0;
+  border-radius: var(--ap-radius-l);
+  background-color: None;
+}
+
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf {
+  background-color: var(--color-base-20);
+  margin: var(--ap-container-padding);
+}
+
+.workspace-split.mod-root {
+  background-color: var(--color-base-20);
+}
+
+.workspace-leaf-content .view-content {
+  padding: var(--ap-container-padding);
+}
+
+.workspace .mod-root .workspace-tab-header {
+  -webkit-app-region: no-drag;
+  flex: 1 1 0;
+  width: var(--tab-width);
+  min-width: 0;
+  max-width: var(--tab-max-width);
+  padding: 1px 3px 0px;
+  border-radius: var(--ap-radius-s);
+}
+
+.workspace-tab-header::before,
+.workspace-tab-header::after {
+  display: none;
+}
+
+.view-header {
+  display: flex;
+  border-radius: var(--ap-radius-l);
+  margin-bottom: var(--ap-container-padding);
+  padding: var(--ap-container-padding);
+  height: auto;
+}
+
+.view-header-nav-buttons {
+  --icon-size: var(--icon-s);
+  align-items: center;
+  display: inline-flex;
+  margin-right: var(--size-4-1);
+}
+
+.view-header-title-container {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  justify-content: var(--file-header-justify);
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.cm-s-obsidian .cm-cursor {
+  transition: all 80ms;
+}
+
+/*=======================================
+Plugins
+=========================================*/
+#calendar-container {
+  padding: var(--ap-container-padding);
+  border-radius: var(--ap-radius-l);
+  background-color: var(--ap-color-dp1);
+}
+
+.theme-dark,
+.excalidraw.theme--dark {
+  --theme-filter: invert(98%) hue-rotate(180deg);
+}
+
+.theme-dark,
+.theme-dark.a-theme-apatheia {
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
   --mono-rgb-0: 0, 0, 0;
@@ -272,321 +1143,10 @@
   --radius-xl: var(--ap-radius-xl);
 }
 
-/* H2 styling */
-h2,
-.HyperMD-header.HyperMD-header-2.cm-line {
-  border-bottom: 2px solid var(--background-modifier-border);
-  width: 100%;
-  padding-bottom: 2px;
-}
-
-/* Hashtags font */
-.markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
-.markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
-  font-family: var(--ap-font-hashtag);
-}
-
-/* Blockquote */
-body:not(.default-font-color) .markdown-preview-view blockquote,
-body:not(.default-font-color) span.cm-quote.cm-quote-1 {
-  font-style: italic;
-  color: var(--ap-color-quote);
-}
-
-/* Bold font */
-body:not(.default-font-color) strong,
-body:not(.default-font-color) .cm-strong {
-  color: var(--ap-color-strong);
-}
-
-/* Markdown formatting */
-.cm-formatting-strong,
-.cm-formatting-em,
-.cm-formatting.cm-formatting-quote {
-  color: var(--text-faint) !important;
-  font-weight: var(--normal-weight);
-  opacity: 0.8;
-  letter-spacing: -0.02em;
-}
-
-/* Completed checkboxes */
-.markdown-preview-view ul > li.task-list-item.is-checked,
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X] {
-  text-decoration: none;
-  color: var(--text-faint);
-}
-
-/* Image card */
-img {
-  border-radius: var(--ap-radius-l);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-/* ###########################################
-Code styling
-########################################### */
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: var(--ap-code-gray-1);
-}
-
-.token.punctuation,
-.cm-hmd-codeblock,
-.cm-bracket {
-  color: var(--ap-code-gray-2);
-}
-
-code[class*=language-],
-.token.selector,
-.token.tag,
-.token.parameter,
-.token.property-access,
-.cm-def,
-.cm-property,
-.cm-qualifier {
-  color: var(--ap-code-red);
-}
-
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.attr-name,
-.token.deleted,
-.cm-number,
-.cm-property.cm-string {
-  color: var(--ap-code-orange) !important;
-}
-
-.token.string,
-.token.char,
-.token.attr-value,
-.token.builtin,
-.token.inserted,
-.cm-hmd-codeblock.cm-string {
-  color: var(--ap-code-green);
-}
-
-.token.operator,
-.cm-operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: var(--ap-code-aqua);
-}
-
-.token.atrule,
-.token.keyword,
-.cm-keyword {
-  color: var(--ap-code-purple);
-}
-
-.token.function,
-.token.macro.property,
-.cm-variable {
-  color: var(--ap-code-blue);
-}
-
-.token.class-name,
-.token.property,
-.cm-atom,
-code .cm-tag,
-.theme-dark .cm-variable-2,
-.cm-type {
-  color: var(--ap-code-yellow);
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: var(--ap-code-purple);
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-/*=======================================
-Container styling
-=========================================*/
-.nav-files-container.node-insert-event {
-  border-radius: var(--ap-radius-l);
-  padding: 0px;
-  margin: var(--ap-container-padding);
-  margin-bottom: 0px;
-}
-
-.mod-root,
-.nav-folder-title {
-  padding: var(--ap-container-padding);
-}
-
-.nav-header .nav-buttons-container {
-  border-radius: var(--ap-radius-l);
-  background-color: var(--color-base-00);
-  margin-top: none;
-  padding: var(--ap-container-padding);
-}
-
-.nav-files-container {
-  padding: var(--ap-container-padding);
-}
-
-.nav-folder {
-  border-radius: var(--ap-radius-l);
-  background-color: var(--color-base-00);
-}
-
-.backlink-pane,
-.outgoing-link-pane {
-  margin: var(--ap-container-padding);
-  background-color: var(--color-base-00);
-  border-radius: var(--ap-radius-l);
-}
-
-.workspace-ribbon.mod-left {
-  background-color: var(--color-base-00);
-  border-radius: var(--ap-radius-l);
-  margin: calc(var(--header-height) + var(--ap-container-padding)) var(--ap-container-padding) var(--ap-container-padding) var(--ap-container-padding);
-}
-
-.workspace-ribbon.mod-left:before {
-  width: calc(var(--ribbon-width) + var(--ap-container-padding) + var(--ap-container-padding));
-}
-
-.workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
-  margin: 0px;
-}
-
-.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
-  border-radius: var(--ap-radius-l) !important;
-  border-bottom-right-radius: 0px !important;
-}
-
-.workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf .view-header {
-  margin: 0px var(--ap-container-padding);
-}
-
-.workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf .view-content {
-  border-radius: 0px;
-  margin-bottom: 0px;
-}
-
-.workspace {
-  background-color: var(--color-base-20);
-}
-
-.workspace-tab-container {
-  display: flex;
-  padding-bottom: var(--ap-container-padding);
-}
-
-.workspace-split.mod-root .view-content {
-  background-color: var(--color-base-00);
-  border-radius: var(--ap-radius-l);
-  padding: var(--ap-container-padding);
-  margin-top: var(--ap-container-padding);
-  margin-bottom: var(--ap-container-padding);
-}
-
-.workspace-split.mod-root {
-  padding: 0;
-  border-radius: var(--ap-radius-l);
-}
-
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-.mod-root .workspace-tabs .workspace-leaf {
-  background-color: var(--color-base-20);
-  margin: var(--ap-container-padding);
-}
-
-.workspace-split.mod-root {
-  background-color: var(--color-base-20);
-}
-
-.workspace-leaf-content .view-content {
-  padding: var(--ap-container-padding);
-}
-
-.workspace .mod-root .workspace-tab-header {
-  -webkit-app-region: no-drag;
-  flex: 1 1 0;
-  width: var(--tab-width);
-  min-width: 0;
-  max-width: var(--tab-max-width);
-  padding: 1px 3px 0px;
-  border-radius: var(--ap-radius-s);
-}
-
-.workspace-tab-header::before,
-.workspace-tab-header::after {
-  display: none;
-}
-
-.view-header {
-  display: flex;
-  border-radius: var(--ap-radius-l);
-  margin-bottom: var(--ap-container-padding);
-  padding: var(--ap-container-padding);
-  height: auto;
-}
-
-.view-header-nav-buttons {
-  --icon-size: var(--icon-s);
-  align-items: center;
-  display: inline-flex;
-  margin-right: var(--size-4-1);
-}
-
-.view-header-title-container {
-  flex-grow: 1;
-  overflow: hidden;
-  position: relative;
-  justify-content: var(--file-header-justify);
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  white-space: nowrap;
-}
-
-.cm-s-obsidian .cm-cursor {
-  transition: all 80ms;
-}
-
-/*=======================================
-Plugins
-=========================================*/
-#calendar-container {
-  padding: var(--ap-container-padding);
-  border-radius: var(--ap-radius-l);
-  background-color: var(--color-base-00);
-}
-
-.theme-dark,
-.excalidraw.theme--dark {
-  --theme-filter: invert(98%) hue-rotate(180deg);
-}
-
-/*---------------------------------------
-            Style settings
----------------------------------------*/
 /* @settings
 
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: a-theme 				title: Theme variant 				type: class-select 				default: apatheia 				options:						-								label: Dark theme								value: a-theme-dark						-								label: Dracula theme								value: a-theme-dracula		-				id: ap-radius-s 				title: Border radius S 				type: variable-number-slider 				default: 4 				format: px 		-				id: ap-radius-m 				title: Border radius M 				type: variable-number-slider 				default: 8 				format: px 		-				id: ap-radius-l 				title: Border radius L 				type: variable-number-slider 				default: 10 				format: px 
+		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change theme appearance here 				type: heading 				level: 1 				collapsed: false 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple						-								label: 🌿 Catpuccin Mocha								value: a-catpuccin-mocha						-								label: ☕ Catpuccin Espresso								value: a-catpuccin-espresso		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: false 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: false 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 
 */

@@ -23,9 +23,12 @@ $theme-select: (); // list of all themes
 $theme-select: list.append($theme-select, ss.CreateOption("a-theme-apatheia", "Apatheia"));
 $theme-style-settings: (); // list of all theme style settings
 
+// themes
 @import "./styling/themes/test.scss";
+@import "./styling/themes/catpuccin_mocha.scss";
+@import "./styling/themes/catpuccin_espresso.scss";
 
-$settings: list.append($settings, ss.CreateHeading("a-theme-settings", "Theme settings", "Change them appearance here"));
+$settings: list.append($settings, ss.CreateHeading("a-theme-settings", "Theme settings", "Change theme appearance here"));
 $settings: list.append($settings, ss.CreateClassSelect("theme-dark", "Theme variant", "Select theme variant", "a-theme-apatheia", $theme-select));
 // loop over all the theme settings
 @each $theme-setting, $theme-setting-settings in $theme-style-settings {

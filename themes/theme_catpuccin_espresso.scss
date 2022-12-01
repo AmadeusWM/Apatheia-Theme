@@ -1,0 +1,57 @@
+@use "sass:color";
+
+$theme-primary: #F4D7CD;
+$theme-secondary: #72b69c;
+$theme-base0: #0F0D1A;
+$theme-base1: #0B0A10;
+// $theme-base1: #0B0A10;
+
+$template-vars: (
+    // primary
+    "ap-primary-h": color.hue($theme-primary),
+    "ap-primary-s": color.saturation($theme-primary),
+    "ap-primary-l": color.lightness($theme-primary),
+    "ap-primary-d": 80%, // lightness/darkness of accented text/icons
+    "ap-primary": $theme-primary,
+    
+    // secondary 
+    "ap-secondary-h": color.hue($theme-secondary),
+    "ap-secondary-s": color.saturation($theme-secondary),
+    "ap-secondary-l": color.lightness($theme-secondary),
+    "ap-secondary-d": 70%,
+    "ap-secondary": $theme-secondary,
+
+    // base 0
+    "ap-base0-h":color.hue($theme-base0),
+    "ap-base0-s": color.saturation($theme-base0),
+    "ap-base0-l": color.lightness($theme-base0),
+    "ap-base0-d": 20%,
+    "ap-base0": $theme-base0,
+    
+    // base 1
+    "ap-base1-h": color.hue($theme-base1),
+    "ap-base1-s": color.saturation($theme-base1),
+    "ap-base1-l": color.lightness($theme-base1),
+    "ap-base1-d": 20%,
+    "ap-base1": $theme-base1,
+    
+    // colors
+    "ap-red": #f38ba8,
+    "ap-green": #a6e3a1,
+    "ap-blue": #89b4fa,
+    "ap-purple": #cba6f7,
+    "ap-aqua": #94e2d5,
+    "ap-yellow": #f9e2af,
+    "ap-orange": #fab387,
+
+    // extra colors
+    "ap-color-strong":#f5c2e7,
+    "ap-color-quote": #f5c2e7,
+    "ap-color-italic": #f5c2e7,
+    "ap-color-tag-background": #2c2537,
+    "ap-color-tag-text": #EEEEEE,
+
+    // base colors
+    "ap-color-dp0":     $theme-base1, 
+    "ap-color-dp1":     $theme-base0, 
+)

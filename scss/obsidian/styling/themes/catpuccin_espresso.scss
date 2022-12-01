@@ -1,0 +1,147 @@
+@use "sass:string";
+@use "sass:map";
+@use "sass:list";
+@use "sass:color";
+@use "../../style-settings.scss" as ss;
+@use "../../obsidian.scss" as o-var;
+
+// TO-DO: use colors
+$theme-primary: #F4D7CD;
+$theme-secondary: #72b69c;
+// base 0
+$theme-base0: #0F0D1A;
+$theme-base0-h:color.hue($theme-base0);
+$theme-base0-s: color.saturation($theme-base0);
+$theme-base0-l: color.lightness($theme-base0);
+// base 1
+$theme-base1: #0B0A10;
+$theme-base1-h: color.hue($theme-base1);
+$theme-base1-s: color.saturation($theme-base1);
+$theme-base1-l: color.lightness($theme-base1);
+
+$theme-colors: (
+    // primary
+    "ap-primary-h": color.hue($theme-primary),
+    "ap-primary-s": color.saturation($theme-primary),
+    "ap-primary-l": color.lightness($theme-primary),
+    "ap-primary-d": 80%, // lightness/darkness of accented text/icons
+    "ap-primary": $theme-primary,
+    
+    // secondary 
+    "ap-secondary-h": color.hue($theme-secondary),
+    "ap-secondary-s": color.saturation($theme-secondary),
+    "ap-secondary-l": color.lightness($theme-secondary),
+    "ap-secondary-d": 70%,
+    "ap-secondary": $theme-secondary,
+
+    // base 0
+    "ap-base0-h": $theme-base0-h,
+    "ap-base0-s": $theme-base0-s,
+    "ap-base0-l": $theme-base0-l,
+    "ap-base0-d": 20%,
+    "ap-base0": $theme-base0,
+    
+    // base 1
+    "ap-base1-h": $theme-base1-h,
+    "ap-base1-s": $theme-base1-s,
+    "ap-base1-l": $theme-base1-l,
+    "ap-base1-d": 20%,
+    "ap-base1": $theme-base1,
+    
+    // colors
+    "ap-red": #f38ba8,
+    "ap-green": #a6e3a1,
+    "ap-blue": #89b4fa,
+    "ap-purple": #cba6f7,
+    "ap-aqua": #94e2d5,
+    "ap-yellow": #f9e2af,
+    "ap-orange": #fab387,
+
+    // extra colors
+    "ap-color-strong":#f5c2e7,
+    "ap-color-quote": #f5c2e7,
+    "ap-color-italic": #f5c2e7,
+    "ap-color-tag-background": #2c2537,
+    "ap-color-tag-text": #EEEEEE,
+
+    // code syntac highlighting
+    "ap-code-gray-1": #5b5c5f,
+    "ap-code-gray-2": #45474c,
+    "ap-code-red": var(--ap-red),
+    "ap-code-green": var(--ap-green),
+    "ap-code-blue": var(--ap-blue),
+    "ap-code-purple": var(--ap-purple),
+    "ap-code-aqua": var(--ap-aqua),
+    "ap-code-yellow": var(--ap-yellow),
+    "ap-code-orange": var(--ap-orange),
+
+    // base colors (text, background, icons ...)
+    "ap-color-dp0":     $theme-base1, 
+    "ap-color-dp1":     $theme-base0, 
+    "ap-color-dp2":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 5%)),
+    "ap-color-dp3":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 10%)),
+    "ap-color-dp4":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 15%)),
+    "ap-color-dp5":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 40%)),
+    "ap-color-dp6":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 50%)),
+    "ap-color-dp7":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 60%)),
+    "ap-color-dp8":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 70%)),
+    "ap-color-dp9":     hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 80%)),
+    "ap-color-dp10":    hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 85%)),
+    "ap-color-dp11":    hsl($theme-base0-h, $theme-base0-s, calc($theme-base0-l + 90%)),
+
+    // header colors
+    "ap-h1": #ffba08,
+    //#E97193,
+    "ap-h2": var(--ap-purple),
+    //#DFA7E7,
+    "ap-h3": var(--ap-blue),
+    //#A8C5E6,
+    "ap-h4": var(--ap-green),
+    //#AAC5A0,
+    "ap-h5": var(--ap-orange),
+    //#D1A999,
+    "ap-h6": var(--ap-yellow),
+    //#D79D9C,
+);
+
+// default text sizin
+$theme-format: (
+    // headers
+    "ap-h1-size": 2.5em,
+    "ap-h2-size": 1.9882em,
+    "ap-h3-size": 1.5811em,
+    "ap-h4-size": 1.2574em,
+    "ap-h5-size": 1em,
+    "ap-h6-size": 0.7953em,
+
+    // text
+    "ap-size-text": 1em,
+    "ap-size-text-header": 1em,
+    "ap-size-text-item": 1em,
+
+    // containers
+    "ap-container-padding": 8px,
+    "ap-frame-left": 10px
+);
+
+// generate theme variables
+.theme-dark.a-catpuccin-espresso {
+
+    @each $var,
+    $value in $theme-colors {
+        --#{$var}: #{$value};
+    }
+
+    ;
+
+    @each $var,
+    $value in o-var.$obsidian-vars {
+        #{$var}: #{$value};
+    }
+
+    ;
+}
+
+// add list
+$theme-select: list.append($theme-select,
+        ss.CreateOption("a-catpuccin-espresso", "☕ Catpuccin Espresso"));
