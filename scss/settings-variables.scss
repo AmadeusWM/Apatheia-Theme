@@ -2,7 +2,7 @@
 @use "sass:color";
 @import "settings.scss";
 
-@import "../themes/theme_dark.scss"; // selected theme
+@import "../themes/theme_apatheia.scss"; // selected theme
 
 // helper methods
 // useable variables: https://code.visualstudio.com/api/references/theme-color
@@ -40,7 +40,7 @@ $ap-base1-s: color.saturation($ap-base1);
 $ap-base1-l: color.lightness($ap-base1);
 $ap-base1-d: 13%;
 
-// base colors
+// base colors (copy from settings.scss, but with scss variables 
 $ap-color-dp0:     map.get($theme-colors, "ap-color-dp0");
 $ap-color-dp1:     map.get($theme-colors, "ap-color-dp1");
 $ap-color-dp2:     hsl($ap-base0-h, $ap-base0-s, calc($ap-base0-l + 5%));
