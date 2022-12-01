@@ -13,7 +13,7 @@ $yaml-tab: "\9\9";
 /* ----------------------------
         Style Functions
 ---------------------------- */
-@function CreateHeading($id, $title, $description, $level: 1, $collapsed: false){
+@function CreateHeading($id, $title, $description, $level: 1, $collapsed: true){
     $map: createDefaultSetting($id, $title, $description, "heading");
     $map: map-merge($map1: $map, $map2: (
         "level": $level,

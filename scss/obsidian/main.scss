@@ -45,7 +45,7 @@ $settings: list.append($settings,
     ss.CreateHeading("a-effect-settings", "Effects", "Add effects", 1)
 );
 @import "./styling/effects/glassmorphism.scss";
-
+@import "./styling/effects/smoothIndent.scss";
 
 // default theme
 
