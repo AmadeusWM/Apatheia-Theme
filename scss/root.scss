@@ -5,7 +5,7 @@
 
 // apply selected theme to theme colors
 @import "./settings-variables.scss"; // selected theme
-@import "./settings";
+@import "./settings.scss";
 :root {
     // Theme settings
     @each $setting, $value in $theme-settings {

@@ -1,11 +1,14 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 5 | @import "../themes/theme_dark.scss"; // selected theme
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   ../settings-variables.scss 5:9  @import
- *   ../root.scss 8:9                @use
- *   main.scss 8:1                   root stylesheet */
+@charset "UTF-8";
+/* Main sass file that contains the theme */
+/*---------------------------------------
+            Style settings
+---------------------------------------*/
+/*---------------------------------------
+            Themes            
+--------------------------------------*/
+/*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
 
 For reference, check the Obsidian style settings repo
 - https://github.com/mgmeyers/obsidian-style-settings
@@ -16,32 +19,45 @@ For reference, check the Obsidian style settings repo
 /* ----------------------------
         Private Functions
 ---------------------------- */
-/* Main sass file that contains the theme */ /* Main sass file that contains the theme */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Assistant:wght@200;300;400;500;600;700;800&family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Baloo+2:wght@400;500;600;700;800&family=Besley:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Domine:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:wght@300;400;500;600;700;800;900&family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Fira+Code:wght@300;400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jura:wght@300;400;500;600;700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=M+PLUS+1+Code:wght@100;200;300;400;500;600;700&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Maven+Pro:wght@400;500;600;700;800;900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nabla&family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Overpass+Mono:wght@300;400;500;600;700&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Podkova:wght@400;500;600;700;800&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@200;300;400;500;600;700&family=Recursive:wght@300;400;500;600;700;800;900;1000&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Red+Rose:wght@300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Rosario:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika+Negative:wght@300;400;500;600;700&family=Signika:wght@300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"); /*
+This is a simple function library to generate Obsidian Style settings with scss.
+@author @Zenneh
+
+For reference, check the Obsidian style settings repo
+- https://github.com/mgmeyers/obsidian-style-settings
+*/
+/* ----------------------------
+        Style Functions
+---------------------------- */
+/* ----------------------------
+        Private Functions
+---------------------------- */
+/* Main sass file that contains the theme */
 :root {
   --ap-radius-s: 4px;
   --ap-radius-m: 8px;
   --ap-radius-l: 10px;
   --ap-radius-xl: 16px;
-  --ap-primary-h: 15.3846153846deg;
-  --ap-primary-s: 63.9344262295%;
-  --ap-primary-l: 88.0392156863%;
+  --ap-primary-h: 15;
+  --ap-primary-s: 64%;
+  --ap-primary-l: 88%;
   --ap-primary-d: 80%;
-  --ap-primary: #F4D7CD;
-  --ap-secondary-h: 157.0588235294deg;
-  --ap-secondary-s: 31.7757009346%;
-  --ap-secondary-l: 58.0392156863%;
+  --ap-primary: hsl(var(--ap-primary-h), var(--ap-primary-s), var(--ap-primary-l));
+  --ap-secondary-h: 157;
+  --ap-secondary-s: 32%;
+  --ap-secondary-l: 58%;
   --ap-secondary-d: 70%;
-  --ap-secondary: #72b69c;
-  --ap-base1-h: 250deg;
-  --ap-base1-s: 23.0769230769%;
-  --ap-base1-l: 8.0980392157%;
-  --ap-base1-d: 20%;
-  --ap-base0: #0B0A10;
-  --ap-base0-h: 250deg;
-  --ap-base0-s: 23.0769230769%;
-  --ap-base0-l: 5.0980392157%;
-  --ap-base0-d: 20%;
-  --ap-base1: #111019;
+  --ap-secondary: hsl(var(--ap-secondary-h), var(--ap-secondary-s), var(--ap-secondary-l));
+  --ap-base1-h: 249;
+  --ap-base1-s: 33%;
+  --ap-base1-l: 8%;
+  --ap-base1-d: 10%;
+  --ap-base0: hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l));
+  --ap-base0-h: 250;
+  --ap-base0-s: 23%;
+  --ap-base0-l: 5%;
+  --ap-base0-d: 13%;
+  --ap-base1: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
   --ap-red: #E97193;
   --ap-green: #AAC5A0;
   --ap-blue: #A8C5E6;
@@ -63,8 +79,8 @@ For reference, check the Obsidian style settings repo
   --ap-code-aqua: var(--ap-aqua);
   --ap-code-yellow: var(--ap-yellow);
   --ap-code-orange: var(--ap-orange);
-  --ap-color-dp0: #111019;
-  --ap-color-dp1: #0B0A10;
+  --ap-color-dp0: hsl(var(--ap-base1-h), var(--ap-base1-s), var(--ap-base1-l));
+  --ap-color-dp1: hsl(var(--ap-base0-h), var(--ap-base0-s), var(--ap-base0-l));
   --ap-color-dp2: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 5%));
   --ap-color-dp3: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 10%));
   --ap-color-dp4: hsl(var(--ap-base0-h), var(--ap-base0-s), calc(var(--ap-base0-l) + 15%));
@@ -92,27 +108,14 @@ For reference, check the Obsidian style settings repo
   --ap-size-text-item: 1em;
   --ap-container-padding: 8px;
   --ap-frame-left: 10px;
+  --ap-font-text: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-interface: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-monospace: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-title: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-header: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
+  --ap-font-hashtag: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
 }
 
-/*---------------------------------------
-            Style settings
----------------------------------------*/
-/*---------------------------------------
-            Themes            
---------------------------------------*/
-/*
-This is a simple function library to generate Obsidian Style settings with scss.
-@author @Zenneh
-
-For reference, check the Obsidian style settings repo
-- https://github.com/mgmeyers/obsidian-style-settings
-*/
-/* ----------------------------
-        Style Functions
----------------------------- */
-/* ----------------------------
-        Private Functions
----------------------------- */
 .theme-dark.a-theme-purple {
   --ap-primary-h: 15;
   --ap-primary-s: 64%;
@@ -236,11 +239,14 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
+  --inline-title-font: var(--ap-font-title);
+  --font-text: var(--ap-font-text);
+  --font-monospace: var(--ap-font-monospace);
+  --font-interface: var(--ap-font-interface);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
   --link-decoration: underline;
@@ -406,11 +412,14 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
+  --inline-title-font: var(--ap-font-title);
+  --font-text: var(--ap-font-text);
+  --font-monospace: var(--ap-font-monospace);
+  --font-interface: var(--ap-font-interface);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
   --link-decoration: underline;
@@ -576,11 +585,14 @@ For reference, check the Obsidian style settings repo
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
+  --inline-title-font: var(--ap-font-title);
+  --font-text: var(--ap-font-text);
+  --font-monospace: var(--ap-font-monospace);
+  --font-interface: var(--ap-font-interface);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
   --link-decoration: underline;
@@ -720,6 +732,27 @@ For reference, check the Obsidian style settings repo
   --header-offset: 3rem;
 }
 
+.Fade.modal,
+.Fade.snw-ref-title-popover,
+.Fade.menu,
+.Fade.popover,
+.Fade.prompt,
+.Fade.workspace-split.mod-vertical.mod-root .workspace-tabs:not(.mod-stacked) .view-content {
+  animation: 0.2s fade cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Hover * {
+  transition: background-color 0.1s ease-in;
+}
+
 /* H2 styling */
 h2,
 .HyperMD-header.HyperMD-header-2.cm-line {
@@ -732,6 +765,33 @@ h2,
 .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
 .markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
   font-family: var(--ap-font-hashtag);
+}
+
+h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.HyperMD-list-line .cm-header-1,
+h2,
+.markdown-rendered h2,
+.HyperMD-header-2,
+.HyperMD-list-line .cm-header-2,
+h3,
+.markdown-rendered h3,
+.HyperMD-header-3,
+.HyperMD-list-line .cm-header-3,
+h4,
+.markdown-rendered h4,
+.HyperMD-header-4,
+.HyperMD-list-line .cm-header-4,
+h5,
+.markdown-rendered h5,
+.HyperMD-header-5,
+.HyperMD-list-line .cm-header-5,
+h6,
+.markdown-rendered h6,
+.HyperMD-header-6,
+.HyperMD-list-line .cm-header-6 {
+  font-family: var(--ap-font-header);
 }
 
 /* Blockquote */
@@ -1091,11 +1151,14 @@ Plugins
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
+  --inline-title-font: var(--ap-font-title);
+  --font-text: var(--ap-font-text);
+  --font-monospace: var(--ap-font-monospace);
+  --font-interface: var(--ap-font-interface);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
   --link-decoration: underline;
@@ -1125,6 +1188,9 @@ Plugins
   --radius-xl: var(--ap-radius-xl);
 }
 
+/*---------------------------------------
+            Fonts            
+--------------------------------------*/
 .theme-light {
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
@@ -1189,11 +1255,14 @@ Plugins
   --tag-font-color-l: #1d694b;
   --tag-background-color-d: #1d694b;
   --tag-font-color-d: #ffffff;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-  --font-editor: var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --font-text-theme: var(--ap-font-text);
+  --font-editor-theme: var(--ap-font-text);
+  --font-monospace-theme: var(--ap-font-monospace);
+  --font-interface-theme: var(--ap-font-interface);
+  --inline-title-font: var(--ap-font-title);
+  --font-text: var(--ap-font-text);
+  --font-monospace: var(--ap-font-monospace);
+  --font-interface: var(--ap-font-interface);
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
   --link-decoration: underline;
@@ -1228,172 +1297,5 @@ Plugins
 name: Apatheia
 id: ap-theme
 settings:
-<<<<<<< HEAD
-		-
-				id: ap-radius-s 
-				title: Border radius S 
-				description: variable-number-slider 
-				type: variable-number-slider 
-				default: 4 
-				min: 0 
-				max: 20 
-				step: px 
-				format: px 
-		-
-				id: ap-radius-m 
-				title: Border radius M 
-				description: variable-number-slider 
-				type: variable-number-slider 
-				default: 8 
-				min: 0 
-				max: 20 
-				step: px 
-				format: px 
-		-
-				id: ap-radius-l 
-				title: Border radius L 
-				description: variable-number-slider 
-				type: variable-number-slider 
-				default: 10 
-				min: 0 
-				max: 20 
-				step: px 
-				format: px 
-		-
-				id: a-theme-settings 
-				title: Theme settings 
-				description: Change theme appearance here 
-				type: heading 
-				level: 1 
-				collapsed: false 
-		-
-				id: theme-dark 
-				title: Theme variant 
-				description: Select theme variant 
-				type: class-select 
-				default: a-theme-apatheia 
-				allowEmpty: false 
-				options:
-						-
-								label: Apatheia
-								value: a-theme-apatheia
-
-						-
-								label: 👾 Purple
-								value: a-theme-purple
-
-						-
-								label: 🌿 Catpuccin Mocha
-								value: a-catpuccin-mocha
-
-						-
-								label: ☕ Catpuccin Espresso
-								value: a-catpuccin-espresso
-		-
-				id: a-theme-purple-settings 
-				title: Test theme settings 
-				description: Settings for the test theme 
-				type: heading 
-				level: 2 
-				collapsed: false 
-		-
-				id: a-theme-purple-test 
-				title: Toggle test 
-				description: toggle to test 
-				type: class-toggle 
-		-
-				id: a-effect-settings 
-				title: Effects 
-				description: Add effects 
-				type: heading 
-				level: 1 
-				collapsed: false 
-		-
-				id: glassMorphism 
-				title: Glassmorphism 
-				description: Add glassmorphism to your theme 
-				type: class-toggle 
-=======
-		-
-				id: ap-radius-s 
-				title: Border radius S 
-				description: variable-number-slider 
-				type: variable-number-slider 
-				default: 4 
-				min: 0 
-				max: 20 
-				step: px 
-				format: px 
-		-
-				id: ap-radius-m 
-				title: Border radius M 
-				description: variable-number-slider 
-				type: variable-number-slider 
-				default: 8 
-				min: 0 
-				max: 20 
-				step: px 
-				format: px 
-		-
-				id: ap-radius-l 
-				title: Border radius L 
-				description: variable-number-slider 
-				type: variable-number-slider 
-				default: 10 
-				min: 0 
-				max: 20 
-				step: px 
-				format: px 
-		-
-				id: a-theme-settings 
-				title: Theme settings 
-				description: Change them appearance here 
-				type: heading 
-				level: 1 
-				collapsed: true 
-		-
-				id: theme-dark 
-				title: Theme variant 
-				description: Select theme variant 
-				type: class-select 
-				default: a-theme-apatheia 
-				allowEmpty: false 
-				options:
-						-
-								label: Apatheia
-								value: a-theme-apatheia
-
-						-
-								label: 👾 Purple
-								value: a-theme-purple
-		-
-				id: a-theme-purple-settings 
-				title: Test theme settings 
-				description: Settings for the test theme 
-				type: heading 
-				level: 2 
-				collapsed: true 
-		-
-				id: a-theme-purple-test 
-				title: Toggle test 
-				description: toggle to test 
-				type: class-toggle 
-		-
-				id: a-effect-settings 
-				title: Effects 
-				description: Add effects 
-				type: heading 
-				level: 1 
-				collapsed: true 
-		-
-				id: glassMorphism 
-				title: Glassmorphism 
-				description: Add glassmorphism to your theme 
-				type: class-toggle 
-		-
-				id: smoothIndent 
-				title: Smooth indent 
-				description: Smooth Indent headers. Vim users may experience weird glitches 
-				type: class-toggle 
->>>>>>> 2bddadb5012c10eba545fdf24dae4417cfdb281f
+		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change theme appearance here 				type: heading 				level: 1 				collapsed: true 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple						-								label: 🌿 Catpuccin Mocha								value: a-catpuccin-mocha						-								label: ☕ Catpuccin Espresso								value: a-catpuccin-espresso		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: true 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: true 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 		-				id: smoothIndent 				title: Smooth indent 				description: Smooth Indent headers. Vim users may experience weird glitches 				type: class-toggle 		-				id: Fade 				title: Fade 				description: Fade 				type: class-toggle 		-				id: Hover 				title: Hover effect 				description: On hover transition on components 				type: class-toggle 		-				id: a-font-settings 				title: Fonts 				description: Select fonts 				type: heading 				level: 1 				collapsed: true 		-				id: ap-font-title 				title: Title font 				description: Change title font 				type: variable-select 				default: Open Sans 				options:						- Alegreya						- Anybody						- Archivo						- Archivo Narrow						- Asap						- Assistant						- Azeret Mono						- Baloo 2						- Besley						- Bitter						- Bodoni Moda						- Cabin						- Cairo						- Cairo Play						- Catamaran						- Cinzel						- Comfortaa						- Crimson Pro						- Domine						- Dosis						- EB Garamond						- Encode Sans						- Epilogue						- Exo 2						- Figtree						- Finlandica						- Heebo						- Inconsolata						- Inter						- Josefin Sans						- Jost						- Jura						- Karla						- Lexend						- Lexend Deca						- Lexend Exa						- Libre Franklin						- Lora						- M PLUS 1						- Manrope						- Maven Pro						- Merriweather Sans						- Montserrat						- Mulish						- MuseoModerno						- Noto Sans Display						- Nunito						- Open Sans						- Oswald						- Outfit						- Overpass						- Podkova						- Public Sans						- Quicksand						- Raleway						- Readex Pro						- Recursive						- Red Hat Display						- Red Hat Text						- Red Rose						- Rosario						- Rubik						- STIX Two Text						- Saira						- Signika						- Signika Negative						- Space Grotesk						- Syne						- Vollkorn						- Work Sans						- Yanone Kaffeesatz		-				id: ap-font-interface 				title: Interface font 				description: Change interface font 				type: variable-select 				default: Open Sans 				options:						- Alegreya						- Anybody						- Archivo						- Archivo Narrow						- Asap						- Assistant						- Azeret Mono						- Baloo 2						- Besley						- Bitter						- Bodoni Moda						- Cabin						- Cairo						- Cairo Play						- Catamaran						- Cinzel						- Comfortaa						- Crimson Pro						- Domine						- Dosis						- EB Garamond						- Encode Sans						- Epilogue						- Exo 2						- Figtree						- Finlandica						- Heebo						- Inconsolata						- Inter						- Josefin Sans						- Jost						- Jura						- Karla						- Lexend						- Lexend Deca						- Lexend Exa						- Libre Franklin						- Lora						- M PLUS 1						- Manrope						- Maven Pro						- Merriweather Sans						- Montserrat						- Mulish						- MuseoModerno						- Noto Sans Display						- Nunito						- Open Sans						- Oswald						- Outfit						- Overpass						- Podkova						- Public Sans						- Quicksand						- Raleway						- Readex Pro						- Recursive						- Red Hat Display						- Red Hat Text						- Red Rose						- Rosario						- Rubik						- STIX Two Text						- Saira						- Signika						- Signika Negative						- Space Grotesk						- Syne						- Vollkorn						- Work Sans						- Yanone Kaffeesatz		-				id: ap-font-text 				title: Text font 				description: Change text font 				type: variable-select 				default: Open Sans 				options:						- Alegreya						- Anybody						- Archivo						- Archivo Narrow						- Asap						- Assistant						- Azeret Mono						- Baloo 2						- Besley						- Bitter						- Bodoni Moda						- Cabin						- Cairo						- Cairo Play						- Catamaran						- Cinzel						- Comfortaa						- Crimson Pro						- Domine						- Dosis						- EB Garamond						- Encode Sans						- Epilogue						- Exo 2						- Figtree						- Finlandica						- Heebo						- Inconsolata						- Inter						- Josefin Sans						- Jost						- Jura						- Karla						- Lexend						- Lexend Deca						- Lexend Exa						- Libre Franklin						- Lora						- M PLUS 1						- Manrope						- Maven Pro						- Merriweather Sans						- Montserrat						- Mulish						- MuseoModerno						- Noto Sans Display						- Nunito						- Open Sans						- Oswald						- Outfit						- Overpass						- Podkova						- Public Sans						- Quicksand						- Raleway						- Readex Pro						- Recursive						- Red Hat Display						- Red Hat Text						- Red Rose						- Rosario						- Rubik						- STIX Two Text						- Saira						- Signika						- Signika Negative						- Space Grotesk						- Syne						- Vollkorn						- Work Sans						- Yanone Kaffeesatz		-				id: ap-font-monospace 				title: Monospace font 				description: Change the monospace font 				type: variable-select 				default: Source code pro 				options:						- Alegreya						- Anybody						- Archivo						- Archivo Narrow						- Asap						- Assistant						- Azeret Mono						- Baloo 2						- Besley						- Bitter						- Bodoni Moda						- Cabin						- Cairo						- Cairo Play						- Catamaran						- Cinzel						- Comfortaa						- Crimson Pro						- Domine						- Dosis						- EB Garamond						- Encode Sans						- Epilogue						- Exo 2						- Figtree						- Finlandica						- Heebo						- Inconsolata						- Inter						- Josefin Sans						- Jost						- Jura						- Karla						- Lexend						- Lexend Deca						- Lexend Exa						- Libre Franklin						- Lora						- M PLUS 1						- Manrope						- Maven Pro						- Merriweather Sans						- Montserrat						- Mulish						- MuseoModerno						- Noto Sans Display						- Nunito						- Open Sans						- Oswald						- Outfit						- Overpass						- Podkova						- Public Sans						- Quicksand						- Raleway						- Readex Pro						- Recursive						- Red Hat Display						- Red Hat Text						- Red Rose						- Rosario						- Rubik						- STIX Two Text						- Saira						- Signika						- Signika Negative						- Space Grotesk						- Syne						- Vollkorn						- Work Sans						- Yanone Kaffeesatz
 */

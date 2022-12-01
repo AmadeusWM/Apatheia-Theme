@@ -79,8 +79,11 @@ $obsidian-vars: (
     "--font-editor-theme":var(--ap-font-text),
     "--font-monospace-theme": var(--ap-font-monospace),
     "--font-interface-theme": var(--ap-font-interface),
-    "--font-editor": "var(--font-editor-override), var(--font-text-override), var(--font-editor-theme)",
-  
+    
+    "--inline-title-font":var(--ap-font-title),
+    "--font-text": var(--ap-font-text),
+    "--font-monospace": var(--ap-font-monospace),
+    "--font-interface": var(--ap-font-interface),
     /* Misc */
     "--checkbox-radius": 30%,
     "--link-external-decoration": underline,

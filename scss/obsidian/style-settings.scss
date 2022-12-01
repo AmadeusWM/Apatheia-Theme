@@ -101,6 +101,9 @@ $yaml-tab: "\9\9";
 }
 
 @function CreateOption($value, $label: None){
+    @if $label == None {
+        @return ("value": $value)
+    };
     @return (
         "label": $label,
         "value": $value
@@ -108,20 +111,19 @@ $yaml-tab: "\9\9";
 }
 
 @function generateOptionString($values){
-    $string: "";
+    $string: "\d";
 
     @each $option in $values {
         // $option: meta.call($option);
+        $value: map-get($map: $option, $key: "value");
         @if map-get($map: $option, $key: "label") {
-            $value: map-get($map: $option, $key: "value");
             $label: map-get($map: $option, $key: "label");
-
             $string: str-insert($string: #{"\d" + $yaml-tab + $yaml-tab + $yaml-tab + "-\d"}, $insert: $string, $index: 0);  // - 
             $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + $yaml-tab + "label: " + $label + "\d"}, $insert: $string, $index: 0);  // label
             $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + $yaml-tab + "value: " + $value + "\d"}, $insert: $string, $index: 0);  // value
         }
         @else {
-            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + $key + "\d"}, $insert: $string, $index: 0);  // value
+            $string: str-insert($string: #{$yaml-tab + $yaml-tab + $yaml-tab + "- "+$value + "\d"}, $insert: $string, $index: 0);  // value
         }
     }
     @return $string;
