@@ -2,12 +2,10 @@
 
 // theme config
 @use "sass:map";
-@import "./settings";
 
 // apply selected theme to theme colors
 @import "./settings-variables.scss"; // selected theme
-
-// generate theme config and colors
+@import "./settings";
 :root {
     // Theme settings
     @each $setting, $value in $theme-settings {
@@ -19,7 +17,6 @@
         --#{$color}: #{$value};
     }
 
-    // mobile support config
 
     // Theme format
     @each $format, $value in $theme-format {

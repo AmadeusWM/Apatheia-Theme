@@ -12,7 +12,7 @@ For reference, check the Obsidian style settings repo
 /* ----------------------------
         Private Functions
 ---------------------------- */
-/* Main sass file that contains the theme */ /* Main sass file that contains the theme */
+/* Main sass file that contains the theme */
 :root {
   --ap-radius-s: 4px;
   --ap-radius-m: 8px;
@@ -90,6 +90,7 @@ For reference, check the Obsidian style settings repo
   --ap-frame-left: 10px;
 }
 
+/* Main sass file that contains the theme */
 /*---------------------------------------
             Style settings
 ---------------------------------------*/
@@ -409,6 +410,33 @@ h2,
 .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
 .markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
   font-family: var(--ap-font-hashtag);
+}
+
+h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.HyperMD-list-line .cm-header-1,
+h2,
+.markdown-rendered h2,
+.HyperMD-header-2,
+.HyperMD-list-line .cm-header-2,
+h3,
+.markdown-rendered h3,
+.HyperMD-header-3,
+.HyperMD-list-line .cm-header-3,
+h4,
+.markdown-rendered h4,
+.HyperMD-header-4,
+.HyperMD-list-line .cm-header-4,
+h5,
+.markdown-rendered h5,
+.HyperMD-header-5,
+.HyperMD-list-line .cm-header-5,
+h6,
+.markdown-rendered h6,
+.HyperMD-header-6,
+.HyperMD-list-line .cm-header-6 {
+  font-family: var(--ap-font-header);
 }
 
 /* Blockquote */
@@ -908,5 +936,5 @@ Plugins
 name: Apatheia
 id: ap-theme
 settings:
-		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change them appearance here 				type: heading 				level: 1 				collapsed: true 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: true 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: true 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 		-				id: smoothIndent 				title: Smooth indent 				description: Smooth Indent headers. Vim users may experience weird glitches 				type: class-toggle 		-				id: Fade 				title: Fade 				description: Fade 				type: class-toggle 		-				id: Hover 				title: Hover effect 				description: On hover transition on components 				type: class-toggle 		-				id: a-font-settings 				title: Fonts 				description: Select fonts 				type: heading 				level: 1 				collapsed: true 
+		-				id: ap-radius-s 				title: Border radius S 				description: variable-number-slider 				type: variable-number-slider 				default: 4 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-m 				title: Border radius M 				description: variable-number-slider 				type: variable-number-slider 				default: 8 				min: 0 				max: 20 				step: px 				format: px 		-				id: ap-radius-l 				title: Border radius L 				description: variable-number-slider 				type: variable-number-slider 				default: 10 				min: 0 				max: 20 				step: px 				format: px 		-				id: a-theme-settings 				title: Theme settings 				description: Change them appearance here 				type: heading 				level: 1 				collapsed: true 		-				id: theme-dark 				title: Theme variant 				description: Select theme variant 				type: class-select 				default: a-theme-apatheia 				allowEmpty: false 				options:						-								label: Apatheia								value: a-theme-apatheia						-								label: 👾 Purple								value: a-theme-purple		-				id: a-theme-purple-settings 				title: Test theme settings 				description: Settings for the test theme 				type: heading 				level: 2 				collapsed: true 		-				id: a-theme-purple-test 				title: Toggle test 				description: toggle to test 				type: class-toggle 		-				id: a-effect-settings 				title: Effects 				description: Add effects 				type: heading 				level: 1 				collapsed: true 		-				id: glassMorphism 				title: Glassmorphism 				description: Add glassmorphism to your theme 				type: class-toggle 		-				id: smoothIndent 				title: Smooth indent 				description: Smooth Indent headers. Vim users may experience weird glitches 				type: class-toggle 		-				id: Fade 				title: Fade 				description: Fade 				type: class-toggle 		-				id: Hover 				title: Hover effect 				description: On hover transition on components 				type: class-toggle 		-				id: a-font-settings 				title: Fonts 				description: Select fonts 				type: heading 				level: 1 				collapsed: true 		-				id: ap-font-title 				title: Title font 				description: Change title font 				type: variable-select 				default: Open sans 				options:						-								label: Open sans								value: Open Sans
 */
