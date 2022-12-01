@@ -5,7 +5,8 @@
 @use "sass:list";
 
 // theme config
-@import "../root.scss";
+@use "../root.scss";
+
 /*---------------------------------------
             Style settings
 ---------------------------------------*/
@@ -72,6 +73,11 @@ $settings: list.append($settings,
     ss.CreateHeading("a-font-settings", "Fonts", "Select fonts", 1)
 );
 
+$settings: list.append($settings,
+    ss.CreateVariableSelect("ap-font-title", "Title font", "Change title font", "Open sans", (
+        ss.CreateOption("Open Sans", "Open sans"),
+    ))
+);
 .theme-light {
 
     @each $style,

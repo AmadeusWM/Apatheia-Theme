@@ -1,3 +1,11 @@
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 5 | @import "../themes/theme_dark.scss"; // selected theme
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   ../settings-variables.scss 5:9  @import
+ *   ../root.scss 8:9                @use
+ *   main.scss 8:1                   root stylesheet */
 /* Error: Duplicate key.
  *     ,
  * 107 |     "ap-font-text": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif",

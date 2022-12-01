@@ -61,7 +61,7 @@ $yaml-tab: "\9\9";
     @return $map;
 }
 @function CreateVariableSelect($id, $title, $description, $default, $options){
-    $map: createDefaultSetting($id, $title, $description, "variable-text");
+    $map: createDefaultSetting($id, $title, $description, "variable-select");
     $map: map-merge($map1: $map, $map2: (
         "default": $default,
         "options": $options
