@@ -191,7 +191,7 @@ tab-item:not([data-level="0"]):not(.pinned) {
 
 tab-item tab-favicon {
   left: 0;
-  filter: var(--extension-icon-mask);
+  /* filter: var(--extension-icon-mask); */
   transition: transform calc(var(--animation-duration) * 2) var(--ease-out);
 }
 
@@ -217,6 +217,7 @@ tab-item .label {
   color: var(--light-1) !important;
   padding-bottom: 2px;
   padding-left: 8px;
+  margin-top: 4px;
 }
 
 /*The drop-down ">" button*/
