@@ -1,12 +1,16 @@
 
-// import theming and settings
 @import "../main.scss";
 
 // when import ends with ".css" it will be used as a normal css import (source: https://sass-lang.com/documentation/at-rules/import#plain-css-imports)
 /* order of these files is important and should not be changed */
 @import "icons/extension-icons.css";
 
-// window contols
+/*
+WINDOW CONTROLS BEHAVIOUR (buttons to close, minimize, ... firefox)
+* Window control buttons to the right: @import "window-controls/wc-without-tabline-r.css";
+* Window control buttons to the left: @import "window-controls/wc-without-tabline.css";
+* With tabs in top bar: @import "window-controls/wc-with-tabline.css";
+*/
 @if ($wc-with-tabline){
   @import "window-controls/wc-with-tabline.css";
 }
@@ -22,6 +26,13 @@
   @import "hide-tabline.css";
 }
 
+/*
+SIDEBAR BEHAVIOUR
+for a sidebar which pops out on hover
+ * @import "userChrome-hover.css"
+one that stays (static)
+ * @import "userChrome-static.css"
+*/
 @if ($hover){
   @import "userChrome-hover.css";
 }

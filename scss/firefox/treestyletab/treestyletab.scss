@@ -47,28 +47,24 @@ for some information on how to change these variables...
 
 
 :root {
-    --tab-border-radius: 8px;
-    /* border radius of tabs */
-    --animation-duration: 200ms;
-    /* duration of different animations [0s: turn all animations off] */
-    --spacing: 10px;
-    /* spacing between tabs. [<15px: compact tabs] */
-    --distance-from-edge: 7px;
-    /* distance between tabs, and left-right edges of sidebar*/
-    --hover-text-spacing: 0.2;
-    /* should be left alone. with hover sidebar, if text is visible in collapsed status, increase this */
-
-
-    --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
-    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-
-    --collapsed-width: 60px;
-
-    --contextual-identity-color-blue: #63B3ED;
-    --contextual-identity-color-orange: #F6AD55;
-    --contextual-identity-color-green: #68D391;
-    --contextual-identity-color-pink: #F687B3;
+  --tab-border-radius: 8px;
+  /* border radius of tabs */
+  --animation-duration: 200ms;
+  /* duration of different animations [0s: turn all animations off] */
+  --spacing: 10px;
+  /* spacing between tabs. [<15px: compact tabs] */
+  --distance-from-edge: 7px;
+  /* distance between tabs, and left-right edges of sidebar*/
+  --hover-text-spacing: 0.2;
+  /* should be left alone. with hover sidebar, if text is visible in collapsed status, increase this */
+  --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --collapsed-width: 60px;
+  --contextual-identity-color-blue: #63B3ED;
+  --contextual-identity-color-orange: #F6AD55;
+  --contextual-identity-color-green: #68D391;
+  --contextual-identity-color-pink: #F687B3;
 }
 
 /************UNCUSTOMIZED CSS************/
@@ -115,7 +111,7 @@ tab-item:not([data-level="0"]):not(.pinned) {
 
 tab-item tab-favicon {
   left: 0;
-  filter: var(--extension-icon-mask);
+  /* filter: var(--extension-icon-mask); */
   transition: transform calc(var(--animation-duration) * 2) var(--ease-out);
 }
 
@@ -125,7 +121,6 @@ tab-item tab-favicon {
 
 tab-item {
   --tab-size: 34px !important;
-//   margin: 4px;
 }
 
 tab-item tab-item-substance {
@@ -142,6 +137,7 @@ tab-item .label {
   color: var(--light-1) !important;
   padding-bottom: 2px;
   padding-left: 8px;
+  margin-top: 4px;
 }
 
 /*The drop-down ">" button*/

@@ -87,6 +87,19 @@
 }
 
 /* order of these files is important and should not be changed */
+/*
+WINDOW CONTROLS BEHAVIOUR (buttons to close, minimize, ... firefox)
+* Window control buttons to the right: @import "window-controls/wc-without-tabline-r.css";
+* Window control buttons to the left: @import "window-controls/wc-without-tabline.css";
+* With tabs in top bar: @import "window-controls/wc-with-tabline.css";
+*/
+/*
+SIDEBAR BEHAVIOUR
+for a sidebar which pops out on hover
+ * @import "userChrome-hover.css"
+one that stays (static)
+ * @import "userChrome-static.css"
+*/
 :root {
   --dark-0: var(--ap-color-dp0);
   --dark-base: var(--ap-color-dp0);
