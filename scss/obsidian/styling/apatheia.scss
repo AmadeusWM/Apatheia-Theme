@@ -186,6 +186,11 @@ code .cm-tag,
   cursor: help;
 }
 
+// iframe (embeds)
+iframe {
+  border-radius: var(--ap-radius-l) !important;
+}
+
 /*=======================================
 Container styling
 =========================================*/
@@ -385,4 +390,17 @@ Plugins
   // --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   // --shadow-color: rgba(0, 0, 0, 0.3);
   // --btn-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+// Custom Frame
+// surrounding the frame 
+.custom-frames-view{
+  padding: 0px var(--ap-container-padding) !important;
+}
+// inner frame
+.custom-frames-frame {
+  padding: 0px !important;
+  background-color: #fff0 !important;
+  border-radius: var(--ap-radius-l) !important;
+  overflow: hidden !important;
 }

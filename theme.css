@@ -941,6 +941,10 @@ code .cm-tag,
   cursor: help;
 }
 
+iframe {
+  border-radius: var(--ap-radius-l) !important;
+}
+
 /*=======================================
 Container styling
 =========================================*/
@@ -1098,6 +1102,17 @@ Plugins
 .theme-dark,
 .excalidraw.theme--dark {
   --theme-filter: invert(98%) hue-rotate(180deg);
+}
+
+.custom-frames-view {
+  padding: 0px var(--ap-container-padding) !important;
+}
+
+.custom-frames-frame {
+  padding: 0px !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-radius: var(--ap-radius-l) !important;
+  overflow: hidden !important;
 }
 
 .theme-dark,
