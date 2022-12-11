@@ -6,7 +6,7 @@
 window {
     margin: 0px;
     border: 5px solid rgba($ap-color-dp0, 1);
-    background-color: rgba($ap-color-dp1, 0.9);
+    background-color: rgba($ap-color-dp1, 1);
     border-radius: 15px;
 }
 
@@ -49,9 +49,12 @@ window {
     margin-bottom: 5px;
 }
 
+#text{
+    margin: 5px;
+}
+
 #text:selected {
-    color: rgba($ap-color-dp11, 1);
-    margin: 0px 0px;
+    color: rgba($ap-color-dp3, 1);
     border: none;
     border-radius: 15px;
 }
@@ -60,12 +63,11 @@ window {
     margin: 0px 0px;
     border: none;
     border-radius: 15px;
-    background-color: transparent;
 }
 
 #entry:selected {
     margin: 0px 0px;
     border: none;
     border-radius: 15px;
-    background: linear-gradient(90deg, $ap-red 0%, lighten($ap-red, 10%) 100%);
+    background: linear-gradient(90deg, $ap-primary 0%, lighten($ap-secondary, 10%) 100%);
 }

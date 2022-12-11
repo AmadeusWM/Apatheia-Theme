@@ -27,6 +27,7 @@ $theme-style-settings: (); // list of all theme style settings
 @import "./styling/themes/test.scss";
 @import "./styling/themes/catpuccin_mocha.scss";
 @import "./styling/themes/catpuccin_espresso.scss";
+@import "./styling/themes/winter.scss";
 
 $settings: list.append($settings, ss.CreateHeading("a-theme-settings", "Theme settings", "Change theme appearance here"));
 $settings: list.append($settings, ss.CreateClassSelect("theme-dark", "Theme variant", "Select theme variant", "a-theme-apatheia", $theme-select));

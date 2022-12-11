@@ -16,8 +16,8 @@ target_tst=$BASEDIR/compiled-themes/firefox/treestyletab/treestyletab.css
 source_eww_bar=$BASEDIR/scss/eww-bar/eww.scss
 target_eww_bar=$BASEDIR/compiled-themes/eww-bar/eww/eww.scss
 # discord theme
-source_discord=$BASEDIR/scss/discord/Ultra.theme.scss
-target_discord=$BASEDIR/compiled-themes/discord/Ultra.theme.css 
+source_discord=$BASEDIR/scss/discord/Apatheia.theme.scss
+target_discord=$BASEDIR/compiled-themes/discord/Apatheia.theme.css 
 # wofi
 source_wofi=$BASEDIR/scss/wofi/style.scss
 target_wofi=$BASEDIR/compiled-themes/wofi/style.css
