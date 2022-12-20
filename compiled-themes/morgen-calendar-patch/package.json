@@ -1,0 +1,16 @@
+{
+  "name": "morgen-calendar-patch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apply.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asar": "^3.2.0",
+    "load-json-file": "^7.0.1"
+  }
+}
