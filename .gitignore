@@ -1,2 +1,3 @@
 .sass-cache/
 *.map
+compiled-themes/morgen-calendar-patch/node_modules
