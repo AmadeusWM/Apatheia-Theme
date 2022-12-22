@@ -101,6 +101,14 @@ https://github.com/flozz/nautilus-terminal
 Credits to https://github.com/taylor85345
 Dependency: `eww-wayland`
 
+### Morgen Calendar
+Install morgen calendar with `yay -S morgen-bin`
+```
+cd compiled-themes/morgen-calendar-patch
+npm install
+node patch.js /opt/Morgen/resources
+```
+
 ## Todo
 - [ ] Create Dark and light theme 
 - [ ] Add custom features
