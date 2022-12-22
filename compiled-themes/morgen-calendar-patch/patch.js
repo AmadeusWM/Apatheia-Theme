@@ -1,9 +1,9 @@
 // run with `node patch.js /Path/to/the/Morgen/installation`
 // node patch.js /opt/Morgen/resources
 
-const fs = require('fs');
-const exec = require('child_process').exec;
-const loadJson = import('load-json-file');
+import fs from 'fs';
+import {exec} from 'child_process';
+import {loadJsonFile} from 'load-json-file';
 const updatesFile = 'updates.json';
 
 /**
@@ -37,7 +37,7 @@ if (! fs.existsSync(path('app.asar.bak'))) {
 // Extract the asar file.
 exec(`asar extract ${path('app.asar')} ${path('app')}`, () => {
     // Parse the updates file.
-    loadJson(updatesFile).then(updates => {
+    loadJsonFile(updatesFile).then(updates => {
         for (let file in updates) {
             let filePath = path(`app/${file}`);
             let update = updates[file];

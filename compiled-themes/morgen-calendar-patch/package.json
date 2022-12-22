@@ -12,5 +12,6 @@
   "dependencies": {
     "asar": "^3.2.0",
     "load-json-file": "^7.0.1"
-  }
+  },
+  "type":"module"
 }
