@@ -311,20 +311,24 @@ tab-item.active .contextual-identity-marker {
   border-bottom-left-radius: 0px !important;
 }
 
+// Personal
 tab-item.active.contextual-identity-firefox-container-1 {
-  background: linear-gradient(to right, #D53F8C, #9F7AEA) !important;
+  background: linear-gradient(to right, #3182CE, #0BC5EA) !important;
 }
 
+// Work
 tab-item.active.contextual-identity-firefox-container-2 {
   background: linear-gradient(to right, #DD6B20, #F56565) !important;
 }
 
+// Banking
 tab-item.active.contextual-identity-firefox-container-3 {
   background: linear-gradient(to right, #38A169, #38B2AC) !important;
 }
 
+// Shopping
 tab-item.active.contextual-identity-firefox-container-4 {
-  background: linear-gradient(to right, #3182CE, #0BC5EA) !important;
+  background: linear-gradient(to right, #D53F8C, #9F7AEA) !important;
 }
 
 /***********************************/

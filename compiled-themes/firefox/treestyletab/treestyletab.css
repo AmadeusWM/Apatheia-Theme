@@ -392,7 +392,7 @@ tab-item.active .contextual-identity-marker {
 }
 
 tab-item.active.contextual-identity-firefox-container-1 {
-  background: linear-gradient(to right, #D53F8C, #9F7AEA) !important;
+  background: linear-gradient(to right, #3182CE, #0BC5EA) !important;
 }
 
 tab-item.active.contextual-identity-firefox-container-2 {
@@ -404,7 +404,7 @@ tab-item.active.contextual-identity-firefox-container-3 {
 }
 
 tab-item.active.contextual-identity-firefox-container-4 {
-  background: linear-gradient(to right, #3182CE, #0BC5EA) !important;
+  background: linear-gradient(to right, #D53F8C, #9F7AEA) !important;
 }
 
 /***********************************/
