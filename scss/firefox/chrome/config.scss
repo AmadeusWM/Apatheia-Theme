@@ -6,6 +6,7 @@
 @import "icons/extension-icons.css";
 
 /*
+#{$wc-with-tabline}
 WINDOW CONTROLS BEHAVIOUR (buttons to close, minimize, ... firefox)
 * Window control buttons to the right: @import "window-controls/wc-without-tabline-r.css";
 * Window control buttons to the left: @import "window-controls/wc-without-tabline.css";
@@ -17,6 +18,9 @@ WINDOW CONTROLS BEHAVIOUR (buttons to close, minimize, ... firefox)
 @else if($wc-right){
   @import "window-controls/wc-without-tabline-r.css";
 }
+@else if($no-wc){
+  @import "window-controls/no-wc-without-tabline.css";
+}
 @else{
   @import "window-controls/wc-without-tabline.css";
 }
@@ -27,6 +31,7 @@ WINDOW CONTROLS BEHAVIOUR (buttons to close, minimize, ... firefox)
 }
 
 /*
+#{$wc-with-tabline}
 SIDEBAR BEHAVIOUR
 for a sidebar which pops out on hover
  * @import "userChrome-hover.css"

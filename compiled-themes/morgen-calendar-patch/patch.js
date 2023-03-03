@@ -1,4 +1,5 @@
 // run with `node patch.js /Path/to/the/Morgen/installation`
+// cd /home/amadeusw/Projects/theming/Apatheia/compiled-themes/morgen-calendar-patch
 // node patch.js /opt/Morgen/resources
 
 import fs from 'fs';
